@@ -3,26 +3,26 @@ package model;
 public class Component {
 
     //Attributes
-    private Double price;
+    private double price;
 
-    private Double cost;
+    private double cost;
 
     //Getters and Setters
 
 
-    public Double getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(Double price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 
-    public Double getCost() {
+    public double getCost() {
         return cost;
     }
 
-    public void setCost(Double cost) {
+    public void setCost(double cost) {
         this.cost = cost;
     }
 }

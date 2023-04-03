@@ -23,9 +23,9 @@ public class WorkOrder {
 
     public Date finishedAt;
 
-    public Double price;
+    public double price;
 
-    public Double cost;
+    public double cost;
 
     public String paymentMethod;
 
@@ -122,19 +122,19 @@ public class WorkOrder {
         this.finishedAt = finishedAt;
     }
 
-    public Double getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(Double price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 
-    public Double getCost() {
+    public double getCost() {
         return cost;
     }
 
-    public void setCost(Double cost) {
+    public void setCost(double cost) {
         this.cost = cost;
     }
 

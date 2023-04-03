@@ -3,16 +3,16 @@ package model;
 public class Service {
 
     //Attributes
-    private Double price;
-    private Double cost;
+    private double price;
+    private double cost;
 
     //Getters and Setters
 
-    public Double getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public Double getCost() {
+    public double getCost() {
 
         return cost;
     }
