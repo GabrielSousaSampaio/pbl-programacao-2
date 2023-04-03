@@ -32,5 +32,17 @@ public class Installation extends Service{
     public void setOperatingSystem(String operatingSystem) {
         this.operatingSystem = operatingSystem;
     }
+
+    @Override
+    public double getPrice(){
+        double aux = 0;
+        for(String i : programs){
+            aux+=10;
+        }
+        if (operatingSystem != null){
+            aux+=70;
+        }
+        return aux;
+    }
 }
 
