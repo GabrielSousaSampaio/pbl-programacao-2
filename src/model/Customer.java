@@ -8,14 +8,9 @@ public class Customer extends User{
 
     //Constructor
 
-    public Customer(String name, String email, String adress, String phone) {
-
-        this.setName(name);
-
-        this.setEmail(email);
-
+    public Customer(int id, String name, String email, String adress, String phone) {
+        super(id, name, email);
         this.setAdress(adress);
-
         this.setPhone(phone);
     }
 

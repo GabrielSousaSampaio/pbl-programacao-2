@@ -8,11 +8,8 @@ public class Technician extends User{
 
     //Constructor
 
-    public Technician(String name, String email) {
-
-        this.setName(name);
-
-        this.setEmail(email);
+    public Technician(int id, String name, String email) {
+        super(id, name, email);
     }
 
 
