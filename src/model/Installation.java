@@ -1,6 +1,6 @@
 package model;
 
-
+import java.util.ArrayList;
 import java.util.List;
 
 public class Installation extends Service{
@@ -9,6 +9,11 @@ public class Installation extends Service{
 
     private List<String> programs;
     private String operatingSystem;
+
+    public Installation (String operatingSystem){
+        this.programs = new ArrayList<String>();
+        this.operatingSystem = operatingSystem;
+    }
 
     //Getters and Setters
 
@@ -24,9 +29,8 @@ public class Installation extends Service{
         return operatingSystem;
     }
 
-    public void setOperatingSystem(String OperatingSystem) {
-        this.operatingSystem = OperatingSystem;
+    public void setOperatingSystem(String operatingSystem) {
+        this.operatingSystem = operatingSystem;
     }
-
 }
 
