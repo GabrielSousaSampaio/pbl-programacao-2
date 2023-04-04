@@ -1,5 +1,6 @@
 package model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Installation extends Service{
@@ -7,10 +8,14 @@ public class Installation extends Service{
     //Attributes
 
     private List<String> programs;
-    private String OperatingSystem;
+    private String operatingSystem;
+
+    public Installation (String operatingSystem){
+        this.programs = new ArrayList<String>();
+        this.operatingSystem = operatingSystem;
+    }
 
     //Getters and Setters
-
 
     public List<String> getPrograms() {
         return programs;
@@ -21,12 +26,23 @@ public class Installation extends Service{
     }
 
     public String getOperatingSystem() {
-        return OperatingSystem;
+        return operatingSystem;
     }
 
-    public void setOperatingSystem(String OperatingSystem) {
-        this.OperatingSystem = OperatingSystem;
+    public void setOperatingSystem(String operatingSystem) {
+        this.operatingSystem = operatingSystem;
     }
 
+    @Override
+    public double getPrice(){
+        double aux = 0;
+        for(String i : programs){
+            aux+=10;
+        }
+        if (operatingSystem != null){
+            aux+=70;
+        }
+        return aux;
+    }
 }
 

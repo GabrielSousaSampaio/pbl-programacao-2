@@ -4,12 +4,15 @@ public class Component {
 
     //Attributes
     private double price;
-
     private double cost;
 
+    //Constructor
+    public Component(double price, double cost){
+        this.price = price;
+        this.cost = cost;
+    }
+
     //Getters and Setters
-
-
     public double getPrice() {
         return price;
     }
