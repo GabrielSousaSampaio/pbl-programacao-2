@@ -7,17 +7,13 @@ public class Service {
     private double cost;
 
     //Getters and Setters
-
     public double getPrice() {
         return price;
     }
 
     public double getCost() {
-
         return cost;
     }
-
-
 }
 
 

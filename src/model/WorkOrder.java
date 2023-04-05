@@ -6,58 +6,33 @@ import java.util.List;
 public class WorkOrder {
 
     //Attributes
-
-    private int id;   //////////////INT OU STRING
-
+    private int id;
     private Customer customer;
-
     private Technician technician;
-
     private String status;
-
     public List<Service> servicelist;
-
     public String description;
-
     public Date createdAt;
-
     public Date finishedAt;
-
     public double price;
-
     public double cost;
-
     public String paymentMethod;
 
 
     //Constructor
-
-
     public WorkOrder(Customer customer, List<Service> service, String description) {
-
         this.setCustomer(customer);
-
         this.setTechnician(null);
-
         this.setStatus("Em andamento.");
-
         this.setServicelist(service);
-
         this.setDescription(description);
-
-        // this.setCreatedAt();
-
+        //this.setCreatedAt();
         //this.setPrice(price);
-
         //this.setCost(cost);
-
         this.setPaymentMethod(null);
-
     }
 
-
     //Getters and Setters
-
     public int getId() {
         return id;
     }
@@ -146,25 +121,19 @@ public class WorkOrder {
         this.paymentMethod = paymentMethod;
     }
 
-    //Methods
-
+    //Other Methods
     public void addService(Service service){
-
-        this.servicelist.add(service); // setservice
-
+        this.servicelist.add(service);
     }
     public void finished(){
-
         this.setStatus("Finalizado.");
     }
 
     public void cancel(){
-
         this.setStatus("Cancelado.");
     }
 
     public boolean isFinshed(){
-
         if(this.getStatus().equals("Finalizado.")){
             return true;
         }
@@ -172,21 +141,17 @@ public class WorkOrder {
     }
 
     public boolean isCanceled(){
-
         if(this.getStatus().equals("Cancelado.")){
             return true;
         }
         return false;
-
     }
 
     public boolean isOngoing(){
-
         if(this.getStatus().equals("Em andamento.")){
             return true;
         }
         return false;
-
     }
 
     //public boolean isPaid(){

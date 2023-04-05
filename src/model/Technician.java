@@ -3,18 +3,14 @@ package model;
 public class Technician extends User{
 
     //Attributes
-
     private WorkOrder WorkingOn;
 
     //Constructor
-
     public Technician(int id, String name, String email) {
         super(id, name, email);
     }
 
-
     //Getters and Setters
-
     public WorkOrder getWorkingOn() {
         return WorkingOn;
     }
@@ -23,8 +19,7 @@ public class Technician extends User{
         this.WorkingOn = WorkingOn;
     }
 
-    //Methods
-
+    //Other Methods
     public void updateOrderStatus(String status){
         this.WorkingOn.setStatus(status);
     }

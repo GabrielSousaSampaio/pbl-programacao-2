@@ -13,6 +13,7 @@ public class Installation extends Service{
     private double programCost;
     private double operatingSystemCost;
 
+    //Constructor
     public Installation (String operatingSystem, double programPrice, double programCost, double operatingSystemPrice, double operatingSystemCost){
         this.programs = new ArrayList<String>();
         this.operatingSystem = operatingSystem;

@@ -7,6 +7,7 @@ public abstract class User {
     private String name;
     private String email;
 
+    //Constructor
     public User(int id, String name, String email){
         this.id = id;
         this.name = name;

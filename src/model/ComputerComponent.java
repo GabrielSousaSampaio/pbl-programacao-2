@@ -29,6 +29,4 @@ public class ComputerComponent extends Component {
     public void setManufacturer(String manufacturer) {
         this.manufacturer = manufacturer;
     }
-
-
 }

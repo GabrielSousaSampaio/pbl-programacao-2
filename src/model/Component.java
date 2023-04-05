@@ -9,7 +9,6 @@ public class Component {
     private int id;
 
     //Constructor
-
     public Component(double price, double cost, int quantity){
         this.price = price;
         this.cost = cost;
@@ -32,6 +31,7 @@ public class Component {
     public void setCost(double cost) {
         this.cost = cost;
     }
+
     public int getQuantity() {
         return quantity;
     }

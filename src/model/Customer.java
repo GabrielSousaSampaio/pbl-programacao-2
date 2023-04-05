@@ -7,16 +7,13 @@ public class Customer extends User{
     private String phone;
 
     //Constructor
-
     public Customer(int id, String name, String email, String adress, String phone) {
         super(id, name, email);
         this.setAdress(adress);
         this.setPhone(phone);
     }
 
-
     //Getters and Setters
-
     public String getAdress() {
         return adress;
     }
