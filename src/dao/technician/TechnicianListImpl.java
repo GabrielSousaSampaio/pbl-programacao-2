@@ -6,8 +6,8 @@ import java.util.List;
 
 public class TechnicianListImpl implements TechnicianDAO{
 
+    //Atributes
     private List<Technician> TechnicianList;
-
     private int nextID;
 
     public TechnicianListImpl() {
@@ -16,17 +16,14 @@ public class TechnicianListImpl implements TechnicianDAO{
 
     }
 
+    //Methods
     @Override
     public Technician create(Technician technician) {
-
         technician.setId(nextID);
         this.nextID++;
-
         this.TechnicianList.add(technician);
-
         return technician;
     }
-
 
     @Override
     public List<Technician> FindMany() {
@@ -35,21 +32,17 @@ public class TechnicianListImpl implements TechnicianDAO{
 
     @Override
     public Technician FindById(int id) {
-
         for(Technician t: this.TechnicianList){
             if(t.getId() == id){
                 return t;
             }
         }
-
         return null;
     }
 
     @Override
     public void update(Technician technician) {
-
         int indexOF;
-
         for(Technician t: this.TechnicianList){
             if(t.getId() == technician.getId()){
                 indexOF = this.TechnicianList.indexOf(t);
@@ -57,13 +50,10 @@ public class TechnicianListImpl implements TechnicianDAO{
                 return;
             }
         }
-
     }
-
 
     @Override
     public void delete(int id) {
-
         int indexRemove;
         for(Technician t: this.TechnicianList){
             if(t.getId() == id){
@@ -72,7 +62,5 @@ public class TechnicianListImpl implements TechnicianDAO{
                 return;
             }
         }
-
     }
-
 }

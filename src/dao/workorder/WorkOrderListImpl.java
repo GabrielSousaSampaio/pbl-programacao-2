@@ -6,24 +6,23 @@ import java.util.List;
 
 public class WorkOrderListImpl implements WorkOrderDAO{
 
+    //Atributes
     private List<WorkOrder> WorkOrderList;
-
     private int nextID;
 
+    //Constructor
     public WorkOrderListImpl() {
         this.WorkOrderList = new ArrayList<WorkOrder>();
         this.nextID = 0;
 
     }
 
+    //Methods
     @Override
     public WorkOrder create(WorkOrder workOrder) {
-
         workOrder.setId(nextID);
         this.nextID++;
-
         this.WorkOrderList.add(workOrder);
-
         return workOrder;
     }
 

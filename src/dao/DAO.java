@@ -10,12 +10,10 @@ import dao.workorder.WorkOrderListImpl;
 
 public class DAO {
 
+    //Atributes
     private static CustomerDAO customerDAO;
-
     private static TechnicianDAO technicianDAO;
-
     private static WorkOrderDAO workOrderDAO;
-
     private static ComponentDAO componentDAO;
 
     //Methods

@@ -8,22 +8,20 @@ import java.util.List;
 
 public class CustomerListImpl implements CustomerDAO {
 
+    //Atributes
     private List<Customer> CustomerList;
-
     private int nextID;
-
     public CustomerListImpl() {
         this.CustomerList = new ArrayList<Customer>();
         this.nextID = 0;
     }
 
+    //Methods
     @Override
     public Customer create(Customer customer) {
         customer.setId(nextID);
         this.nextID++;
-
         this.CustomerList.add(customer);
-
         return customer;
     }
 
@@ -39,15 +37,12 @@ public class CustomerListImpl implements CustomerDAO {
                 return c;
             }
         }
-
         return null;
     }
 
     @Override
     public void update(Customer customer) {
-
         int indexOF;
-
         for(Customer c: this.CustomerList){
             if(c.getId() == customer.getId()){
                 indexOF = this.CustomerList.indexOf(c);
@@ -55,12 +50,10 @@ public class CustomerListImpl implements CustomerDAO {
                 return;
             }
         }
-
     }
 
     @Override
     public void delete(int id) {
-
         int indexRemove;
         for(Customer c: this.CustomerList){
             if(c.getId() == id){
@@ -69,6 +62,5 @@ public class CustomerListImpl implements CustomerDAO {
                 return;
             }
         }
-
     }
 }
