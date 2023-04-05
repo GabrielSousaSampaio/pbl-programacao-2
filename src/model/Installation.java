@@ -6,17 +6,23 @@ import java.util.List;
 public class Installation extends Service{
 
     //Attributes
-
     private List<String> programs;
     private String operatingSystem;
+    private double programPrice;
+    private double operatingSystemPrice;
+    private double programCost;
+    private double operatingSystemCost;
 
-    public Installation (String operatingSystem){
+    public Installation (String operatingSystem, double programPrice, double programCost, double operatingSystemPrice, double operatingSystemCost){
         this.programs = new ArrayList<String>();
         this.operatingSystem = operatingSystem;
+        this.programPrice = programPrice;
+        this.programCost = programCost;
+        this.operatingSystemPrice = operatingSystemPrice;
+        this.operatingSystemCost = operatingSystemCost;
     }
 
     //Getters and Setters
-
     public List<String> getPrograms() {
         return programs;
     }
@@ -33,16 +39,59 @@ public class Installation extends Service{
         this.operatingSystem = operatingSystem;
     }
 
+    public double getProgramPrice() {
+        return programPrice;
+    }
+
+    public void setProgramPrice(double programPrice) {
+        this.programPrice = programPrice;
+    }
+
+    public double getOperatingSystemPrice() {
+        return operatingSystemPrice;
+    }
+
+    public void setOperatingSystemPrice(double operatingSystemPrice) {
+        this.operatingSystemPrice = operatingSystemPrice;
+    }
+
+    public double getProgramCost() {
+        return programCost;
+    }
+
+    public void setProgramCost(double programCost) {
+        this.programCost = programCost;
+    }
+
+    public double getOperatingSystemCost() {
+        return operatingSystemCost;
+    }
+
+    public void setOperatingSystemCost(double operatingSystemCost) {
+        this.operatingSystemCost = operatingSystemCost;
+    }
+
     @Override
     public double getPrice(){
         double aux = 0;
         for(String i : programs){
-            aux+=10;
+            aux+=getProgramPrice();
         }
         if (operatingSystem != null){
-            aux+=70;
+            aux+=getOperatingSystemPrice();
+        }
+        return aux;
+    }
+
+    @Override
+    public double getCost(){
+        double aux = 0;
+        for(String i : programs){
+            aux+=getProgramCost();
+        }
+        if (operatingSystem != null){
+            aux+=getOperatingSystemCost();
         }
         return aux;
     }
 }
-
