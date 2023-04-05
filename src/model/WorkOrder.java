@@ -1,5 +1,6 @@
 package model;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -20,11 +21,11 @@ public class WorkOrder {
 
 
     //Constructor
-    public WorkOrder(Customer customer, List<Service> service, String description) {
+    public WorkOrder(Customer customer, String description) {
         this.setCustomer(customer);
         this.setTechnician(null);
         this.setStatus("Em andamento.");
-        this.setServicelist(service);
+        this.setServicelist(new ArrayList<>());
         this.setDescription(description);
         //this.setCreatedAt();
         //this.setPrice(price);

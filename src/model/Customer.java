@@ -7,8 +7,8 @@ public class Customer extends User{
     private String phone;
 
     //Constructor
-    public Customer(int id, String name, String email, String adress, String phone) {
-        super(id, name, email);
+    public Customer(String name, String email, String adress, String phone) {
+        super(name, email);
         this.setAdress(adress);
         this.setPhone(phone);
     }
