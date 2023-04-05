@@ -6,8 +6,8 @@ public class OtherComponent extends Component{
     private String description;
 
     //Constructor
-    public OtherComponent(double price, double cost, String description) {
-        super(price, cost);
+    public OtherComponent(double price, double cost, int quantity, String description) {
+        super(price, cost, quantity);
         this.description = description;
     }
 

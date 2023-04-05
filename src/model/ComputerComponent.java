@@ -7,8 +7,8 @@ public class ComputerComponent extends Component {
     private String manufacturer;
 
     //Constructor
-    public ComputerComponent(double price, double cost, String name, String manufacturer){
-        super(price, cost);
+    public ComputerComponent(double price, double cost, int quantity, String name, String manufacturer){
+        super(price, cost, quantity);
         this.name = name;
         this.manufacturer = manufacturer;
     }
