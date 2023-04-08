@@ -1,6 +1,7 @@
 package dao;
 
 import dao.component.ComponentDAO;
+import dao.component.ComponentListImpl;
 import dao.customer.CustomerDAO;
 import dao.customer.CustomerListImpl;
 import dao.technician.TechnicianDAO;
@@ -19,6 +20,7 @@ public class DAO {
     private static ComponentDAO componentDAO;
 
     //Methods
+    
     public static WorkOrderDAO getWorkOrder(){
 
         if(workOrderDAO == null) {
@@ -41,6 +43,14 @@ public class DAO {
             technicianDAO = new TechnicianListImpl();
         }
         return technicianDAO;
+    }
+
+    public static ComponentDAO getComponent(){
+
+        if(componentDAO == null) {
+            componentDAO= new ComponentListImpl();
+        }
+        return componentDAO;
     }
 
 }
