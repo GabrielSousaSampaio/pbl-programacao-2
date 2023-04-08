@@ -1,8 +1,6 @@
 package dao.customer;
 
 import model.Customer;
-import model.Technician;
-
 import java.util.ArrayList;
 import java.util.List;
 
