@@ -1,7 +1,7 @@
 package model;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class WorkOrder {
@@ -13,8 +13,8 @@ public class WorkOrder {
     private String status;
     public List<Service> servicelist;
     public String description;
-    public Date createdAt;
-    public Date finishedAt;
+    public LocalDateTime createdAt;
+    public LocalDateTime finishedAt;
     public double price;
     public double cost;
     public String paymentMethod;
@@ -27,7 +27,7 @@ public class WorkOrder {
         this.setStatus("Em andamento.");
         this.setServicelist(new ArrayList<>());
         this.setDescription(description);
-        //this.setCreatedAt();
+        this.setCreatedAt();
         //this.setPrice(price);
         //this.setCost(cost);
         this.setPaymentMethod(null);
@@ -82,20 +82,20 @@ public class WorkOrder {
         this.description = description;
     }
 
-    public Date getCreatedAt() {
+    public LocalDateTime getCreatedAt() {
         return createdAt;
     }
 
-    public void setCreatedAt(Date createdAt) {
-        this.createdAt = createdAt;
+    public void setCreatedAt() {
+        this.createdAt = LocalDateTime.now();
     }
 
-    public Date getFinishedAt() {
+    public LocalDateTime getFinishedAt() {
         return finishedAt;
     }
 
-    public void setFinishedAt(Date finishedAt) {
-        this.finishedAt = finishedAt;
+    public void setFinishedAt() {
+        this.finishedAt = LocalDateTime.now();
     }
 
     public double getPrice() {
