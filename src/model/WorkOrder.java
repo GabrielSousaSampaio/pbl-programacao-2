@@ -69,6 +69,10 @@ public class WorkOrder {
         return servicelist;
     }
 
+    public void setServicelist(List<Service> servicelist) {
+        this.servicelist = servicelist;
+    }
+
     public String getDescription() {
         return description;
     }
@@ -105,7 +109,6 @@ public class WorkOrder {
     public void addService(Service service){
         this.servicelist.add(service);
     }
-
     public void finished(){
         this.setStatus("Finalizado.");
     }
