@@ -106,6 +106,14 @@ public class WorkOrder {
     }
 
     //Other Methods
+    public void setPaymentToDebit(){
+        this.paymentMethod = ("Débito");
+    }
+
+    public void setPaymentToCash(){
+        this.paymentMethod = ("À vista");
+    }
+
     public void addService(Service service){
         this.servicelist.add(service);
     }
