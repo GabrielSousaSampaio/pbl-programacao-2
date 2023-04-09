@@ -15,8 +15,6 @@ public class WorkOrder {
     public String description;
     public LocalDateTime createdAt;
     public LocalDateTime finishedAt;
-    public double price;
-    public double cost;
     public String paymentMethod;
 
 
@@ -98,22 +96,6 @@ public class WorkOrder {
         this.finishedAt = LocalDateTime.now();
     }
 
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
-    public double getCost() {
-        return cost;
-    }
-
-    public void setCost(double cost) {
-        this.cost = cost;
-    }
-
     public String getPaymentMethod() {
         return paymentMethod;
     }
@@ -153,6 +135,22 @@ public class WorkOrder {
             return true;
         }
         return false;
+    }
+
+    public double getTotalPrice() {
+        double price = 0;
+        for (Service i: servicelist) {
+            price+=i.getPrice();
+        }
+        return price;
+    }
+
+    public double getTotalCost() {
+        double cost = 0;
+        for (Service i: servicelist) {
+            cost+=i.getCost();
+        }
+        return cost;
     }
 
     //public boolean isPaid(){
