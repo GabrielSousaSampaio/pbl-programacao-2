@@ -11,11 +11,11 @@ public class WorkOrder {
     private Customer customer;
     private Technician technician;
     private String status;
-    public List<Service> servicelist;
-    public String description;
-    public LocalDateTime createdAt;
-    public LocalDateTime finishedAt;
-    public String paymentMethod;
+    private List<Service> servicelist;
+    private String description;
+    private LocalDateTime createdAt;
+    private LocalDateTime finishedAt;
+    private String paymentMethod;
 
 
     //Constructor
