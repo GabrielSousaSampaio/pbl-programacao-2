@@ -1,6 +1,7 @@
 package model;
 
 import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -68,10 +69,6 @@ public class WorkOrder {
         return servicelist;
     }
 
-    public void setServicelist(List<Service> servicelist) {
-        this.servicelist = servicelist;
-    }
-
     public String getDescription() {
         return description;
     }
@@ -108,6 +105,7 @@ public class WorkOrder {
     public void addService(Service service){
         this.servicelist.add(service);
     }
+
     public void finished(){
         this.setStatus("Finalizado.");
     }
