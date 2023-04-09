@@ -151,6 +151,10 @@ public class WorkOrder {
         return cost;
     }
 
+    public double waitingTime(){
+        return ChronoUnit.MINUTES.between(getCreatedAt(), getFinishedAt());
+    }
+
     //public boolean isPaid(){
 
     //}
