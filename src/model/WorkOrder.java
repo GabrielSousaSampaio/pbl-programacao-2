@@ -1,7 +1,8 @@
 package model;
 
+import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class WorkOrder {
@@ -11,13 +12,12 @@ public class WorkOrder {
     private Customer customer;
     private Technician technician;
     private String status;
-    public List<Service> servicelist;
-    public String description;
-    public Date createdAt;
-    public Date finishedAt;
-    public double price;
-    public double cost;
-    public String paymentMethod;
+    private List<Service> servicelist;
+    private String description;
+    private LocalDateTime createdAt;
+    private LocalDateTime finishedAt;
+    private String paymentMethod;
+    private String satisfaction;
 
 
     //Constructor
@@ -27,10 +27,9 @@ public class WorkOrder {
         this.setStatus("Em andamento.");
         this.setServicelist(new ArrayList<>());
         this.setDescription(description);
-        //this.setCreatedAt();
-        //this.setPrice(price);
-        //this.setCost(cost);
+        this.setCreatedAt();
         this.setPaymentMethod(null);
+        this.setSatisfaction("Sem resposta");
     }
 
     //Getters and Setters
@@ -82,36 +81,20 @@ public class WorkOrder {
         this.description = description;
     }
 
-    public Date getCreatedAt() {
+    public LocalDateTime getCreatedAt() {
         return createdAt;
     }
 
-    public void setCreatedAt(Date createdAt) {
-        this.createdAt = createdAt;
+    public void setCreatedAt() {
+        this.createdAt = LocalDateTime.now();
     }
 
-    public Date getFinishedAt() {
+    public LocalDateTime getFinishedAt() {
         return finishedAt;
     }
 
-    public void setFinishedAt(Date finishedAt) {
-        this.finishedAt = finishedAt;
-    }
-
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
-    public double getCost() {
-        return cost;
-    }
-
-    public void setCost(double cost) {
-        this.cost = cost;
+    public void setFinishedAt() {
+        this.finishedAt = LocalDateTime.now();
     }
 
     public String getPaymentMethod() {
@@ -123,6 +106,18 @@ public class WorkOrder {
     }
 
     //Other Methods
+    public void setPaymentToCreditCard(){
+        this.paymentMethod = ("Cartão de Crédito");
+    }
+
+    public void setPaymentToPix(){
+        this.paymentMethod = ("Pix");
+    }
+
+    public void setPaymentToCash(){
+        this.paymentMethod = ("À vista");
+    }
+
     public void addService(Service service){
         this.servicelist.add(service);
     }
@@ -153,6 +148,46 @@ public class WorkOrder {
             return true;
         }
         return false;
+    }
+
+    public double getTotalPrice() {
+        double price = 0;
+        for (Service i: servicelist) {
+            price+=i.getPrice();
+        }
+        return price;
+    }
+
+    public double getTotalCost() {
+        double cost = 0;
+        for (Service i: servicelist) {
+            cost+=i.getCost();
+        }
+        return cost;
+    }
+
+    public String getSatisfaction() {
+        return satisfaction;
+    }
+
+    public void setSatisfaction(String satisfaction) {
+        this.satisfaction = satisfaction;
+    }
+
+    public void setSatisfactionToSatisfied() {
+        this.satisfaction = "Satisfeito";
+    }
+
+    public void setSatisfactionToNormal() {
+        this.satisfaction = "Normal";
+    }
+
+    public void setSatisfactionToUnsatisfied() {
+        this.satisfaction = "Insatisfeito";
+    }
+
+    public double waitingTime(){
+        return ChronoUnit.MINUTES.between(getCreatedAt(), getFinishedAt());
     }
 
     //public boolean isPaid(){

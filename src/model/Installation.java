@@ -73,10 +73,7 @@ public class Installation extends Service{
 
     @Override
     public double getPrice(){
-        double aux = 0;
-        for(String i : programs){
-            aux+=getProgramPrice();
-        }
+        double aux = getProgramPrice()*programs.size();;
         if (operatingSystem != null){
             aux+=getOperatingSystemPrice();
         }
@@ -85,10 +82,7 @@ public class Installation extends Service{
 
     @Override
     public double getCost(){
-        double aux = 0;
-        for(String i : programs){
-            aux+=getProgramCost();
-        }
+        double aux = getProgramCost()*programs.size();
         if (operatingSystem != null){
             aux+=getOperatingSystemCost();
         }
