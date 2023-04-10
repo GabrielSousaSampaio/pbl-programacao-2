@@ -27,8 +27,6 @@ public class WorkOrder {
         this.setServicelist(new ArrayList<>());
         this.setDescription(description);
         this.setCreatedAt();
-        //this.setPrice(price);
-        //this.setCost(cost);
         this.setPaymentMethod(null);
     }
 
