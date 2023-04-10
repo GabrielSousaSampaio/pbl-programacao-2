@@ -6,6 +6,8 @@ import dao.customer.CustomerDAO;
 import dao.customer.CustomerListImpl;
 import dao.technician.TechnicianDAO;
 import dao.technician.TechnicianListImpl;
+import dao.user.UserDAO;
+import dao.user.UserListImpl;
 import dao.workorder.WorkOrderDAO;
 import dao.workorder.WorkOrderListImpl;
 
@@ -18,6 +20,8 @@ public class DAO {
     private static WorkOrderDAO workOrderDAO;
 
     private static ComponentDAO componentDAO;
+
+    private static UserDAO userDAO;
 
     //Methods
     
@@ -51,6 +55,14 @@ public class DAO {
             componentDAO= new ComponentListImpl();
         }
         return componentDAO;
+    }
+
+    public static UserDAO getUser(){
+
+        if(userDAO == null) {
+            userDAO = new UserListImpl();
+        }
+        return userDAO;
     }
 
 }
