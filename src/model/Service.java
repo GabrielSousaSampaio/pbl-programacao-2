@@ -11,9 +11,15 @@ public class Service {
         return price;
     }
 
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
     public double getCost() {
         return cost;
     }
+
+    public void setCost(double cost) {
+        this.cost = cost;
+    }
 }
-
-
