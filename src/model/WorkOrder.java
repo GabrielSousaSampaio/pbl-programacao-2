@@ -17,7 +17,7 @@ public class WorkOrder {
     private LocalDateTime createdAt;
     private LocalDateTime finishedAt;
     private String paymentMethod;
-    private String satisfaction;
+    private int satisfaction;
 
 
     //Constructor
@@ -29,7 +29,7 @@ public class WorkOrder {
         this.setDescription(description);
         this.setCreatedAt();
         this.setPaymentMethod(null);
-        this.setSatisfaction("Sem resposta");
+        this.setSatisfaction(0);
     }
 
     //Getters and Setters
@@ -166,31 +166,15 @@ public class WorkOrder {
         return cost;
     }
 
-    public String getSatisfaction() {
+    public int getSatisfaction() {
         return satisfaction;
     }
 
-    public void setSatisfaction(String satisfaction) {
+    public void setSatisfaction(int satisfaction) {
         this.satisfaction = satisfaction;
-    }
-
-    public void setSatisfactionToSatisfied() {
-        this.satisfaction = "Satisfeito";
-    }
-
-    public void setSatisfactionToNormal() {
-        this.satisfaction = "Normal";
-    }
-
-    public void setSatisfactionToUnsatisfied() {
-        this.satisfaction = "Insatisfeito";
     }
 
     public double waitingTime(){
         return ChronoUnit.MINUTES.between(getCreatedAt(), getFinishedAt());
     }
-
-    //public boolean isPaid(){
-
-    //}
 }
