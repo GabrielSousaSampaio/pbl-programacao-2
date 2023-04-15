@@ -12,7 +12,7 @@ public class UserListImpl implements UserDAO {
 
     private int nextID;
 
-    public UserListImpl(List<User> userList, int nextID) {
+    public UserListImpl() {
         this.userList = new ArrayList<User>();
         this.nextID = 0;
     }
