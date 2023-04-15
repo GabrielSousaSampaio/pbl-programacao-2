@@ -6,7 +6,7 @@ import java.util.List;
 public class Building extends Service {
 
     //Attributes
-    private List<Component> usedComponents;
+    private List<Integer> usedComponents;
 
     //Constructor
     public Building(){
@@ -15,7 +15,7 @@ public class Building extends Service {
 
     //Getters and Setters
     private void addComponent(Component computerComponent){
-        this.usedComponents.add(computerComponent);
+        this.usedComponents.add(computerComponent.getId());
     }
 
     @Override
