@@ -3,10 +3,19 @@ package model;
 public class Service {
 
     //Attributes
+    private int id;
     private double price;
     private double cost;
 
     //Getters and Setters
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public double getPrice() {
         return price;
     }
