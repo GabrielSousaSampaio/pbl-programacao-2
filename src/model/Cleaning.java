@@ -2,12 +2,22 @@ package model;
 
 public class Cleaning extends Service{
 
-    public Cleaning(double price, double cost){
-        setPrice(price);
-        setCost(cost);
+    //Attributes
+    private String cleaningName;
+
+    //Constructor
+    public Cleaning(String cleaningName, double price, double cost){
+        this.cleaningName = cleaningName;
+        this.setPrice(price);
+        this.setCost(cost);
     }
 
-    public void addService(){
-        this.getPrice();
+    //Getters and Setters
+    public String getCleaningName() {
+        return cleaningName;
+    }
+
+    public void setCleaningName(String cleaningName) {
+        this.cleaningName = cleaningName;
     }
 }
