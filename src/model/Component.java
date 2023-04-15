@@ -47,4 +47,10 @@ public class Component {
     public void setId(int id) {
         this.id = id;
     }
+
+    public Component copy(){
+
+        return new Component(this.getPrice(), this.getCost(), this.getQuantity());
+
+    }
 }
