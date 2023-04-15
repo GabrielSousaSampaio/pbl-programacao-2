@@ -12,12 +12,12 @@ public class WorkOrder {
     private Customer customer;
     private Technician technician;
     private String status;
-    private List<Service> servicelist;
+    private ArrayList<Integer> servicelist;
     private String description;
     private LocalDateTime createdAt;
     private LocalDateTime finishedAt;
     private String paymentMethod;
-    private String satisfaction;
+    private int satisfaction;
 
 
     //Constructor
@@ -29,7 +29,7 @@ public class WorkOrder {
         this.setDescription(description);
         this.setCreatedAt();
         this.setPaymentMethod(null);
-        this.setSatisfaction("Sem resposta");
+        this.setSatisfaction(0);
     }
 
     //Getters and Setters
@@ -65,11 +65,11 @@ public class WorkOrder {
         this.status = status;
     }
 
-    public List<Service> getServicelist() {
+    public ArrayList<Integer> getServicelist() {
         return servicelist;
     }
 
-    public void setServicelist(List<Service> servicelist) {
+    public void setServicelist (ArrayList<Integer> servicelist) {
         this.servicelist = servicelist;
     }
 
@@ -119,7 +119,7 @@ public class WorkOrder {
     }
 
     public void addService(Service service){
-        this.servicelist.add(service);
+        this.servicelist.add(service.getId());
     }
     public void finished(){
         this.setStatus("Finalizado.");
@@ -150,47 +150,15 @@ public class WorkOrder {
         return false;
     }
 
-    public double getTotalPrice() {
-        double price = 0;
-        for (Service i: servicelist) {
-            price+=i.getPrice();
-        }
-        return price;
-    }
-
-    public double getTotalCost() {
-        double cost = 0;
-        for (Service i: servicelist) {
-            cost+=i.getCost();
-        }
-        return cost;
-    }
-
-    public String getSatisfaction() {
+    public int getSatisfaction() {
         return satisfaction;
     }
 
-    public void setSatisfaction(String satisfaction) {
+    public void setSatisfaction(int satisfaction) {
         this.satisfaction = satisfaction;
-    }
-
-    public void setSatisfactionToSatisfied() {
-        this.satisfaction = "Satisfeito";
-    }
-
-    public void setSatisfactionToNormal() {
-        this.satisfaction = "Normal";
-    }
-
-    public void setSatisfactionToUnsatisfied() {
-        this.satisfaction = "Insatisfeito";
     }
 
     public double waitingTime(){
         return ChronoUnit.MINUTES.between(getCreatedAt(), getFinishedAt());
     }
-
-    //public boolean isPaid(){
-
-    //}
 }
