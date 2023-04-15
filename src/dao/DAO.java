@@ -1,11 +1,19 @@
 package dao;
 
+import dao.building.BuildingDAO;
+import dao.building.BuildingListImpl;
+import dao.cleaning.CleaningDAO;
+import dao.cleaning.CleaningListImpl;
 import dao.component.ComponentDAO;
 import dao.component.ComponentListImpl;
 import dao.customer.CustomerDAO;
 import dao.customer.CustomerListImpl;
+import dao.installation.InstallationDAO;
+import dao.installation.InstallationListImpl;
 import dao.technician.TechnicianDAO;
 import dao.technician.TechnicianListImpl;
+import dao.user.UserDAO;
+import dao.user.UserListImpl;
 import dao.workorder.WorkOrderDAO;
 import dao.workorder.WorkOrderListImpl;
 
@@ -18,6 +26,14 @@ public class DAO {
     private static WorkOrderDAO workOrderDAO;
 
     private static ComponentDAO componentDAO;
+
+    private static UserDAO userDAO;
+
+    private static BuildingDAO buildingDAO;
+
+    private static CleaningDAO  cleaningDAO;
+
+    private static InstallationDAO installationDAO;
 
     //Methods
     
@@ -52,5 +68,42 @@ public class DAO {
         }
         return componentDAO;
     }
+
+    public static UserDAO getUser(){
+
+        if(userDAO == null) {
+            userDAO = new UserListImpl();
+        }
+        return userDAO;
+    }
+
+    public static BuildingDAO getBuilding(){
+
+        if(buildingDAO == null) {
+            buildingDAO = new BuildingListImpl();
+        }
+        return buildingDAO;
+
+    }
+
+    public static CleaningDAO getCleaning(){
+
+        if(cleaningDAO == null) {
+            cleaningDAO  = new CleaningListImpl();
+        }
+        return cleaningDAO;
+
+    }
+
+    public static InstallationDAO getInstallation(){
+
+        if(installationDAO == null) {
+            installationDAO  = new InstallationListImpl();
+        }
+        return installationDAO;
+
+    }
+
+
 
 }
