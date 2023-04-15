@@ -75,4 +75,18 @@ public class ComponentListImpl implements ComponentDAO {
         }
 
     }
+
+    public Component pickingComponent(Component component,int quantity){
+
+        if(component.getQuantity() >= quantity){
+
+            component.setQuantity((component.getQuantity() - quantity));
+            Component newComponent = component.copy();
+            newComponent.setQuantity(quantity);
+
+            return newComponent;
+
+        }
+        return null;
+    }
 }
