@@ -1,5 +1,6 @@
 package dao.workorder;
 
+import model.Technician;
 import model.WorkOrder;
 import java.util.ArrayList;
 import java.util.List;
@@ -44,30 +45,92 @@ public class WorkOrderListImpl implements WorkOrderDAO{
         return null;
     }
 
-    public WorkOrder FindByTechnicianId(int id){
+    public List<WorkOrder> FindByTechnicianId(int id){
+
+        List<WorkOrder> workOrderTechinicianList = new ArrayList<WorkOrder>();
 
         for(WorkOrder wo: this.WorkOrderList){
             if(wo.getTechnician().getId() == id){
-                return wo;
+
+                workOrderTechinicianList.add(wo);
+
             }
         }
 
-        return null;
+        return workOrderTechinicianList;
 
     };
 
-    public WorkOrder FindByCustomerId(int id){
+    public List<WorkOrder>  FindByCustomerId(int id){
+
+        List<WorkOrder> workOrderTechinicianList = new ArrayList<WorkOrder>();
 
         for(WorkOrder wo: this.WorkOrderList){
             if(wo.getCustomer().getId() == id){
-                return wo;
+                workOrderTechinicianList.add(wo);
             }
         }
 
-        return null;
+        return workOrderTechinicianList;
 
 
     };
+
+    public List<WorkOrder> getFinishedWorkOrders(){
+
+        List<WorkOrder> workOrderFinishedList = new ArrayList<WorkOrder>();
+
+        for(WorkOrder wo: this.WorkOrderList){
+            if(wo.isFinshed()){
+
+                workOrderFinishedList.add(wo);
+
+            }
+        }
+
+        return workOrderFinishedList;
+
+    }
+
+    public double getFinishedWorkOrdersTotalPrice(){
+
+        double totalPrice = 0;
+
+        for(WorkOrder wo: this.getFinishedWorkOrders()){
+
+                totalPrice += wo.getPrice();
+
+        }
+
+        return totalPrice;
+
+    }
+
+    public double getFinishedWorkOrdersTotalCost(){
+
+        double totalPrice = 0;
+
+        for(WorkOrder wo: this.getFinishedWorkOrders()){
+
+                totalPrice += wo.getCost();
+
+        }
+
+        return totalPrice;
+
+    }
+
+    //public double getFinishedWorkOrdersAverageTime()
+
+    //public int getFinishedWorkOrdersAverageRating()
+
+    //public
+
+
+
+
+
+
 
     @Override
     public void update(WorkOrder workOrder) {
