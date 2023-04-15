@@ -44,9 +44,30 @@ public class WorkOrderListImpl implements WorkOrderDAO{
         return null;
     }
 
-    //public WorkOrder FindByTechnician();
+    public WorkOrder FindByTechnicianId(int id){
 
-    //public WorkOrder FindByCustomer();
+        for(WorkOrder wo: this.WorkOrderList){
+            if(wo.getTechnician().getId() == id){
+                return wo;
+            }
+        }
+
+        return null;
+
+    };
+
+    public WorkOrder FindByCustomerId(int id){
+
+        for(WorkOrder wo: this.WorkOrderList){
+            if(wo.getCustomer().getId() == id){
+                return wo;
+            }
+        }
+
+        return null;
+
+
+    };
 
     @Override
     public void update(WorkOrder workOrder) {
