@@ -1,14 +1,18 @@
 package model;
 
-public class Customer extends User{
+public class Customer{
 
     //Attributes
+    private int id;
+    private String name;
+    private String email;
     private String adress;
     private String phone;
 
     //Constructor
     public Customer(String name, String email, String adress, String phone) {
-        super(name, email);
+        this.setName(name);
+        this.setEmail(email);
         this.setAdress(adress);
         this.setPhone(phone);
     }
@@ -30,4 +34,27 @@ public class Customer extends User{
         this.phone = phone;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
 }
