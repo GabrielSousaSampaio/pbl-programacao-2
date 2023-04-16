@@ -14,8 +14,8 @@ public class Building extends Service {
     }
 
     //Getters and Setters
-    private void addComponent(Component computerComponent){
-        this.usedComponents.add(computerComponent);
+    public void addComponent(Component component){
+        this.usedComponents.add(component);
     }
 
     public List<Component> getUsedComponents() {
