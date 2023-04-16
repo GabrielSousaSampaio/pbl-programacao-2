@@ -9,27 +9,25 @@ public class WorkOrder {
 
     //Attributes
     private int id;
-    private Customer customer;
-    private Technician technician;
+    private int customerId;
+    private int technicianId;
     private String status;
-    private ArrayList<Integer> servicelist;
+    private ArrayList<Service> serviceList;
     private String description;
     private LocalDateTime createdAt;
     private LocalDateTime finishedAt;
     private String paymentMethod;
     private int satisfaction;
+    private boolean paidOut;
 
 
     //Constructor
     public WorkOrder(Customer customer, String description) {
-        this.setCustomer(customer);
-        this.setTechnician(null);
+        this.setCustomerId(customer);
         this.setStatus("Em andamento.");
-        this.setServicelist(new ArrayList<>());
+        this.setServiceList(new ArrayList<>());
         this.setDescription(description);
         this.setCreatedAt();
-        this.setPaymentMethod(null);
-        this.setSatisfaction(0);
     }
 
     //Getters and Setters
@@ -41,20 +39,20 @@ public class WorkOrder {
         this.id = id;
     }
 
-    public Customer getCustomer() {
-        return customer;
+    public int getCustomerId() {
+        return customerId;
     }
 
-    public void setCustomer(Customer customer) {
-        this.customer = customer;
+    public void setCustomerId(Customer customer) {
+        this.customerId = customer.getId();
     }
 
-    public Technician getTechnician() {
-        return technician;
+    public int getTechnicianId() {
+        return technicianId;
     }
 
-    public void setTechnician(Technician technician) {
-        this.technician = technician;
+    public void setTechnicianId(Technician technician) {
+        this.technicianId = technician.getId();
     }
 
     public String getStatus() {
@@ -65,12 +63,12 @@ public class WorkOrder {
         this.status = status;
     }
 
-    public ArrayList<Integer> getServicelist() {
-        return servicelist;
+    public ArrayList<Service> getServicelist() {
+        return serviceList;
     }
 
-    public void setServicelist (ArrayList<Integer> servicelist) {
-        this.servicelist = servicelist;
+    public void setServiceList (ArrayList<Service> serviceList) {
+        this.serviceList = serviceList;
     }
 
     public String getDescription() {
@@ -119,7 +117,7 @@ public class WorkOrder {
     }
 
     public void addService(Service service){
-        this.servicelist.add(service.getId());
+        this.serviceList.add(service);
     }
     public void finished(){
         this.setStatus("Finalizado.");
@@ -130,24 +128,15 @@ public class WorkOrder {
     }
 
     public boolean isFinshed(){
-        if(this.getStatus().equals("Finalizado.")){
-            return true;
-        }
-        return false;
+        return this.getStatus().equals("Finalizado.");
     }
 
     public boolean isCanceled(){
-        if(this.getStatus().equals("Cancelado.")){
-            return true;
-        }
-        return false;
+        return this.getStatus().equals("Cancelado.");
     }
 
     public boolean isOngoing(){
-        if(this.getStatus().equals("Em andamento.")){
-            return true;
-        }
-        return false;
+        return this.getStatus().equals("Em andamento.");
     }
 
     public int getSatisfaction() {
@@ -156,6 +145,38 @@ public class WorkOrder {
 
     public void setSatisfaction(int satisfaction) {
         this.satisfaction = satisfaction;
+    }
+
+    public boolean isPaidOut() {
+        return paidOut;
+    }
+
+    public void setPaidOut(boolean paidOut) {
+        this.paidOut = paidOut;
+    }
+
+    public void removeService(Service service){
+        for (Service i : serviceList) {
+            if (i.equals(service)){
+                this.serviceList.remove(i);
+            }
+        }
+    }
+
+    public double getPrice() {
+        double price = 0;
+        for (Service i: serviceList) {
+            price+=i.getPrice();
+        }
+        return price;
+    }
+
+    public double getCost() {
+        double cost = 0;
+        for (Service i: serviceList) {
+            cost+=i.getCost();
+        }
+        return cost;
     }
 
     public double waitingTime(){

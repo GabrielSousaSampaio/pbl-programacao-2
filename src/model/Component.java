@@ -49,8 +49,6 @@ public class Component {
     }
 
     public Component copy(){
-
         return new Component(this.getPrice(), this.getCost(), this.getQuantity());
-
     }
 }

@@ -18,12 +18,4 @@ public class Technician extends User{
     public void setWorkingOn(WorkOrder WorkingOn) {
         this.WorkingOn = WorkingOn;
     }
-
-    //Other Methods
-    public void updateOrderStatus(String status){
-        this.WorkingOn.setStatus(status);
-    }
-    public void updateOrder(WorkOrder workOrder){
-
-    }
 }

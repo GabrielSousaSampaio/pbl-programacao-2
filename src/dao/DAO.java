@@ -1,7 +1,5 @@
 package dao;
 
-import dao.building.BuildingDAO;
-import dao.building.BuildingListImpl;
 import dao.cleaning.CleaningDAO;
 import dao.cleaning.CleaningListImpl;
 import dao.component.ComponentDAO;
@@ -28,8 +26,6 @@ public class DAO {
     private static ComponentDAO componentDAO;
 
     private static UserDAO userDAO;
-
-    private static BuildingDAO buildingDAO;
 
     private static CleaningDAO  cleaningDAO;
 
@@ -77,15 +73,6 @@ public class DAO {
         return userDAO;
     }
 
-    public static BuildingDAO getBuilding(){
-
-        if(buildingDAO == null) {
-            buildingDAO = new BuildingListImpl();
-        }
-        return buildingDAO;
-
-    }
-
     public static CleaningDAO getCleaning(){
 
         if(cleaningDAO == null) {
@@ -103,7 +90,4 @@ public class DAO {
         return installationDAO;
 
     }
-
-
-
 }

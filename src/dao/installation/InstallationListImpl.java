@@ -1,6 +1,5 @@
 package dao.installation;
 
-import model.Cleaning;
 import model.Installation;
 
 import java.util.ArrayList;
@@ -9,23 +8,18 @@ import java.util.List;
 public class InstallationListImpl implements InstallationDAO{
 
     private List<Installation> installationList;
-
     private int nextId;
-
 
     public InstallationListImpl() {
         this.installationList = new ArrayList<Installation>();
         this.nextId = 0;
-
     }
 
     @Override
     public Installation create(Installation installation) {
         installation.setId(nextId);
         this.nextId++;
-
         this.installationList.add(installation);
-
         return installation;
     }
 
@@ -36,7 +30,6 @@ public class InstallationListImpl implements InstallationDAO{
 
     @Override
     public Installation FindById(int id) {
-
         for(Installation i: this.installationList){
             if(i.getId() == id){
                 return i;
@@ -48,9 +41,7 @@ public class InstallationListImpl implements InstallationDAO{
 
     @Override
     public void update(Installation installation) {
-
         int indexOF;
-
         for(Installation i: this.installationList){
             if(i.getId() == installation.getId()){
                 indexOF = this.installationList.indexOf(i);
@@ -58,12 +49,10 @@ public class InstallationListImpl implements InstallationDAO{
                 return;
             }
         }
-
     }
 
     @Override
     public void delete(int id) {
-
         int indexRemove;
         for(Installation i: this.installationList){
             if(i.getId() == id){
@@ -72,6 +61,5 @@ public class InstallationListImpl implements InstallationDAO{
                 return;
             }
         }
-
     }
 }
