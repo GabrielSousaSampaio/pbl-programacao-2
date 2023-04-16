@@ -6,8 +6,8 @@ public class Technician extends User{
     private WorkOrder WorkingOn;
 
     //Constructor
-    public Technician(String name, String email) {
-        super(name, email);
+    public Technician(String name, String email, String password) {
+        super(name, email, password);
     }
 
     //Getters and Setters
