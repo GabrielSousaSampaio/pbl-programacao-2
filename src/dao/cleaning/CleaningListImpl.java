@@ -8,23 +8,19 @@ import java.util.List;
 public class CleaningListImpl implements CleaningDAO{
 
     private List<Cleaning> cleaningList;
-
     private int nextId;
 
 
     public CleaningListImpl() {
         this.cleaningList = new ArrayList<Cleaning>();
         this.nextId = 0;
-
     }
 
     @Override
     public Cleaning create(Cleaning cleaning) {
         cleaning.setId(nextId);
         this.nextId++;
-
         this.cleaningList.add(cleaning);
-
         return cleaning;
     }
 
@@ -35,21 +31,17 @@ public class CleaningListImpl implements CleaningDAO{
 
     @Override
     public Cleaning FindById(int id) {
-
         for(Cleaning c: this.cleaningList){
             if(c.getId() == id){
                 return c;
             }
         }
-
         return null;
     }
 
     @Override
     public void update(Cleaning cleaning) {
-
         int indexOF;
-
         for(Cleaning c: this.cleaningList){
             if(c.getId() == cleaning.getId()){
                 indexOF = this.cleaningList.indexOf(c);
@@ -57,7 +49,6 @@ public class CleaningListImpl implements CleaningDAO{
                 return;
             }
         }
-
     }
 
     @Override
@@ -70,6 +61,5 @@ public class CleaningListImpl implements CleaningDAO{
                 return;
             }
         }
-
     }
 }

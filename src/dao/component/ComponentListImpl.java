@@ -7,27 +7,21 @@ import java.util.List;
 public class ComponentListImpl implements ComponentDAO {
 
     private List<Component> ComponentList;
-
     private int nextID;
 
     //Constructor
-
     public ComponentListImpl() {
-
         this.ComponentList = new ArrayList<Component>();
         this.nextID = 0;
     }
 
 
     //Methods
-
     @Override
     public Component create(Component component) {
         component.setId(nextID);
         this.nextID++;
-
         this.ComponentList.add(component);
-
         return component;
     }
 
@@ -49,9 +43,7 @@ public class ComponentListImpl implements ComponentDAO {
 
     @Override
     public void update(Component component) {
-
         int indexOF;
-
         for(Component c: this.ComponentList){
             if(c.getId() == component.getId()){
                 indexOF = this.ComponentList.indexOf(c);
@@ -64,7 +56,6 @@ public class ComponentListImpl implements ComponentDAO {
 
     @Override
     public void delete(int id) {
-
         int indexRemove;
         for(Component c: this.ComponentList){
             if(c.getId() == id){
@@ -73,19 +64,14 @@ public class ComponentListImpl implements ComponentDAO {
                 return;
             }
         }
-
     }
 
-    public Component pickingComponent(Component component,int quantity){
-
+    public Component pickingComponent(Component component, int quantity){
         if(component.getQuantity() >= quantity){
-
             component.setQuantity((component.getQuantity() - quantity));
             Component newComponent = component.copy();
             newComponent.setQuantity(quantity);
-
             return newComponent;
-
         }
         return null;
     }

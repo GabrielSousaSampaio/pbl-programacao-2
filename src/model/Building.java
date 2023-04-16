@@ -17,4 +17,8 @@ public class Building extends Service {
     private void addComponent(Component computerComponent){
         this.usedComponents.add(computerComponent);
     }
+
+    public List<Component> getUsedComponents() {
+        return usedComponents;
+    }
 }

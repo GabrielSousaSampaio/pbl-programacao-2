@@ -1,6 +1,5 @@
 package dao.user;
 
-import model.Customer;
 import model.User;
 
 import java.util.ArrayList;
@@ -21,11 +20,8 @@ public class UserListImpl implements UserDAO {
     public User create(User user) {
         user.setId(nextID);
         this.nextID++;
-
         this.userList.add(user);
-
         return user;
-
     }
 
     @Override
@@ -40,14 +36,12 @@ public class UserListImpl implements UserDAO {
                 return u;
             }
         }
-
         return null;
     }
 
     @Override
     public void update(User user) {
         int indexOF;
-
         for(User u: this.userList){
             if(u.getId() == user.getId()){
                 indexOF = this.userList.indexOf(u);
@@ -55,7 +49,6 @@ public class UserListImpl implements UserDAO {
                 return;
             }
         }
-
     }
 
     @Override
@@ -68,6 +61,5 @@ public class UserListImpl implements UserDAO {
                 return;
             }
         }
-
     }
 }
