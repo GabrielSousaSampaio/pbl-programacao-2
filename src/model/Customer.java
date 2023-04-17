@@ -11,7 +11,7 @@ public class Customer{
     private int id;
     private String name;
     private String email;
-    private String adress;
+    private String address;
     private String phone;
 
     //Constructor
@@ -19,14 +19,14 @@ public class Customer{
      * Método cronstrutor do cliente
      * @param name O nome do cliente
      * @param email O e-mail do cliente
-     * @param adress O endereço do cliente
+     * @param address O endereço do cliente
      * @param phone O telefone do cliente
      */
-    public Customer(String name, String email, String adress, String phone) {
-        this.setName(name);
-        this.setEmail(email);
-        this.setAdress(adress);
-        this.setPhone(phone);
+    public Customer(String name, String email, String address, String phone) {
+        this.name = name;
+        this.email = email;
+        this.address = address;
+        this.phone = phone;
     }
 
     //Getters and Setters
@@ -35,16 +35,16 @@ public class Customer{
      * Método criado para retonar o endereço do cliente
      * @return O endereço do cliente
      */
-    public String getAdress() {
-        return adress;
+    public String getAddress() {
+        return address;
     }
 
     /**
      * Método criado para alterar o endereço do cliente
-     * @param adress  O endereço do cliente
+     * @param address  O endereço do cliente
      */
-    public void setAdress(String adress) {
-        this.adress = adress;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     /**

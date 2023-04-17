@@ -19,12 +19,12 @@ public class CustomerTest {
         customer.setName("Jorgin");
         customer.setEmail("jorgin@gmail.com");
         customer.setPhone("(71) 990000000");
-        customer.setAdress("Rua: do jorgin, número: do jorgin");
+        customer.setAddress("Rua: do jorgin, número: do jorgin");
 
         Assertions.assertEquals(10, customer.getId());
         Assertions.assertEquals("Jorgin", customer.getName());
         Assertions.assertEquals("jorgin@gmail.com", customer.getEmail());
         Assertions.assertEquals("(71) 990000000", customer.getPhone());
-        Assertions.assertEquals("Rua: do jorgin, número: do jorgin", customer.getAdress());
+        Assertions.assertEquals("Rua: do jorgin, número: do jorgin", customer.getAddress());
     }
 }
