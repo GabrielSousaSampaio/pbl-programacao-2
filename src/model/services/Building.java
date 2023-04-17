@@ -1,27 +1,29 @@
 package model.services;
 
 import model.components.Component;
+import model.components.ComputerComponent;
+import model.components.OtherComponent;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  *
- * Classe criada para representar um serviço de montagem com as peças utilizadas
+ * Classe criada para representar um serviço de montagem com utilizacão de peças
  *
  * @author Gabriel Sampaio, Gabriel Baptista
  */
 
-public class Building extends Service {
+public class Building implements Service {
 
-    //Attributes
+    //Attribute
     private List<Component> usedComponents;
 
 
     //Constructor
 
     /**
-     * Método cronstrutor do serviço de montagem
+     * Método cronstrutor do serviço de montagem que inicializa a lista de componentes utilizados
      */
     public Building(){
         this.usedComponents = new ArrayList<>();
@@ -30,9 +32,17 @@ public class Building extends Service {
     //Methods
     /**
      * Método para adicionar um componente na lista dos componentes utilizados na montagem
-     * @param component O componente para ser adicionado
+     * @param component O componente do tipo "outros" para ser adicionado
      */
-    public void addComponent(Component component){
+    public void addComponent(OtherComponent component){
+        this.usedComponents.add(component);
+    }
+
+    /**
+     * Método para adicionar um componente na lista dos componentes utilizados na montagem
+     * @param component O componente de computador para ser adicionado
+     */
+    public void addComponent(ComputerComponent component){
         this.usedComponents.add(component);
     }
 
@@ -48,7 +58,6 @@ public class Building extends Service {
      * Método criado para retonar o preço dos componentes
      * @return o preço dos componentes
      */
-    @Override
     public double getPrice() {
         double aux = 0;
         for (Component i: usedComponents) {
@@ -58,10 +67,9 @@ public class Building extends Service {
     }
 
     /**
-     * Método criado para retonar o preço dos componentes
-     * @return o preço dos componentes
+     * Método criado para retonar o custo dos componentes
+     * @return o custo dos componentes
      */
-    @Override
     public double getCost() {
         double aux = 0;
         for (Component i: usedComponents) {
