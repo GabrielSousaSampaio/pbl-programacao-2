@@ -1,10 +1,6 @@
 package tests.dao.workorder;
 
 import dao.DAO;
-import dao.user.UserDAO;
-import dao.user.UserListImpl;
-import dao.workorder.WorkOrderDAO;
-import dao.workorder.WorkOrderListImpl;
 import model.*;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -18,6 +14,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class WorkOrderListImplTest {
 
+    //Atributtes
     private Customer client1;
 
     private Customer client2;
@@ -82,7 +79,7 @@ class WorkOrderListImplTest {
         WorkOrder newWorkOrder02 = DAO.getWorkOrder().create(workOrder2);
         WorkOrder newWorkOrder03 = DAO.getWorkOrder().create(workOrder3);
 
-        //Asserts
+        //Asserts: Comparing the WorkOrder objects
         assertEquals(workOrder1,newWorkOrder01);
         assertEquals(workOrder2,newWorkOrder02);
         assertEquals(workOrder3,newWorkOrder03);
@@ -97,17 +94,16 @@ class WorkOrderListImplTest {
         DAO.getWorkOrder().create(workOrder2);
         DAO.getWorkOrder().create(workOrder3);
 
-
+        //Create workOrderList
         List<WorkOrder> workOrderList = new ArrayList<WorkOrder>();
 
+        //Adding work orderds
         workOrderList.add(workOrder1);
         workOrderList.add(workOrder2);
         workOrderList.add(workOrder3);
 
-
+        //Assert: Comparing the lists
         assertEquals(DAO.getWorkOrder().FindMany(), workOrderList);
-
-
 
     }
 
@@ -119,7 +115,7 @@ class WorkOrderListImplTest {
         DAO.getWorkOrder().create(workOrder2);
         DAO.getWorkOrder().create(workOrder3);
 
-
+        //Asserts: Comparing the WorkOrder objects
         assertEquals(workOrder1,DAO.getWorkOrder().FindById(workOrder1.getId()));
 
 
@@ -133,8 +129,10 @@ class WorkOrderListImplTest {
         DAO.getWorkOrder().create(workOrder2);
         DAO.getWorkOrder().create(workOrder3);
 
-       Technician technician1 =  new Technician("Pedro","Perdro@email.com", "12345");
-       technician1.setId(1);
+        //Creating new technician
+        Technician technician1 =  new Technician("Pedro","Perdro@email.com", "12345");
+        technician1.setId(1);
+
 
         List<WorkOrder> workOrderList = new ArrayList<WorkOrder>();
         workOrderList.add(workOrder1);
@@ -146,7 +144,7 @@ class WorkOrderListImplTest {
         workOrder2.setTechnicianId(technician1);
         workOrder3.setTechnicianId(technician1);
 
-
+        //Assert
         assertEquals(workOrderList, DAO.getWorkOrder().FindByTechnicianId(workOrder1.getTechnicianId()));
 
 
