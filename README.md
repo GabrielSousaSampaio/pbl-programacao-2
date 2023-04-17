@@ -1,15 +1,20 @@
 # Sistema de Controle de Assistência Técnica de Microcomputadores
 
 Este é um sistema de controle de assistência técnica de microcomputadores, que é composto por várias classes e métodos para criar e gerenciar ordens de serviço, componentes, técnicos e clientes.
-As funcionalidades deste sistema incluem a criação e manipulação de ordens de serviço, adição e remoção de serviços, atualização do status da ordem de serviço, obtenção de preços e custos de ordens de serviço e edifícios, atualização da ordem de serviço e gerenciamento de estoque de peças e equipamentos.
+As funcionalidades deste sistema incluem a criação e manipulação de ordens de serviço, adição e remoção de serviços, atualização do status da ordem de serviço, obtenção de preços e custos de ordens de serviço, atualização da ordem de serviço e gerenciamento de estoque de peças e equipamentos.
 
 ## ⚙️ Principais funcionalidades requeridas
 
-* ### Criar e manipular ordens de serviço
-* ### Gerenciar o estoque de peças e equipamentos necessários para realizar os serviços
-* ### Gerar faturas para os serviços prestados
-* ### Gerar relatórios sobre o desempenho do serviço
-
+### 1. 😀 Criar e manipular clientes 
+- O sistema deve permitir o cadastro de novos usuários, bem como a atualização destes cadastros. 
+### 2. 🗂️ Criar e manipular ordens de serviço
+- O sistema deve permitir que o técnico de assistência técnica crie e gerencie ordens de serviço  capazes de conter serviços de montagem, instalação e limpeza para cada cliente.
+### 3. 🧩 Gerenciar o estoque de peças e equipamentos necessários para realizar os serviços
+-  O sistema deve possibilitar que o técnico possa retirar do estoque as peças necessárias para realizar os serviços que lhe são atribuídos. Desta forma, uma vez que o estoque de peças pode acabar, o projeto também deve contar com recursos que permitem o gerenciamento do estoque, como adição de novas peças e controle de custos.
+### 4. 🧾 Gerar faturas para os serviços prestados
+- O sistema deve possibilitar a criação de fatura para determinado serviço concluído. Este também deve ter suporte para diversas formas de pagamento: cartão de crédito, transferência bancária ou dinheiro.
+### 5. ✍️ Gerar relatórios sobre o desempenho do serviço
+- O sistema deve possibilitar que relatórios acerca dos serviços possam ser gerados. Assim sendo, o projeto deve ser capaz de retornar o tempo de médio de espera, os serviços cancelados, os custos das peças utilizadas, o estoque e a satisfação média dos clientes.
 
 ## 📋 Padrão MVC
 
@@ -37,12 +42,12 @@ As funcionalidades deste sistema incluem a criação e manipulação de ordens d
 
 ## 🛠️ Construído com
 
-* OpenJDK 19
-* Maven
-* IntelliJ IDEA
-* Git
+* Java - Openjdk versão 19.0.2
+* Junit - Versão 5.8.1
+* IntelliJ IDEA - 2022.3.2 (Community Edition)
+* Git - Versão 2.39.1.windows.1
 
 ## ✒️ Autores
 
-* **Gabriel Sampaio** -[@GabrielSousaSampaio](https://github.com/GabrielSousaSampaio)
+* **Gabriel Sampaio** - [@GabrielSousaSampaio](https://github.com/GabrielSousaSampaio)
 * **Gabriel Baptista** - [@BaptistaGabriel](https://github.com/BaptistaGabriel)
