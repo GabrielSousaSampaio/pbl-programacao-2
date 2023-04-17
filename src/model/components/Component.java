@@ -2,106 +2,67 @@ package model.components;
 
 /**
  *
- * Classe criada para representar um componente para o serviço de montagem
+ * Interface criada para representar e apresentar os métodos de um componente para o serviço de montagem
  *
  * @author Gabriel Sampaio, Gabriel Baptista
  */
 
-public class Component {
+public interface Component {
 
-    //Attributes
-    private double price;
-    private double cost;
-    private int quantity;
-    private int id;
-
-    //Constructor
-    /**
-     * Método cronstrutor do componente
-     * @param price O preço do componente
-     * @param cost O custo do componente
-     * @param quantity A quantidade de componentes
-     */
-    public Component(double price, double cost, int quantity){
-        this.price = price;
-        this.cost = cost;
-        this.quantity = quantity;
-    }
 
     //Getters and Setters
     /**
      * Método criado para retonar o preço do componente
      * @return O preço do componente
      */
-    public double getPrice() {
-        return price;
-    }
+    public double getPrice();
 
     /**
      * Método criado para alterar o preço do componente
      * @param price O preço do componente
      */
-    public void setPrice(double price) {
-        this.price = price;
-    }
+    public void setPrice(double price);
+
 
     /**
      * Método criado para retonar o custo do componente
      * @return O custo do componente
      */
-    public double getCost() {
-        return cost;
-    }
+    public double getCost();
 
     /**
      * Método criado para alterar o custo do componente
      * @param cost O custo do componente
      */
-    public void setCost(double cost) {
-        this.cost = cost;
-    }
+    public void setCost(double cost);
 
     /**
      * Método criado para retonar a quantidade de componentes
      * @return A quantidade de componentes
      */
-    public int getQuantity() {
-        return quantity;
-    }
+    public int getQuantity();
 
     /**
      * Método criado para alterar a quantidade de componentes
      * @param quantity A quantidade de componentes
      */
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
-    }
+    public void setQuantity(int quantity);
 
     /**
      * Método criado para retonar o id do componente
      * @return O id do componente
      */
-    public int getId() {
-        return id;
-    }
+    public int getId();
 
     /**
      * Método criado para alterar o id do componente
      * @param id O id do componente
      */
-    public void setId(int id) {
-        this.id = id;
-    }
+    public void setId(int id);
 
     /**
      * Método criado para retonar uma cópia do componente
-     * @return Um novo objeto componente
+     * @return Uma cópia do objeto componente
      */
-    public Component copy(){
-
-        Component newComponent = new Component(this.getPrice(), this.getCost(), this.getQuantity());
-        newComponent.setId(this.getId());
-
-        return newComponent;
-    }
+    public Component copy();
 }
