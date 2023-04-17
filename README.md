@@ -23,7 +23,7 @@ As funcionalidades deste sistema incluem a criação e manipulação de ordens d
 * Os models são representados pelas classes que gerenciam as ordens de serviço, componentes, técnicos e clientes, entre outros.
 * A view é responsável pela interface do usuário, permitindo que o técnico de assistência técnica visualize as informações sobre as ordens de serviço, peças e estoque
 
-<p align = center>Obs: A view ainda não se encontra disponível no projeto<p/>
+<p align = center>Obs: A view e o controller ainda não se encontram disponíveis no projeto<p/>
 
 ## 📁 Padrão DAO
 
