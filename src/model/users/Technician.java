@@ -1,4 +1,6 @@
-package model;
+package model.users;
+
+import model.WorkOrder;
 
 /**
  *

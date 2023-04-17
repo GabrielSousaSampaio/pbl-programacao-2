@@ -1,7 +1,7 @@
 package tests.dao.technician;
 
 import dao.DAO;
-import model.Technician;
+import model.users.Technician;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

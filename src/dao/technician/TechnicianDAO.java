@@ -1,7 +1,7 @@
 package dao.technician;
 
 import dao.CRUD;
-import model.Technician;
+import model.users.Technician;
 
 /**
  * Interface criada para apresentar os métodos a serem implementados pela aplicação referente aos técnicos

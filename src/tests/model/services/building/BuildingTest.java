@@ -1,9 +1,7 @@
-package tests.model;
+package tests.model.services.building;
 
-import model.Building;
-import model.Component;
-import model.ComputerComponent;
-import org.junit.jupiter.api.AfterEach;
+import model.services.Building;
+import model.components.ComputerComponent;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

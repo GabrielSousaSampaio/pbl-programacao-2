@@ -1,6 +1,6 @@
-package tests.model;
+package tests.model.components.otherComponent;
 
-import model.OtherComponent;
+import model.components.OtherComponent;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

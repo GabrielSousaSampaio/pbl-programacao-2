@@ -1,4 +1,4 @@
-package tests.model;
+package tests.model.customer;
 
 import model.Customer;
 import org.junit.jupiter.api.Assertions;

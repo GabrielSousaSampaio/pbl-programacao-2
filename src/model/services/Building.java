@@ -1,4 +1,6 @@
-package model;
+package model.services;
+
+import model.components.Component;
 
 import java.util.ArrayList;
 import java.util.List;

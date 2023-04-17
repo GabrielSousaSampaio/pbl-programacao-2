@@ -1,7 +1,7 @@
 package dao.cleaning;
 
 import dao.CRUD;
-import model.Cleaning;
+import model.services.Cleaning;
 
 /**
  * Interface criada para apresentar os métodos a serem implementados pela aplicação referente aos serviços de limpeza

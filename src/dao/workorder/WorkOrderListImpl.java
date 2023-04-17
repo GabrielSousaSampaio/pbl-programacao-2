@@ -1,6 +1,9 @@
 package dao.workorder;
 
 import model.*;
+import model.components.Component;
+import model.services.Building;
+import model.services.Service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,7 +24,7 @@ public class WorkOrderListImpl implements WorkOrderDAO{
     //Constructor
 
     /**
-     * Método cronstrutor que inicializa o array para armazenar as ordens de serviço e inicia o id com o valor 0
+     * Método cronstrutor que inicializa o array para armazenar as ordens de serviço e inicia o id com o valor 1
      *
      */
 

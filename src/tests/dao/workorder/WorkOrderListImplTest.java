@@ -2,6 +2,12 @@ package tests.dao.workorder;
 
 import dao.DAO;
 import model.*;
+import model.components.ComputerComponent;
+import model.components.OtherComponent;
+import model.services.Building;
+import model.services.Cleaning;
+import model.services.Installation;
+import model.users.Technician;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -330,6 +336,7 @@ class WorkOrderListImplTest {
 
         Building building02 =  new Building();
 
+        building02.addComponent(new OtherComponent(300,50,20,"RAM_16GB"));
         building02.addComponent(new ComputerComponent(300,50,20,"RAM_16GB","XXXXX"));
 
         workOrder1.addService(building02);

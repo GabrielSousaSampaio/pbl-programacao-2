@@ -1,7 +1,7 @@
 package tests.dao.cleaning;
 
 import dao.DAO;
-import model.Cleaning;
+import model.services.Cleaning;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

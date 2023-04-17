@@ -1,6 +1,6 @@
-package tests.model;
+package tests.model.services.installlation;
 
-import model.Installation;
+import model.services.Installation;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

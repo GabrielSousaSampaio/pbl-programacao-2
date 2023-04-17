@@ -1,7 +1,7 @@
 package dao.component;
 
 import dao.CRUD;
-import model.Component;
+import model.components.Component;
 
 /**
  * Interface criada para apresentar os métodos a serem implementados pela aplicação referente aos componentes do estoque

@@ -1,6 +1,6 @@
 package dao.component;
 
-import model.Component;
+import model.components.Component;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,12 +20,12 @@ public class ComponentListImpl implements ComponentDAO {
     //Constructor
 
     /**
-     * Método cronstrutor que inicializa o array para armazenar os componentes e inicia o id com o valor 0
+     * Método cronstrutor que inicializa o array para armazenar os componentes e inicia o id com o valor 1
      *
      */
     public ComponentListImpl() {
         this.componentList = new ArrayList<Component>();
-        this.nextID = 0;
+        this.nextID = 1;
     }
 
     //Methods

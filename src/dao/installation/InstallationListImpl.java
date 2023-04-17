@@ -1,6 +1,6 @@
 package dao.installation;
 
-import model.Installation;
+import model.services.Installation;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,12 +21,12 @@ public class InstallationListImpl implements InstallationDAO{
     //Constructor
 
     /**
-     * Método cronstrutor que inicializa o array para armazenar os serviços de instalação e inicia o id com o valor 0
+     * Método cronstrutor que inicializa o array para armazenar os serviços de instalação e inicia o id com o valor 1
      *
      */
     public InstallationListImpl() {
         this.installationList = new ArrayList<Installation>();
-        this.nextId = 0;
+        this.nextId = 1;
     }
 
     //Methods

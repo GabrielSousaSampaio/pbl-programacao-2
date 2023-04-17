@@ -1,6 +1,6 @@
 package dao.recepcionist;
 
-import model.Recepcionist;
+import model.users.Recepcionist;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,13 +20,13 @@ public class RecepcionistListImpl implements RecepcionistDAO{
     //Constructor
 
     /**
-     * Método cronstrutor que inicializa o array para armazenar os recepcionistas e inicia o id com o valor 0
+     * Método cronstrutor que inicializa o array para armazenar os recepcionistas e inicia o id com o valor 1
      *
      */
     public RecepcionistListImpl() {
 
         this.recepcionistList = new ArrayList<Recepcionist>();
-        this.nextId = 0;
+        this.nextId = 1;
 
     }
 
