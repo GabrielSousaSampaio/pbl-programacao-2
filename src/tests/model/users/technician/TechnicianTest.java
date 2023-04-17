@@ -12,9 +12,7 @@ class TechnicianTest {
     WorkOrder workOrder;
     Customer customer;
 
-    /**
-     * Método que configura os atributos de technician, workOrder e customer antes de cada teste
-     */
+    //Método que configura os atributos de technician, workOrder e customer antes de cada teste
     @BeforeEach
     public void setUp(){
         technician = new Technician("Technician", "technician@gmail.com", "123456");
@@ -22,9 +20,7 @@ class TechnicianTest {
         workOrder = new WorkOrder(customer, "Serviço teste");
     }
 
-    /**
-     * Método que testa os métodos get e set de Technician.java
-     */
+    //Método que testa os métodos get e set de Technician.java
     @Test
     public void gettersAndSetters(){
         technician.setId(53);

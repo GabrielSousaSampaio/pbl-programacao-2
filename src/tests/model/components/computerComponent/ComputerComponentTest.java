@@ -8,17 +8,13 @@ import org.junit.jupiter.api.Test;
 public class ComputerComponentTest {
     ComputerComponent computerComponent;
 
-    /**
-     * Método que configura os atributos de computerComponent antes de cada teste
-     */
+    //Método que configura os atributos de computerComponent antes de cada teste
     @BeforeEach
     public void setUp(){
         computerComponent = new ComputerComponent(5000, 4500, 100, "Processador", "AMD");
     }
 
-    /**
-     * Método que testa os métodos get e set de ComputerComponent.java
-     */
+    //Método que testa os métodos get e set de ComputerComponent.java
     @Test
     public void gettersAndSetters(){
         computerComponent.setPrice(200);

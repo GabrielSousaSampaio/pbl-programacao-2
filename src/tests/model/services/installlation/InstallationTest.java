@@ -9,17 +9,13 @@ public class InstallationTest {
 
     Installation installation;
 
-    /**
-     * Método que configura os atributos de installation antes de cada teste
-     */
+    //Método que configura os atributos de installation antes de cada teste
     @BeforeEach
     public void setUp(){
         installation = new Installation(1000, 200, "Instalação de HD");
     }
 
-    /**
-     * Método que testa os métodos get e set de Installation.java
-     */
+    //Método que testa os métodos get e set de Installation.java
     @Test
     public void gettersAndSetters(){
         installation.setPrice(800);

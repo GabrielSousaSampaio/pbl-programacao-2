@@ -9,17 +9,13 @@ public class OtherComponentTest {
 
     OtherComponent component0;
 
-    /**
-     * Método que configura os atributos de component0 antes de cada teste
-     */
+    //Método que configura os atributos de component0 antes de cada teste
     @BeforeEach
     public void setUp(){
         component0 = new OtherComponent(60, 20, 95, "Pen Drive 16GB");
     }
 
-    /**
-     * Método que testa os métodos get e set de OtherComponent.java
-     */
+    //Método que testa os métodos get e set de OtherComponent.java
     @Test
     public void gettersAndSetters(){
         component0.setPrice(45);
