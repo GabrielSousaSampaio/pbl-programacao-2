@@ -1,6 +1,9 @@
 package dao.component;
 
 import model.components.Component;
+import model.components.ComputerComponent;
+import model.components.OtherComponent;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -112,7 +115,19 @@ public class ComponentListImpl implements ComponentDAO {
 
 
     @Override
-    public Component pickingComponent(Component component, int quantity){
+    public Component pickingComponent(ComputerComponent component, int quantity){
+
+        if(component.getQuantity() >= quantity){
+            component.setQuantity((component.getQuantity() - quantity));
+            Component newComponent = component.copy();
+            newComponent.setQuantity(quantity);
+            return newComponent;
+        }
+        return null;
+    }
+
+    @Override
+    public Component pickingComponent(OtherComponent component, int quantity){
         if(component.getQuantity() >= quantity){
             component.setQuantity((component.getQuantity() - quantity));
             Component newComponent = component.copy();
