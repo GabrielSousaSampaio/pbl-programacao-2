@@ -29,6 +29,8 @@ As funcionalidades deste sistema incluem a criação e manipulação de ordens d
 
 ## 🧑‍💻 Diagrama de classes
 
+![Cópia de diagrama uml - diagrama de classe](https://user-images.githubusercontent.com/91295529/232501891-84d5c45f-04fe-4cfa-84d0-bb618ce7e78c.jpeg)
+
 ## 💻 Diagrama de casos de uso
 
 ![diagrama uml - casos de uso ideias](https://user-images.githubusercontent.com/91295529/232383345-f6e70d26-4c92-4661-bf11-eafe54ae5cf3.jpeg)
