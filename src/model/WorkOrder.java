@@ -121,6 +121,7 @@ public class WorkOrder {
     }
     public void finished(){
         this.setStatus("Finalizado.");
+        this.setFinishedAt();
     }
 
     public void cancel(){
