@@ -26,4 +26,12 @@ public class BuildingTest {
         Assertions.assertEquals(25, building.getUsedComponents().get(0).getCost());
         Assertions.assertEquals(600, building.getUsedComponents().get(1).getPrice());
     }
+
+    @Test
+    public void getPriceAndGetCost(){
+        building.addComponent(computerComponent0);
+        building.addComponent(computerComponent1);
+        Assertions.assertEquals(650, building.getPrice());
+        Assertions.assertEquals(425, building.getCost());
+    }
 }
