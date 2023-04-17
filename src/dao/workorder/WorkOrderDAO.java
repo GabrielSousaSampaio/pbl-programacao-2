@@ -1,7 +1,7 @@
 package dao.workorder;
 
 import dao.CRUD;
-import model.Component;
+import model.components.Component;
 import model.WorkOrder;
 
 import java.util.List;

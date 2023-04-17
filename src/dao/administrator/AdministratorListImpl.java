@@ -1,6 +1,6 @@
 package dao.administrator;
 
-import model.Administrator;
+import model.users.Administrator;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,12 +20,12 @@ public class AdministratorListImpl implements AdministratorDAO {
 
     //Constructor
     /**
-     * Método cronstrutor que inicializa o array para armazenar os administradores e inicia o id com o valor 0
+     * Método cronstrutor que inicializa o array para armazenar os administradores e inicia o id com o valor 1
      *
      */
     public AdministratorListImpl() {
         this.administratorList = new ArrayList<Administrator>();
-        this.nextId = 0;
+        this.nextId = 1;
     }
 
     //Methods

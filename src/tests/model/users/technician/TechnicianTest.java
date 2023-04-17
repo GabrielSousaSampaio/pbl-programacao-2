@@ -1,13 +1,11 @@
-package tests.model;
+package tests.model.users.technician;
 
 import model.Customer;
-import model.Technician;
+import model.users.Technician;
 import model.WorkOrder;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class TechnicianTest {
     Technician technician;

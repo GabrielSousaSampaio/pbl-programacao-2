@@ -1,6 +1,6 @@
 package dao.cleaning;
 
-import model.Cleaning;
+import model.services.Cleaning;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,12 +21,12 @@ public class CleaningListImpl implements CleaningDAO{
 
     //Constructor
     /**
-     * Método cronstrutor que inicializa o array para armazenar os serviços de limpeza e inicia o id com o valor 0
+     * Método cronstrutor que inicializa o array para armazenar os serviços de limpeza e inicia o id com o valor 1
      *
      */
     public CleaningListImpl() {
         this.cleaningList = new ArrayList<Cleaning>();
-        this.nextId = 0;
+        this.nextId = 1;
     }
 
     //Methods

@@ -1,7 +1,7 @@
 package dao.administrator;
 
 import dao.CRUD;
-import model.Administrator;
+import model.users.Administrator;
 
 /**
  * Interface criada para apresentar os métodos a serem implementados pela aplicação referente aos administradores

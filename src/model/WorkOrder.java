@@ -1,5 +1,8 @@
 package model;
 
+import model.services.Service;
+import model.users.Technician;
+
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;

@@ -1,7 +1,7 @@
 package dao.recepcionist;
 
 import dao.CRUD;
-import model.Recepcionist;
+import model.users.Recepcionist;
 
 
 /**

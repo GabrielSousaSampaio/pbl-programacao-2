@@ -20,12 +20,12 @@ public class CustomerListImpl implements CustomerDAO {
     //Constructor
 
     /**
-     * Método cronstrutor que inicializa o array para armazenar os clientes e inicia o id com o valor 0
+     * Método cronstrutor que inicializa o array para armazenar os clientes e inicia o id com o valor 1
      *
      */
     public CustomerListImpl() {
         this.customerList = new ArrayList<Customer>();
-        this.nextID = 0;
+        this.nextID = 1;
     }
 
     //Methods

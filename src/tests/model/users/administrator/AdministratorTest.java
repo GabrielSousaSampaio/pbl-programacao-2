@@ -1,6 +1,6 @@
-package tests.model;
+package tests.model.users.administrator;
 
-import model.Administrator;
+import model.users.Administrator;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

@@ -1,6 +1,6 @@
-package tests.model;
+package tests.model.services.cleaning;
 
-import model.Cleaning;
+import model.services.Cleaning;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

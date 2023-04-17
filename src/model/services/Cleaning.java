@@ -1,4 +1,4 @@
-package model;
+package model.services;
 
 /**
  *
@@ -7,7 +7,7 @@ package model;
  * @author Gabriel Sampaio, Gabriel Baptista
  */
 
-public class Cleaning extends Service{
+public class Cleaning extends Service {
 
     //Attributes
     private int id;

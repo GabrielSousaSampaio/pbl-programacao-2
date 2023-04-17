@@ -1,7 +1,7 @@
 package tests.dao.installation;
 
 import dao.DAO;
-import model.Installation;
+import model.services.Installation;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

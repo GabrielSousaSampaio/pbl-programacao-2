@@ -1,7 +1,9 @@
 package tests.dao.component;
 
 import dao.DAO;
-import model.*;
+import model.components.Component;
+import model.components.ComputerComponent;
+import model.components.OtherComponent;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

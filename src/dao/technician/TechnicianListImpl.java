@@ -1,6 +1,6 @@
 package dao.technician;
 
-import model.Technician;
+import model.users.Technician;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,12 +19,12 @@ public class TechnicianListImpl implements TechnicianDAO{
     //Constructor
 
     /**
-     * Método cronstrutor que inicializa o array para armazenar os técnicos e inicia o id com o valor 0
+     * Método cronstrutor que inicializa o array para armazenar os técnicos e inicia o id com o valor 1
      *
      */
     public TechnicianListImpl() {
         this.technicianList = new ArrayList<Technician>();
-        this.nextID = 0;
+        this.nextID = 1;
     }
 
     //Methods

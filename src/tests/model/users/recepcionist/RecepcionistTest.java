@@ -1,6 +1,6 @@
-package tests.model;
+package tests.model.users.recepcionist;
 
-import model.Recepcionist;
+import model.users.Recepcionist;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
