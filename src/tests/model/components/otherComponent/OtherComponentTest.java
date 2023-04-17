@@ -8,13 +8,18 @@ import org.junit.jupiter.api.Test;
 public class OtherComponentTest {
 
     OtherComponent component0;
-    OtherComponent component1;
 
+    /**
+     * Método que configura os atributos de component0 antes de cada teste
+     */
     @BeforeEach
     public void setUp(){
         component0 = new OtherComponent(60, 20, 95, "Pen Drive 16GB");
     }
 
+    /**
+     * Método que testa os métodos get e set de OtherComponent.java
+     */
     @Test
     public void gettersAndSetters(){
         component0.setPrice(45);

@@ -11,6 +11,9 @@ public class BuildingTest {
     Building building;
     ComputerComponent computerComponent0, computerComponent1;
 
+    /**
+     * Método que configura os atributos de computerComponent0 e computerComponent1 antes de cada teste
+     */
     @BeforeEach
     public void setUp(){
         building = new Building();
@@ -18,6 +21,9 @@ public class BuildingTest {
         computerComponent1 = new ComputerComponent(600, 400, 15, "Placa Mãe", "Asus");
     }
 
+    /**
+     * Método que testa o método "addComponent" de Building.java
+     */
     @Test
     public void addComponent(){
         building.addComponent(computerComponent0);
@@ -27,6 +33,9 @@ public class BuildingTest {
         Assertions.assertEquals(600, building.getUsedComponents().get(1).getPrice());
     }
 
+    /**
+     * Método que testa os métodos "getPrice" e "getCost" de Building.java
+     */
     @Test
     public void getPriceAndGetCost(){
         building.addComponent(computerComponent0);

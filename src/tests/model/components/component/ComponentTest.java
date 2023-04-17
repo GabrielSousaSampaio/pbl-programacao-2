@@ -10,11 +10,17 @@ public class ComponentTest {
     Component component0;
     Component component1;
 
+    /**
+     * Método que configura os atributos de component0 antes de cada teste
+     */
     @BeforeEach
     public void setUp(){
         component0 = new Component(300, 10, 2000);
     }
 
+    /**
+     * Método que testa o método "copy" de Component.java
+     */
     @Test void copy(){
         component1 = component0.copy();
         Assertions.assertEquals(component1.getPrice(), component0.getPrice());
@@ -22,6 +28,9 @@ public class ComponentTest {
         Assertions.assertEquals(component1.getQuantity(), component0.getQuantity());
     }
 
+    /**
+     * Método que testa os métodos get e set de Component.java
+     */
     @Test
     public void gettersAndSetters(){
         component0.setPrice(100);

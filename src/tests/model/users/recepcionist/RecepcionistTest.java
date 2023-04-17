@@ -8,11 +8,17 @@ import org.junit.jupiter.api.Test;
 public class RecepcionistTest {
     Recepcionist recepcionist;
 
+    /**
+     * Método que configura os atributos de recepcionist antes de cada teste
+     */
     @BeforeEach
     public void setUp(){
         recepcionist = new Recepcionist("Recepcionista", "recepcionista@gmail.com", "recepcionista");
     }
 
+    /**
+     * Método que testa os métodos get e set de Recepcionist.java
+     */
     @Test
     public void gettersAndSetters(){
         recepcionist.setId(94);

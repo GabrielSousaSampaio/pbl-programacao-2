@@ -19,6 +19,9 @@ public class WorkOrderTest {
     Installation installation;
     Cleaning cleaning;
 
+    /**
+     * Método que configura os atributos de customer, workOrder, technician, installation e cleaning antes de cada teste
+     */
     @BeforeEach
     public void setUp(){
         installation = new Installation(100, 20, "Windows Vista");
@@ -28,6 +31,9 @@ public class WorkOrderTest {
         workOrder = new WorkOrder(customer, "Serviço teste");
     }
 
+    /**
+     * Método que testa o set e o get das formas de pagamento de workOrder
+     */
     @Test
     public void workOrderPaymentMethod(){
         workOrder.setPaymentToCreditCard();
@@ -43,6 +49,9 @@ public class WorkOrderTest {
         Assertions.assertEquals("TestPaymentMethod", workOrder.getPaymentMethod());
     }
 
+    /**
+     * Método que testa o set e o get do status de workOrder
+     */
     @Test
     public void workOrderStatus(){
         Assertions.assertEquals(true, workOrder.isOngoing());
@@ -54,6 +63,9 @@ public class WorkOrderTest {
         Assertions.assertEquals(true, workOrder.isCanceled());
     }
 
+    /**
+     * Método que testa o set e o get da satisfação de workOrder
+     */
     @Test
     public void workOrderSatisfaction(){
         Assertions.assertEquals(0, workOrder.getSatisfaction());
@@ -62,6 +74,9 @@ public class WorkOrderTest {
         Assertions.assertEquals(5, workOrder.getSatisfaction());
     }
 
+    /**
+     * Método que testa o adicionar e remover itens da lista de serviço de workOrder
+     */
     @Test
     public void addAndRemoveServiceToServiceList(){
         workOrder.addService(installation);
@@ -75,6 +90,9 @@ public class WorkOrderTest {
         Assertions.assertEquals(0, workOrder.getServicelist().size());
     }
 
+    /**
+     * Método que testa o getPrice de workOrder
+     */
     @Test
     public void getprice(){
         workOrder.addService(installation);
@@ -82,6 +100,9 @@ public class WorkOrderTest {
         Assertions.assertEquals(170, workOrder.getPrice());
     }
 
+    /**
+     * Método que testa o getCost de workOrder
+     */
     @Test
     public void getCost(){
         workOrder.addService(installation);
@@ -89,6 +110,9 @@ public class WorkOrderTest {
         Assertions.assertEquals(20, workOrder.getCost());
     }
 
+    /**
+     * Método que testa o tempo de espera de workOrder
+     */
     @Test
     public void waitingTime(){
         workOrder.setCreatedAt();
@@ -96,6 +120,9 @@ public class WorkOrderTest {
         Assertions.assertEquals(0, workOrder.waitingTime());
     }
 
+    /**
+     * Método que testa os métodos get e set de WorkOrder.java
+     */
     @Test
     public void gettersAndSetters(){
         workOrder.setId(5);

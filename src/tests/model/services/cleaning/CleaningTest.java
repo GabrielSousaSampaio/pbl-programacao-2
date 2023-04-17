@@ -9,11 +9,17 @@ public class CleaningTest {
 
     Cleaning cleaning;
 
+    /**
+     * Método que configura os atributos de cleaning antes de cada teste
+     */
     @BeforeEach
     public void setUp(){
         cleaning = new Cleaning(1000, 10, "Limpeza Profunda");
     }
 
+    /**
+     * Método que testa os métodos get e set de Cleaning.java
+     */
     @Test
     public void gettersAndSetters(){
         cleaning.setId(1);
