@@ -14,8 +14,6 @@ import dao.recepcionist.RecepcionistDAO;
 import dao.recepcionist.RecepcionistListImpl;
 import dao.technician.TechnicianDAO;
 import dao.technician.TechnicianListImpl;
-import dao.user.UserDAO;
-import dao.user.UserListImpl;
 import dao.workorder.WorkOrderDAO;
 import dao.workorder.WorkOrderListImpl;
 
@@ -36,8 +34,6 @@ public class DAO {
     private static WorkOrderDAO workOrderDAO;
 
     private static ComponentDAO componentDAO;
-
-    private static UserDAO userDAO;
 
     private static CleaningDAO  cleaningDAO;
 
@@ -94,18 +90,6 @@ public class DAO {
             componentDAO= new ComponentListImpl();
         }
         return componentDAO;
-    }
-
-    /**
-     * Método criado para acessar os objetos do tipo "User" armazenados no sistema
-     */
-
-    public static UserDAO getUser(){
-
-        if(userDAO == null) {
-            userDAO = new UserListImpl();
-        }
-        return userDAO;
     }
 
     /**
