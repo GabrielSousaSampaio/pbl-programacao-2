@@ -7,9 +7,11 @@ package model.services;
  * @author Gabriel Sampaio, Gabriel Baptista
  */
 
-public class Installation extends Service {
+public class Installation implements Service {
 
     //Attributes
+    private double price;
+    private double cost;
     private int id;
     private String installationName;
 
@@ -49,10 +51,42 @@ public class Installation extends Service {
     }
 
     /**
-     * Método criado para retonar o id do serviço de instalação
+     * Método criado para alterar o id do serviço de instalação
      * @param id O id do serviço de instalação
      */
     public void setId(int id) {
         this.id = id;
+    }
+
+    /**
+     * Método criado para retonar o preço do serviço de instalação
+     * @return O preço do serviço de instalação
+     */
+    public double getPrice() {
+        return price;
+    }
+
+    /**
+     * Método criado para alterar o preço do serviço de instalação
+     * @param price  O preço do serviço de instalação
+     */
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    /**
+     * Método criado para retonar o custo do serviço de instalação
+     * @return o custo do serviço de instalação
+     */
+    public double getCost() {
+        return cost;
+    }
+
+    /**
+     * Método criado para alterar o custo do serviço de instalação
+     * @param cost O custo do serviço de instalação
+     */
+    public void setCost(double cost) {
+        this.cost = cost;
     }
 }
