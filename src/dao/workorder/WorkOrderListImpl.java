@@ -5,15 +5,38 @@ import model.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ *
+ * Classe criada a partir da implementação da interface "WorkOrderDAO" para a manipulação das ordens de serviço
+ * armazenadas no sistema através de listas.
+ *
+ * @author Gabriel Sampaio, Gabriel Baptista
+ */
+
 public class WorkOrderListImpl implements WorkOrderDAO{
 
     private List<WorkOrder> workOrderList;
     private int nextID;
 
+    //Constructor
+
+    /**
+     * Método cronstrutor que inicializa o array para armazenar as ordens de serviço e inicia o id com o valor 0
+     *
+     */
+
     public WorkOrderListImpl() {
         this.workOrderList = new ArrayList<>();
         this.nextID = 1;
     }
+
+    //Methods
+
+    /**
+     * Método criado para a adição de uma ordem de serviço na lista do sistema
+     * @param workOrder A ordem de serviço que deseja inserir na lista do sistema
+     * @return A ordem de serviço enviado
+     */
 
     @Override
     public WorkOrder create(WorkOrder workOrder) {
@@ -23,11 +46,22 @@ public class WorkOrderListImpl implements WorkOrderDAO{
         return workOrder;
     }
 
+
+    /**
+     * Método criado para adquirir todas as ordens de serviço cadastrados na lista do sistema
+     * @return A lista com todas as ordens de serviços cadastrados
+     */
+
     @Override
     public List<WorkOrder> FindMany() {
         return this.workOrderList;
     }
 
+    /**
+     * Método criado para econtrar uma ordem de serviço pelo seu id
+     * @param id O id da ordem de serviço
+     * @return A ordem de serviço procurada ou nulo (caso ele não esteja cadastrado)
+     */
     @Override
     public WorkOrder FindById(int id) {
         for(WorkOrder wo: this.workOrderList){
@@ -38,6 +72,8 @@ public class WorkOrderListImpl implements WorkOrderDAO{
         return null;
     }
 
+
+    @Override
     public List<WorkOrder> FindByTechnicianId(int id){
         List<WorkOrder> workOrderTechinicianList = new ArrayList<>();
         for(WorkOrder wo: this.workOrderList){
@@ -48,7 +84,9 @@ public class WorkOrderListImpl implements WorkOrderDAO{
         return workOrderTechinicianList;
     }
 
-    public List<WorkOrder>  FindByCustomerId(int id){
+
+    @Override
+    public List<WorkOrder> FindByCustomerId(int id){
 
         List<WorkOrder> workOrderTechinicianList = new ArrayList<WorkOrder>();
 
@@ -60,6 +98,7 @@ public class WorkOrderListImpl implements WorkOrderDAO{
         return workOrderTechinicianList;
     }
 
+    @Override
     public List<WorkOrder> getFinishedWorkOrders(){
         List<WorkOrder> workOrderFinishedList = new ArrayList<WorkOrder>();
         for(WorkOrder wo: this.workOrderList){
@@ -70,6 +109,7 @@ public class WorkOrderListImpl implements WorkOrderDAO{
         return workOrderFinishedList;
     }
 
+    @Override
     public double getFinishedWorkOrdersTotalPrice(){
         double totalPrice = 0;
         for(WorkOrder wo: this.getFinishedWorkOrders()){
@@ -78,6 +118,7 @@ public class WorkOrderListImpl implements WorkOrderDAO{
         return totalPrice;
     }
 
+    @Override
     public double getFinishedWorkOrdersTotalCost(){
         double totalPrice = 0;
         for(WorkOrder wo: this.getFinishedWorkOrders()){
@@ -86,6 +127,7 @@ public class WorkOrderListImpl implements WorkOrderDAO{
         return totalPrice;
     }
 
+    @Override
     public double getFinishedWorkOrdersAverageTime(){
         double avarageTime = 0;
         for(WorkOrder wo: this.getFinishedWorkOrders()){
@@ -97,6 +139,8 @@ public class WorkOrderListImpl implements WorkOrderDAO{
         return avarageTime;
     }
 
+
+    @Override
     public double getFinishedWorkOrdersAverageRating(){
         double avarageRating = 0;
         for(WorkOrder wo: this.getFinishedWorkOrders()){
@@ -108,6 +152,8 @@ public class WorkOrderListImpl implements WorkOrderDAO{
         return avarageRating;
     }
 
+
+    @Override
     public List<Component> getFinishedWorkOrdersUsedComponents(){
         List<Component> usedComponentList = new ArrayList<>();
         for(WorkOrder wo: this.getFinishedWorkOrders())
@@ -121,6 +167,10 @@ public class WorkOrderListImpl implements WorkOrderDAO{
         return usedComponentList;
     }
 
+    /**
+     * Método criado para atuallizar os dados de uma ordem de serviço previamente cadastrada
+     * @param workOrder A ordem de serviço que deseja atuaizar os dados
+     */
     @Override
     public void update(WorkOrder workOrder) {
         int indexOF;
@@ -133,6 +183,10 @@ public class WorkOrderListImpl implements WorkOrderDAO{
         }
     }
 
+    /**
+     * Método criado para deletar uma ordem de serviço da lista do sistema
+     * @param id O id da ordem de serviço
+     */
     @Override
     public void delete(int id) {
         int indexRemove;
@@ -144,4 +198,14 @@ public class WorkOrderListImpl implements WorkOrderDAO{
             }
         }
     }
+
+    /**
+     * Método criado para limpar completamente a lista de ordens de serviço
+     */
+    @Override
+    public void clearList(){
+
+        this.workOrderList.clear();
+    }
+
 }
