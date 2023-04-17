@@ -32,7 +32,7 @@ public abstract class Service {
 
     /**
      * Método criado para retonar o custo do serviço
-     * @return O custo do serviço
+     * @return o custo do serviço
      */
     public double getCost() {
         return cost;
