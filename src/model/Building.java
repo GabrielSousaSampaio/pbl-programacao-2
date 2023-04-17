@@ -41,4 +41,30 @@ public class Building extends Service {
     public List<Component> getUsedComponents() {
         return usedComponents;
     }
+
+    /**
+     * Método criado para retonar o preço dos componentes
+     * @return o preço dos componentes
+     */
+    @Override
+    public double getPrice() {
+        double aux = 0;
+        for (Component i: usedComponents) {
+            aux += i.getPrice();
+        }
+        return aux;
+    }
+
+    /**
+     * Método criado para retonar o preço dos componentes
+     * @return o preço dos componentes
+     */
+    @Override
+    public double getCost() {
+        double aux = 0;
+        for (Component i: usedComponents) {
+            aux += i.getCost();
+        }
+        return aux;
+    }
 }
