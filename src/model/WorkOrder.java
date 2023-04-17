@@ -38,9 +38,9 @@ public class WorkOrder {
      */
     public WorkOrder(Customer customer, String description) {
         this.setCustomerId(customer);
-        this.setStatus("Em andamento.");
-        this.setServiceList(new ArrayList<>());
-        this.setDescription(description);
+        this.status = "Em andamento.";
+        this.serviceList = new ArrayList<Service>();
+        this.description = description;
         this.setCreatedAt(); // Inicia o contador da criação da ordem
     }
 
