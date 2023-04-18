@@ -6,6 +6,9 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class BuildingTest {
 
     Building building;
@@ -28,6 +31,24 @@ public class BuildingTest {
         Assertions.assertEquals(25, building.getUsedComponents().get(0).getCost());
         Assertions.assertEquals(600, building.getUsedComponents().get(1).getPrice());
     }
+
+    //Método que testa o método "removeComponent" de Building.java
+    @Test
+    public void removeComponent(){
+        building.addComponent(computerComponent0);
+        building.addComponent(computerComponent1);
+
+        List<ComputerComponent> computerComponentList = new ArrayList<>();
+        computerComponentList.add(computerComponent0);
+        computerComponentList.add(computerComponent1);
+
+        building.removeComponent(computerComponent0);
+        computerComponentList.remove(computerComponent0);
+
+        Assertions.assertEquals(computerComponentList, building.getUsedComponents());
+
+    }
+
 
     //Método que testa os métodos "getPrice" e "getCost" de Building.java
     @Test
