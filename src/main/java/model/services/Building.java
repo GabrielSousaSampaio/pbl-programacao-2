@@ -47,6 +47,38 @@ public class Building implements Service {
     }
 
     /**
+     * Método para remover um componente na lista dos componentes utilizados na montagem
+     * @param component O componente do tipo "outros" para ser deletado
+     */
+    public void removeComponent(OtherComponent component){
+        int indexRemove;
+        for (Component i: usedComponents) {
+            if(i.getId() == component.getId()){
+                indexRemove = this.usedComponents.indexOf(i);
+                this.usedComponents.remove(indexRemove);
+                return;
+            }
+        }
+
+    }
+
+    /**
+     * Método para remover um componente na lista dos componentes utilizados na montagem
+     * @param component O componente de computador para ser deletado
+     */
+    public void removeComponent(ComputerComponent component){
+
+        int indexRemove;
+        for (Component i: usedComponents) {
+            if(i.getId() == component.getId()){
+                indexRemove = this.usedComponents.indexOf(i);
+                this.usedComponents.remove(indexRemove);
+                return;
+            }
+        }
+    }
+
+    /**
      * Método para retornar a lista de componentes utilizados
      * @return A lista de componentes utilizados
      */
