@@ -1,5 +1,7 @@
 package main.java.model.components;
 
+import java.io.Serializable;
+
 /**
  *
  * Interface criada para representar e apresentar os métodos de um componente para o serviço de montagem
@@ -7,7 +9,7 @@ package main.java.model.components;
  * @author Gabriel Sampaio, Gabriel Baptista
  */
 
-public interface Component {
+public interface Component extends Serializable{
 
 
     //Getters and Setters

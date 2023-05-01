@@ -3,6 +3,7 @@ package main.java.model;
 import main.java.model.services.Service;
 import main.java.model.users.Technician;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
@@ -14,7 +15,7 @@ import java.util.ArrayList;
  * @author Gabriel Sampaio, Gabriel Baptista
  */
 
-public class WorkOrder {
+public class WorkOrder implements Serializable {
 
     //Attributes
     private int id;

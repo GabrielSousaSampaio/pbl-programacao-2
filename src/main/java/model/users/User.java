@@ -1,5 +1,7 @@
 package main.java.model.users;
 
+import java.io.Serializable;
+
 /**
  *
  * Interface criada para representação do usuário e apresentar os métodos referentes aos mesmos
@@ -7,7 +9,7 @@ package main.java.model.users;
  * @author Gabriel Sampaio, Gabriel Baptista
  */
 
-public interface User {
+public interface User extends Serializable {
 
     /**
      * Método criado para retonar o id do usuário

@@ -1,11 +1,14 @@
 package main.java.model;
+
+import java.io.Serializable;
+
 /**
  *
  * Classe criada para representar um cliente
  *
  * @author Gabriel Sampaio, Gabriel Baptista
  */
-public class Customer{
+public class Customer implements Serializable {
 
     //Attributes
     private int id;

@@ -1,5 +1,7 @@
 package main.java.model.services;
 
+import java.io.Serializable;
+
 /**
  *
  * Interface criada para apresentar os métodos e representar a generalização dos serviços
@@ -7,7 +9,7 @@ package main.java.model.services;
  * @author Gabriel Sampaio, Gabriel Baptista
  */
 
-public interface Service {
+public interface Service extends Serializable {
 
 
     /**
