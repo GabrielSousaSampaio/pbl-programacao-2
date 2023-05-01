@@ -14,7 +14,7 @@ import java.util.List;
 public class TechnicianListImpl implements TechnicianDAO{
 
     private List<Technician> technicianList;
-    private int nextID;
+    private int nextId;
 
     //Constructor
 
@@ -24,7 +24,7 @@ public class TechnicianListImpl implements TechnicianDAO{
      */
     public TechnicianListImpl() {
         this.technicianList = new ArrayList<Technician>();
-        this.nextID = 1;
+        this.nextId = 1;
     }
 
     //Methods
@@ -36,8 +36,8 @@ public class TechnicianListImpl implements TechnicianDAO{
      */
     @Override
     public Technician create(Technician technician) {
-        technician.setId(nextID);
-        this.nextID++;
+        technician.setId(nextId);
+        this.nextId++;
         this.technicianList.add(technician);
         return technician;
     }

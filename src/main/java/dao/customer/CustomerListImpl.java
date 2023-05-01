@@ -15,7 +15,7 @@ import java.util.List;
 public class CustomerListImpl implements CustomerDAO {
 
     private List<Customer> customerList;
-    private int nextID;
+    private int nextId;
 
     //Constructor
 
@@ -25,7 +25,7 @@ public class CustomerListImpl implements CustomerDAO {
      */
     public CustomerListImpl() {
         this.customerList = new ArrayList<Customer>();
-        this.nextID = 1;
+        this.nextId = 1;
     }
 
     //Methods
@@ -37,8 +37,8 @@ public class CustomerListImpl implements CustomerDAO {
      */
     @Override
     public Customer create(Customer customer) {
-        customer.setId(nextID);
-        this.nextID++;
+        customer.setId(nextId);
+        this.nextId++;
         this.customerList.add(customer);
         return customer;
     }

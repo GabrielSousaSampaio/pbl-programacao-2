@@ -18,7 +18,7 @@ import java.util.List;
 public class ComponentListImpl implements ComponentDAO {
 
     private List<Component> componentList;
-    private int nextID;
+    private int nextId;
 
     //Constructor
 
@@ -28,7 +28,7 @@ public class ComponentListImpl implements ComponentDAO {
      */
     public ComponentListImpl() {
         this.componentList = new ArrayList<Component>();
-        this.nextID = 1;
+        this.nextId = 1;
     }
 
     //Methods
@@ -40,8 +40,8 @@ public class ComponentListImpl implements ComponentDAO {
      */
     @Override
     public Component create(Component component) {
-        component.setId(nextID);
-        this.nextID++;
+        component.setId(nextId);
+        this.nextId++;
         this.componentList.add(component);
         return component;
     }
