@@ -211,6 +211,68 @@ class WorkOrderListImplTest {
     }
 
     @Test
+    void getCanceledWorkOrders(){
+
+        //Salvando as ordens de serviço no sistema através do DAO
+        DAO.getWorkOrder().create(workOrder1);
+        DAO.getWorkOrder().create(workOrder2);
+        DAO.getWorkOrder().create(workOrder3);
+
+        //Finalizando as ordens de serviço
+        workOrder1.cancel();
+        workOrder2.cancel();
+
+        //Salvando as ordens de serviço em uma lista
+        List<WorkOrder> workOrderFinishedList = new ArrayList<WorkOrder>();
+        workOrderFinishedList.add(workOrder1);
+        workOrderFinishedList.add(workOrder2);
+
+        //Comparando as listas
+        assertEquals(workOrderFinishedList, DAO.getWorkOrder().getCanceledWorkOrders());
+
+
+    }
+
+    @Test
+    void getOpenedWorkOrders(){
+
+        //Salvando as ordens de serviço no sistema através do DAO
+        DAO.getWorkOrder().create(workOrder1);
+        DAO.getWorkOrder().create(workOrder2);
+        DAO.getWorkOrder().create(workOrder3);
+
+        //Finalizando uma única ordem de serviço
+        workOrder1.finished();
+
+
+        //Salvando as ordens de serviço abertas em uma lista
+        List<WorkOrder> workOrderOpenedList = new ArrayList<WorkOrder>();
+        workOrderOpenedList.add(workOrder2);
+        workOrderOpenedList.add(workOrder3);
+
+        //Comparando as listas
+        assertEquals(workOrderOpenedList, DAO.getWorkOrder().getOpenedWorkOrders());
+
+
+    }
+
+    @Test
+    void getFirstOpenWorkOrder(){
+
+        //Salvando as ordens de serviço no sistema através do DAO
+        DAO.getWorkOrder().create(workOrder1);
+        DAO.getWorkOrder().create(workOrder2);
+        DAO.getWorkOrder().create(workOrder3);
+
+        //Finalizando a primeira ordem de serviço
+        workOrder1.finished();
+
+        //Comparando as ordens de serviço
+        assertEquals(workOrder2, DAO.getWorkOrder().getFirstOpenWorkOrder());
+
+    }
+
+    @Test
     void getFinishedWorkOrdersTotalPrice(){
 
 
