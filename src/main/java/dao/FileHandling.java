@@ -31,6 +31,14 @@ public class FileHandling {
 
         ArrayList<G> objectList = new ArrayList<G>();
 
+        File directory = new File("src\\filesSaves");
+
+        try{
+            Class.forName("src\\filesSaves");
+        } catch(ClassNotFoundException e){
+            directory.mkdirs();
+        }
+
         try{
 
             if(!(new File(fileName)).exists()){
