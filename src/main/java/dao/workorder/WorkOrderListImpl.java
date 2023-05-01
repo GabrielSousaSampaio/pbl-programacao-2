@@ -19,7 +19,7 @@ import java.util.List;
 public class WorkOrderListImpl implements WorkOrderDAO{
 
     private List<WorkOrder> workOrderList;
-    private int nextID;
+    private int nextId;
 
     //Constructor
 
@@ -30,7 +30,7 @@ public class WorkOrderListImpl implements WorkOrderDAO{
 
     public WorkOrderListImpl() {
         this.workOrderList = new ArrayList<>();
-        this.nextID = 1;
+        this.nextId = 1;
     }
 
     //Methods
@@ -43,8 +43,8 @@ public class WorkOrderListImpl implements WorkOrderDAO{
 
     @Override
     public WorkOrder create(WorkOrder workOrder) {
-        workOrder.setId(nextID);
-        this.nextID++;
+        workOrder.setId(nextId);
+        this.nextId++;
         this.workOrderList.add(workOrder);
         return workOrder;
     }
@@ -91,14 +91,14 @@ public class WorkOrderListImpl implements WorkOrderDAO{
     @Override
     public List<WorkOrder> FindByCustomerId(int id){
 
-        List<WorkOrder> workOrderTechinicianList = new ArrayList<WorkOrder>();
+        List<WorkOrder> workOrderCustomerList = new ArrayList<WorkOrder>();
 
         for(WorkOrder wo: this.workOrderList){
             if(wo.getCustomerId()== id){
-                workOrderTechinicianList.add(wo);
+                workOrderCustomerList.add(wo);
             }
         }
-        return workOrderTechinicianList;
+        return workOrderCustomerList;
     }
 
     @Override
@@ -110,6 +110,35 @@ public class WorkOrderListImpl implements WorkOrderDAO{
             }
         }
         return workOrderFinishedList;
+    }
+
+    @Override
+    public List<WorkOrder> getCanceledWorkOrders(){
+        List<WorkOrder> workOrderCanceledList = new ArrayList<WorkOrder>();
+        for(WorkOrder wo: this.workOrderList){
+            if(wo.isCanceled()){
+                workOrderCanceledList.add(wo);
+            }
+        }
+        return workOrderCanceledList;
+
+    }
+
+    @Override
+    public List<WorkOrder> getOpenedWorkOrders(){
+        List<WorkOrder> workOrderOpenedList = new ArrayList<WorkOrder>();
+        for(WorkOrder wo: this.workOrderList){
+            if(wo.isOngoing()){
+                workOrderOpenedList.add(wo);
+            }
+        }
+        return workOrderOpenedList;
+    }
+
+    @Override
+    public WorkOrder getFirstOpenWorkOrder(){
+
+        return this.getOpenedWorkOrders().get(0);
     }
 
     @Override

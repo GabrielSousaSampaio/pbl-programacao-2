@@ -36,6 +36,24 @@ public interface WorkOrderDAO extends CRUD<WorkOrder>  {
     List<WorkOrder> getFinishedWorkOrders();
 
     /**
+     * Método criado para adquirir todas as ordens de serviço canceladas
+     * @return A lista de ordens de serviços canceladas
+     */
+    List<WorkOrder> getCanceledWorkOrders();
+
+    /**
+     * Método criado para adquirir todas as ordens de serviço abertas
+     * @return A lista de ordens de serviços abertas
+     */
+    List<WorkOrder> getOpenedWorkOrders();
+
+    /**
+     * Método criado para adquirir a primeira ordem de serviço da lista
+     * @return  A primeira ordem de serviço da lista
+     */
+    WorkOrder getFirstOpenWorkOrder();
+
+    /**
      * Método criado para calcular o preço total em todas as ordens de serviço finalizadas
      * @return O preço total das ordens de serviços finalizadas
      */
