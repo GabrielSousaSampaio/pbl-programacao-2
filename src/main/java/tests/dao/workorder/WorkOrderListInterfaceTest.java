@@ -9,7 +9,6 @@ import main.java.model.services.Cleaning;
 import main.java.model.services.Installation;
 import main.java.model.users.Technician;
 import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -19,7 +18,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 
-class WorkOrderListImplTest {
+class WorkOrderListInterfaceTest {
 
     //Atributos
     private Customer client1;

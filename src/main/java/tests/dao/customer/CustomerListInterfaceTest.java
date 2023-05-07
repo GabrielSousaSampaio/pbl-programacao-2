@@ -11,7 +11,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class CustomerListImplTest {
+class CustomerListInterfaceTest {
 
     //Atributos
     private Customer customer1;

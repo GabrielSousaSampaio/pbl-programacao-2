@@ -11,7 +11,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class RecepcionistListImplTest {
+class RecepcionistListInterfaceTest {
 
     //Atributos
     private Recepcionist recepcionist1;
