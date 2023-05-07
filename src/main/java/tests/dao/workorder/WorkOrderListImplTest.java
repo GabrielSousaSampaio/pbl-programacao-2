@@ -9,6 +9,7 @@ import main.java.model.services.Cleaning;
 import main.java.model.services.Installation;
 import main.java.model.users.Technician;
 import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -31,6 +32,10 @@ class WorkOrderListImplTest {
     private WorkOrder workOrder2;
     private WorkOrder workOrder3;
 
+    Technician technician1;
+    Technician technician2;
+    Technician technician3;
+
    @BeforeEach
     void setUp(){
 
@@ -43,6 +48,10 @@ class WorkOrderListImplTest {
 
        client3 = new Customer("Pedro", "PedroCardoso03@hotmail.com",
                "Rua 31, Bairro Centro","(73)92000-2342" );
+
+       //Criando técnicos
+       technician1 = new Technician("Pedro", "PedrinDaAssistencia@uol.com.br", "123123");
+       technician2 = new Technician("João","joao@email.com","99999");
 
        //Settando o id dos clientes
        client1.setId(0);
@@ -254,6 +263,33 @@ class WorkOrderListImplTest {
         assertEquals(workOrderOpenedList, DAO.getWorkOrder().getOpenedWorkOrders());
 
 
+    }
+
+    @Test
+    void getOpenedAndAllocatedWorkOrders(){
+
+        //Salvando as ordens de serviço no sistema através do DAO
+        DAO.getWorkOrder().create(workOrder1);
+        DAO.getWorkOrder().create(workOrder2);
+        DAO.getWorkOrder().create(workOrder3);
+
+        //Setando id dos técnicos
+        technician1.setId(1);
+        technician2.setId(2);
+
+        //Atribuindo técnicos a ordens de serviço
+        workOrder1.setTechnicianId(technician1);
+        workOrder2.setTechnicianId(technician2);
+
+        //Finalizando ordem de serviço
+        workOrder2.finished();
+
+        //Salvando as ordens de serviço em uma lista
+        List<WorkOrder> workOrderOpenedAndAllocatedList = new ArrayList<WorkOrder>();
+        workOrderOpenedAndAllocatedList.add(workOrder1);
+
+        //Comparando as listas
+        assertEquals(workOrderOpenedAndAllocatedList, DAO.getWorkOrder().getOpenedAndAllocatedWorkOrders());
     }
 
     @Test
