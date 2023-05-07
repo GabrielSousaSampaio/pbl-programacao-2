@@ -11,7 +11,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class CleaningListInterfaceTest {
+class CleaningDAOTest {
 
     //Atributos
     private Cleaning cleaning1;
