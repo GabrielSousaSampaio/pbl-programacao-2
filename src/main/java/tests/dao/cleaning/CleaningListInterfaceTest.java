@@ -16,6 +16,8 @@ class CleaningListInterfaceTest {
     //Atributos
     private Cleaning cleaning1;
     private Cleaning cleaning2;
+    Cleaning saveCleaning1;
+    Cleaning saveCleaning2;
 
     @BeforeEach
     void setUp() {
@@ -24,35 +26,26 @@ class CleaningListInterfaceTest {
         cleaning1 = new Cleaning(50,20,"Clening1");
         cleaning2 = new Cleaning(50,20,"Clening2");
 
+        //Salvando os serviços de limpeza no sistema através do DAO
+        saveCleaning1 = DAO.getCleaning().create(cleaning1);
+        saveCleaning2 = DAO.getCleaning().create(cleaning2);
     }
 
     @AfterEach
     void tearDown() {
-
         //Limpando a lista após os testes
         DAO.getCleaning().clearList();
     }
 
     @Test
     void create() {
-
-        //Salvando os serviços de limpeza no sistema através do DAO
-        Cleaning saveCleaning1 = DAO.getCleaning().create(cleaning1);
-        Cleaning saveCleaning2 = DAO.getCleaning().create(cleaning2);
-
         //Verificando se os serviços de limpeza salvos no sistema e os serviços de limpeza enviados são iguais
         assertEquals(cleaning1, saveCleaning1);
         assertEquals(cleaning2, saveCleaning2);
-
     }
 
     @Test
     void findMany() {
-
-        //Salvando os serviços de limpeza no sistema através do DAO
-        DAO.getCleaning().create(cleaning1);
-        DAO.getCleaning().create(cleaning2);
-
         //Salvando os serviços de limpeza em uma lista
         List<Cleaning> cleaningList = new ArrayList<Cleaning>();
 
@@ -65,11 +58,6 @@ class CleaningListInterfaceTest {
 
     @Test
     void findById() {
-
-        //Salvando os serviços de limpeza no sistema através do DAO
-        DAO.getCleaning().create(cleaning1);
-        DAO.getCleaning().create(cleaning2);
-
         //Verificando se os serviços de limpeza encontrados através do id e os serviços de limpeza enviados são iguais
         assertEquals(cleaning1, DAO.getCleaning().FindById(cleaning1.getId()));
         assertEquals(cleaning2, DAO.getCleaning().FindById(cleaning2.getId()));
@@ -77,11 +65,6 @@ class CleaningListInterfaceTest {
 
     @Test
     void update() {
-
-        //Salvando os serviços de limpeza no sistema através do DAO
-        DAO.getCleaning().create(cleaning1);
-        DAO.getCleaning().create(cleaning2);
-
         //Alterando o nome dos serviços de limpeza
         cleaning1.setCleaningName("NewCleaning1");
         cleaning2.setCleaningName("NewCleaning2");
@@ -97,11 +80,6 @@ class CleaningListInterfaceTest {
 
     @Test
     void delete() {
-
-        //Salvando os serviços de limpeza no sistema através do DAO
-        DAO.getCleaning().create(cleaning1);
-        DAO.getCleaning().create(cleaning2);
-
         //Recebendo os id's dos serviços de limpeza
         int cleaningId1 = cleaning1.getId();
         int cleaningId2 = cleaning2.getId();
@@ -117,16 +95,10 @@ class CleaningListInterfaceTest {
 
     @Test
     void clearList() {
-
-        //Salvando os serviços de limpeza no sistema através do DAO
-        DAO.getCleaning().create(cleaning1);
-        DAO.getCleaning().create(cleaning2);
-
         //Limpando a lista de serviços de limpeza
         DAO.getCleaning().clearList();
 
         //Verificando se o tamanho da lista de serviços de limpeza do sistema é 0
         assertEquals(DAO.getCleaning().FindMany().size(), 0);
-
     }
 }

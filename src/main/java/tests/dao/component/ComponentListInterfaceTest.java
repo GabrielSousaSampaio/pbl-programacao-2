@@ -18,44 +18,35 @@ class ComponentListInterfaceTest {
     //Atributos
     private ComputerComponent component1;
     private OtherComponent component2;
+    Component saveComponent1;
+    Component saveComponent2;
 
     @BeforeEach
     void setUp() {
-
         //Criando dois componentes para os testes
         component1 = new ComputerComponent(30,0,50,"GPU XXX","PPPPPP");
         component2 = new OtherComponent(50,12,20,"LLLLLLLLLLLLLLLLLLLL");
 
+        //Salvando os componentes no sistema através do DAO
+        saveComponent1 = DAO.getComponent().create(component1);
+        saveComponent2 = DAO.getComponent().create(component2);
     }
 
     @AfterEach
     void tearDown() {
-
         //Limpando a lista após os testes
         DAO.getComponent().clearList();
-
     }
 
     @Test
     void create() {
-
-        //Salvando os componentes no sistema através do DAO
-        Component saveComponent1 = DAO.getComponent().create(component1);
-        Component saveComponent2 = DAO.getComponent().create(component2);
-
         //Verificando se os componentes salvos no sistema e os componentes enviados são iguais
         assertEquals(component1, saveComponent1);
         assertEquals(component2, saveComponent2);
-
     }
 
     @Test
     void findMany() {
-
-        //Salvando os componentes no sistema através do DAO
-        DAO.getComponent().create(component1);
-        DAO.getComponent().create(component2);
-
         //Salvando os componentes em uma lista
         List<Component> componentList = new ArrayList<Component>();
 
@@ -64,29 +55,17 @@ class ComponentListInterfaceTest {
 
         //Verificando se as listas são iguais
         assertEquals(componentList, DAO.getComponent().FindMany());
-
     }
 
     @Test
     void findById() {
-
-        //Salvando os componentes no sistema através do DAO
-        DAO.getComponent().create(component1);
-        DAO.getComponent().create(component2);
-
         //Verificando se os componentes encontrados através do id e os componentes enviados são iguais
         assertEquals(component1, DAO.getComponent().FindById(component1.getId()));
         assertEquals(component2, DAO.getComponent().FindById(component2.getId()));
-
     }
 
     @Test
     void update() {
-
-        //Salvando os componentes no sistema através do DAO
-        DAO.getComponent().create(component1);
-        DAO.getComponent().create(component2);
-
         //Alterando a quantidade dos componentes
         component1.setQuantity(200);
         component2.setQuantity(300);
@@ -98,16 +77,10 @@ class ComponentListInterfaceTest {
         //Verificando se os componentes são iguais, ou seja, se foram atualizados
         assertEquals(component1, DAO.getComponent().FindById(component1.getId()));
         assertEquals(component2, DAO.getComponent().FindById(component2.getId()));
-
     }
 
     @Test
     void delete() {
-
-        //Salvando os componentes no sistema através do DAO
-        DAO.getComponent().create(component1);
-        DAO.getComponent().create(component2);
-
         //Recebendo os id's dos componentes
         int componentId1 = component1.getId();
         int componentId2 = component2.getId();
@@ -119,16 +92,10 @@ class ComponentListInterfaceTest {
         //Verificando se o retorno após a busca é nulo
         assertNull(DAO.getComponent().FindById(componentId1));
         assertNull(DAO.getComponent().FindById(componentId2));
-
     }
 
     @Test
     void clearList() {
-
-        //Salvando os componentes no sistema através do DAO
-        DAO.getComponent().create(component1);
-        DAO.getComponent().create(component2);
-
         //Limpando a lista de componentes
         DAO.getComponent().clearList();
 
@@ -138,11 +105,6 @@ class ComponentListInterfaceTest {
 
     @Test
     void pickingComponent() {
-
-        //Salvando os componentes no sistema através do DAO
-        DAO.getComponent().create(component1);
-        DAO.getComponent().create(component2);
-
         //Copiando os componentes
         Component componentCopy1 = component1.copy();
         Component componentCopy2 = component2.copy();
@@ -153,6 +115,5 @@ class ComponentListInterfaceTest {
 
         assertEquals(4, DAO.getComponent().pickingComponent(component2, 4).getQuantity());
         assertEquals(16, DAO.getComponent().FindById(component2.getId()).getQuantity());
-
     }
 }

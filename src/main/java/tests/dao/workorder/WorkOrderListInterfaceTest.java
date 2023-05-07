@@ -22,18 +22,16 @@ class WorkOrderListInterfaceTest {
 
     //Atributos
     private Customer client1;
-
     private Customer client2;
-
     private Customer client3;
-
     private WorkOrder workOrder1;
     private WorkOrder workOrder2;
     private WorkOrder workOrder3;
-
     Technician technician1;
     Technician technician2;
-    Technician technician3;
+    WorkOrder newWorkOrder01;
+    WorkOrder newWorkOrder02;
+    WorkOrder newWorkOrder03;
 
    @BeforeEach
     void setUp(){
@@ -76,40 +74,28 @@ class WorkOrderListInterfaceTest {
        workOrder2.addService(installation01); workOrder2.addService(building01); workOrder2.addService(cleaning01);
        workOrder3.addService(building01);workOrder3.addService(cleaning01);
 
-
-
+       //Salvando as ordens de serviço no sistema através do DAO
+       newWorkOrder01 = DAO.getWorkOrder().create(workOrder1);
+       newWorkOrder02 = DAO.getWorkOrder().create(workOrder2);
+       newWorkOrder03 = DAO.getWorkOrder().create(workOrder3);
     }
 
     @AfterEach
     void tearDown() {
-
        //Limpando a lista após os testes
        DAO.getWorkOrder().clearList();
     }
 
     @Test
     void create() {
-
-        //Salvando as ordens de serviço no sistema através do DAO
-        WorkOrder newWorkOrder01 = DAO.getWorkOrder().create(workOrder1);
-        WorkOrder newWorkOrder02 = DAO.getWorkOrder().create(workOrder2);
-        WorkOrder newWorkOrder03 = DAO.getWorkOrder().create(workOrder3);
-
         //Verificando se as ordens de serviço salvas no sistema e as ordens de serviço enviadas são iguais
         assertEquals(workOrder1,newWorkOrder01);
         assertEquals(workOrder2,newWorkOrder02);
         assertEquals(workOrder3,newWorkOrder03);
-
     }
 
     @Test
     void findMany() {
-
-        //Salvando as ordens de serviço no sistema através do DAO
-        DAO.getWorkOrder().create(workOrder1);
-        DAO.getWorkOrder().create(workOrder2);
-        DAO.getWorkOrder().create(workOrder3);
-
         //Salvando as ordens de serviço em uma lista
         List<WorkOrder> workOrderList = new ArrayList<WorkOrder>();
 
@@ -119,31 +105,16 @@ class WorkOrderListInterfaceTest {
 
         //Verificando se as listas são iguais
         assertEquals(DAO.getWorkOrder().FindMany(), workOrderList);
-
     }
 
     @Test
     void findById() {
-
-        //Salvando as ordens de serviço no sistema através do DAO
-        DAO.getWorkOrder().create(workOrder1);
-        DAO.getWorkOrder().create(workOrder2);
-        DAO.getWorkOrder().create(workOrder3);
-
         //Verificando se as ordens de serviço encontradas através do id e as ordens de serviço enviadas são iguais
         assertEquals(workOrder1,DAO.getWorkOrder().FindById(workOrder1.getId()));
-
-
     }
 
     @Test
     void findByTechnicianId(){
-
-        //Salvando as ordens de serviço no sistema através do DAO
-        DAO.getWorkOrder().create(workOrder1);
-        DAO.getWorkOrder().create(workOrder2);
-        DAO.getWorkOrder().create(workOrder3);
-
         //Criando tecnico
         Technician technician1 =  new Technician("Pedro","Perdro@email.com", "12345");
         technician1.setId(1);
@@ -161,18 +132,10 @@ class WorkOrderListInterfaceTest {
 
         //Verificando se as listas são iguais
         assertEquals(workOrderList, DAO.getWorkOrder().FindByTechnicianId(workOrder1.getTechnicianId()));
-
-
     }
 
     @Test
     void findByCustomerId(){
-
-        //Salvando as ordens de serviço no sistema através do DAO
-        DAO.getWorkOrder().create(workOrder1);
-        DAO.getWorkOrder().create(workOrder2);
-        DAO.getWorkOrder().create(workOrder3);
-
         //Criando cliente
         Customer customer1 =  new Customer("Gabriel","Gabriel@email.com", "Rua x", "(99)9999-9999");
         customer1.setId(1);
@@ -190,17 +153,10 @@ class WorkOrderListInterfaceTest {
 
         //Verificando se as listas são iguais
         assertEquals(workOrderList, DAO.getWorkOrder().FindByCustomerId(workOrder1.getCustomerId()));
-
     }
 
     @Test
     void getFinishedWorkOrders(){
-
-        //Salvando as ordens de serviço no sistema através do DAO
-        DAO.getWorkOrder().create(workOrder1);
-        DAO.getWorkOrder().create(workOrder2);
-        DAO.getWorkOrder().create(workOrder3);
-
         //Finalizando as ordens de serviço
         workOrder1.finished();
         workOrder2.finished();
@@ -214,18 +170,10 @@ class WorkOrderListInterfaceTest {
 
         //Comparando as listas
         assertEquals(workOrderFinishedList, DAO.getWorkOrder().getFinishedWorkOrders());
-
-
     }
 
     @Test
     void getCanceledWorkOrders(){
-
-        //Salvando as ordens de serviço no sistema através do DAO
-        DAO.getWorkOrder().create(workOrder1);
-        DAO.getWorkOrder().create(workOrder2);
-        DAO.getWorkOrder().create(workOrder3);
-
         //Finalizando as ordens de serviço
         workOrder1.cancel();
         workOrder2.cancel();
@@ -237,21 +185,12 @@ class WorkOrderListInterfaceTest {
 
         //Comparando as listas
         assertEquals(workOrderFinishedList, DAO.getWorkOrder().getCanceledWorkOrders());
-
-
     }
 
     @Test
     void getOpenedWorkOrders(){
-
-        //Salvando as ordens de serviço no sistema através do DAO
-        DAO.getWorkOrder().create(workOrder1);
-        DAO.getWorkOrder().create(workOrder2);
-        DAO.getWorkOrder().create(workOrder3);
-
         //Finalizando uma única ordem de serviço
         workOrder1.finished();
-
 
         //Salvando as ordens de serviço abertas em uma lista
         List<WorkOrder> workOrderOpenedList = new ArrayList<WorkOrder>();
@@ -260,18 +199,10 @@ class WorkOrderListInterfaceTest {
 
         //Comparando as listas
         assertEquals(workOrderOpenedList, DAO.getWorkOrder().getOpenedWorkOrders());
-
-
     }
 
     @Test
     void getOpenedAndAllocatedWorkOrders(){
-
-        //Salvando as ordens de serviço no sistema através do DAO
-        DAO.getWorkOrder().create(workOrder1);
-        DAO.getWorkOrder().create(workOrder2);
-        DAO.getWorkOrder().create(workOrder3);
-
         //Setando id dos técnicos
         technician1.setId(1);
         technician2.setId(2);
@@ -293,29 +224,15 @@ class WorkOrderListInterfaceTest {
 
     @Test
     void getFirstOpenWorkOrder(){
-
-        //Salvando as ordens de serviço no sistema através do DAO
-        DAO.getWorkOrder().create(workOrder1);
-        DAO.getWorkOrder().create(workOrder2);
-        DAO.getWorkOrder().create(workOrder3);
-
         //Finalizando a primeira ordem de serviço
         workOrder1.finished();
 
         //Comparando as ordens de serviço
         assertEquals(workOrder2, DAO.getWorkOrder().getFirstOpenWorkOrder());
-
     }
 
     @Test
     void getFinishedWorkOrdersTotalPrice(){
-
-
-        //Salvando as ordens de serviço no sistema através do DAO
-        DAO.getWorkOrder().create(workOrder1);
-        DAO.getWorkOrder().create(workOrder2);
-        DAO.getWorkOrder().create(workOrder3);
-
         //Finalizando as ordens de serviço
         workOrder1.finished();
         workOrder2.finished();
@@ -335,18 +252,10 @@ class WorkOrderListInterfaceTest {
 
         //Comparando os preços
         assertEquals(totalPrice, DAO.getWorkOrder().getFinishedWorkOrdersTotalPrice());
-
-
     }
 
     @Test
     void getFinishedWorkOrdersTotalCost(){
-
-        //Salvando as ordens de serviço no sistema através do DAO
-        DAO.getWorkOrder().create(workOrder1);
-        DAO.getWorkOrder().create(workOrder2);
-        DAO.getWorkOrder().create(workOrder3);
-
         //Finalizando as ordens de serviço
         workOrder1.finished();
         workOrder2.finished();
@@ -366,18 +275,10 @@ class WorkOrderListInterfaceTest {
 
         //Comparando os custos
         assertEquals(totalCost, DAO.getWorkOrder().getFinishedWorkOrdersTotalCost());
-
-
     }
 
     @Test
     void getFinishedWorkOrdersAverageTime(){
-
-        //Salvando as ordens de serviço no sistema através do DAO
-        DAO.getWorkOrder().create(workOrder1);
-        DAO.getWorkOrder().create(workOrder2);
-        DAO.getWorkOrder().create(workOrder3);
-
         //Finalizando as ordens de serviço
         workOrder1.finished();
         workOrder2.finished();
@@ -392,25 +293,16 @@ class WorkOrderListInterfaceTest {
         //Calculando o tempo médio das ordens de serviço
         double avarageTime = 0;
         for (WorkOrder w: workOrderFinishedList){
-
             avarageTime += w.waitingTime();
-
         }
         avarageTime /= workOrderFinishedList.size();
 
         //Comparando os tempos médios
         assertEquals(avarageTime, DAO.getWorkOrder().getFinishedWorkOrdersAverageTime());
-
     }
 
     @Test
     void getFinishedWorkOrdersAverageRating(){
-
-        //Salvando as ordens de serviço no sistema através do DAO
-        DAO.getWorkOrder().create(workOrder1);
-        DAO.getWorkOrder().create(workOrder2);
-        DAO.getWorkOrder().create(workOrder3);
-
         //Finalizando as ordens de serviço
         workOrder1.finished();
         workOrder2.finished();
@@ -427,27 +319,19 @@ class WorkOrderListInterfaceTest {
         workOrderFinishedList.add(workOrder2);
         workOrderFinishedList.add(workOrder3);
 
-
         //Calculando a média das satisfações
         double avarageRating = 0;
         for (WorkOrder w: workOrderFinishedList){
-
             avarageRating += w.getSatisfaction();
-
         }
         avarageRating /= workOrderFinishedList.size();
 
         //Comparando a média das avaliações
         assertEquals(avarageRating, DAO.getWorkOrder().getFinishedWorkOrdersAverageRating());
-
     }
 
     @Test
     void getFinishedWorkOrdersUsedComponents(){
-
-        //Salvando as ordens de serviço no sistema através do DAO
-        DAO.getWorkOrder().create(workOrder1);
-
         //Criando um serviço de montagem
         Building building02 =  new Building();
 
@@ -463,17 +347,10 @@ class WorkOrderListInterfaceTest {
 
         //Avaliando as listas de componenstes usados
         assertEquals(building02.getUsedComponents(), DAO.getWorkOrder().getFinishedWorkOrdersUsedComponents());
-
     }
 
     @Test
     void update() {
-
-        //Salvando as ordens de serviço no sistema através do DAO
-        DAO.getWorkOrder().create(workOrder1);
-        DAO.getWorkOrder().create(workOrder2);
-        DAO.getWorkOrder().create(workOrder3);
-
         //Alterando a descrição da ordem de serviço
         workOrder1.setDescription("++++++");
 
@@ -486,12 +363,6 @@ class WorkOrderListInterfaceTest {
 
     @Test
     void delete() {
-
-        //Salvando as ordens de serviço no sistema através do DAO
-        DAO.getWorkOrder().create(workOrder1);
-        DAO.getWorkOrder().create(workOrder2);
-        DAO.getWorkOrder().create(workOrder3);
-
         //Recebendo os id's das ordens de serviço
         int workOrderId1 = workOrder1.getId();
         int workOrderId2 = workOrder2.getId();
@@ -506,23 +377,14 @@ class WorkOrderListInterfaceTest {
         assertNull(DAO.getWorkOrder().FindById(workOrderId1));
         assertNull(DAO.getWorkOrder().FindById(workOrderId2));
         assertNull(DAO.getWorkOrder().FindById(workOrderId3));
-
-
     }
 
     @Test
     void clearList(){
-
-        //Salvando as ordens de serviço no sistema através do DAO
-        DAO.getWorkOrder().create(workOrder1);
-        DAO.getWorkOrder().create(workOrder2);
-        DAO.getWorkOrder().create(workOrder3);
-
         //Limpando a lista das ordens de serviço
         DAO.getWorkOrder().clearList();
 
         //Verificando se o tamanho da lista das ordens de serviço do sistema é 0
         assertEquals(DAO.getWorkOrder().FindMany().size(), 0);
-
     }
 }
