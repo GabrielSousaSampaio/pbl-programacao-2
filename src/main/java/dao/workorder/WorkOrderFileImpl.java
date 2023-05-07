@@ -1,5 +1,6 @@
 package main.java.dao.workorder;
 
+import main.java.dao.DAO;
 import main.java.dao.FileHandling;
 import main.java.model.WorkOrder;
 import main.java.model.components.Component;
@@ -132,13 +133,13 @@ public class WorkOrderFileImpl implements WorkOrderDAO{
 
     @Override
     public List<WorkOrder> getOpenedAndAllocatedWorkOrders() {
-        List<WorkOrder> workOrderOpenedAndAllocatedList = new ArrayList<WorkOrder>();
-        for(WorkOrder wo: this.workOrderList){
-            if(wo.isOngoing() && wo.getTechnician().getId() != 0){
-                workOrderOpenedAndAllocatedList.add(wo);
+        List<WorkOrder> openedAndAllocatedWorkOrdersList = new ArrayList<>();
+        for (WorkOrder wo : this.getOpenedWorkOrders()) {
+            if (wo.getTechnician() != null) {
+                openedAndAllocatedWorkOrdersList.add(wo);
             }
         }
-        return workOrderOpenedAndAllocatedList;
+        return openedAndAllocatedWorkOrdersList;
     }
 
     @Override

@@ -117,6 +117,7 @@ class WorkOrderListInterfaceTest {
     void findByTechnicianId(){
         //Criando tecnico
         Technician technician1 =  new Technician("Pedro","Perdro@email.com", "12345");
+        DAO.getTechnician().create(technician1);
         technician1.setId(1);
 
         //Salvando as ordens de serviço em uma lista
@@ -132,12 +133,16 @@ class WorkOrderListInterfaceTest {
 
         //Verificando se as listas são iguais
         assertEquals(workOrderList, DAO.getWorkOrder().FindByTechnicianId(workOrder1.getTechnician().getId()));
+
+        //Limpando arquivo
+        DAO.getTechnician().clearList();
     }
 
     @Test
     void findByCustomerId(){
         //Criando cliente
         Customer customer1 =  new Customer("Gabriel","Gabriel@email.com", "Rua x", "(99)9999-9999");
+        DAO.getCustomer().create(customer1);
         customer1.setId(1);
 
         //Salvando as ordens de serviço em uma lista
@@ -153,6 +158,9 @@ class WorkOrderListInterfaceTest {
 
         //Verificando se as listas são iguais
         assertEquals(workOrderList, DAO.getWorkOrder().FindByCustomerId(workOrder1.getCustomer().getId()));
+
+        //Limpando arquivo
+        DAO.getCustomer().clearList();
     }
 
     @Test
@@ -203,11 +211,11 @@ class WorkOrderListInterfaceTest {
 
     @Test
     void getOpenedAndAllocatedWorkOrders(){
-        //Setando id dos técnicos
-        technician1.setId(1);
-        technician2.setId(2);
 
-        //Atribuindo técnicos a ordens de serviço
+        //Salvando ordens de serviço
+        DAO.getTechnician().create(technician1);
+        DAO.getTechnician().create(technician2);
+
         workOrder1.setTechnician(technician1);
         workOrder2.setTechnician(technician2);
 
@@ -220,6 +228,8 @@ class WorkOrderListInterfaceTest {
 
         //Comparando as listas
         assertEquals(workOrderOpenedAndAllocatedList, DAO.getWorkOrder().getOpenedAndAllocatedWorkOrders());
+
+        DAO.getTechnician().clearList();
     }
 
     @Test

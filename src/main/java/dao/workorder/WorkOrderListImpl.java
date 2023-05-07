@@ -136,14 +136,14 @@ public class WorkOrderListImpl implements WorkOrderDAO{
     }
 
     @Override
-    public List<WorkOrder> getOpenedAndAllocatedWorkOrders(){
-        List<WorkOrder> workOrderOpenedAndAllocatedList = new ArrayList<WorkOrder>();
-        for(WorkOrder wo: this.workOrderList){
-            if(wo.isOngoing() && wo.getTechnician().getId() != 0){
-                workOrderOpenedAndAllocatedList.add(wo);
+    public List<WorkOrder> getOpenedAndAllocatedWorkOrders() {
+        List<WorkOrder> openedAndAllocatedWorkOrdersList = new ArrayList<>();
+        for (WorkOrder wo : this.getOpenedWorkOrders()) {
+            if (wo.getTechnician() != null) {
+                openedAndAllocatedWorkOrdersList.add(wo);
             }
         }
-        return workOrderOpenedAndAllocatedList;
+        return openedAndAllocatedWorkOrdersList;
     }
 
     @Override

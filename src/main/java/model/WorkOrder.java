@@ -84,8 +84,6 @@ public class WorkOrder implements Serializable {
      * @return O técnico da ordem de serviço
      */
     public Technician getTechnician() {
-        System.out.println(technicianId);
-        System.out.println(DAO.getTechnician().FindById(technicianId));
         return DAO.getTechnician().FindById(this.technicianId);
     }
 
