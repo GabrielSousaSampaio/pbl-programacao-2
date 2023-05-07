@@ -49,7 +49,7 @@ public interface WorkOrderDAO extends CRUD<WorkOrder>  {
 
     /**
      * Método criado para adquirir todas as ordens de serviço abertas e com técnicos atribuidos
-     * @return A lista de ordens de serviços abertas
+     * @return A lista de ordens de serviços abertas com técnicos atribuidos
      */
     List<WorkOrder> getOpenedAndAllocatedWorkOrders();
 

@@ -134,7 +134,7 @@ public class WorkOrderFileImpl implements WorkOrderDAO{
     public List<WorkOrder> getOpenedAndAllocatedWorkOrders() {
         List<WorkOrder> workOrderOpenedAndAllocatedList = new ArrayList<WorkOrder>();
         for(WorkOrder wo: this.workOrderList){
-            if(wo.isOngoing() && (wo.getTechnicianId() != 0)){
+            if(wo.isOngoing() && wo.getTechnicianId() != 0){
                 workOrderOpenedAndAllocatedList.add(wo);
             }
         }
