@@ -1,5 +1,6 @@
 package main.java.model;
 
+import main.java.dao.DAO;
 import main.java.model.services.Service;
 import main.java.model.users.Technician;
 
@@ -38,7 +39,7 @@ public class WorkOrder implements Serializable {
      * @param description A descrição da ordem
      */
     public WorkOrder(Customer customer, String description) {
-        this.setCustomerId(customer);
+        this.setCustomer(customer);
         this.status = "Em andamento.";
         this.serviceList = new ArrayList<Service>();
         this.description = description;
@@ -63,35 +64,34 @@ public class WorkOrder implements Serializable {
     }
 
     /**
-     * Método criado para retonar o id do cliente da ordem de serviço
-     * @return O id do cliente da ordem de serviço
+     * Método criado para retonar o cliente da ordem de serviço
+     * @return O cliente da ordem de serviço
      */
-    public int getCustomerId() {
-        return customerId;
+    public Customer getCustomer() {
+        return DAO.getCustomer().FindById(this.customerId);
     }
 
     /**
      * Método criado para alterar o id cliente da ordem de serviço
      * @param customer O id do cliente da ordem de serviço
      */
-
-    public void setCustomerId(Customer customer) {
+    public void setCustomer(Customer customer){
         this.customerId = customer.getId();
     }
 
     /**
-     * Método criado para retonar o id do técnico da ordem de serviço
-     * @return O id do técnico da ordem de serviço
+     * Método criado para retonar o técnico da ordem de serviço
+     * @return O técnico da ordem de serviço
      */
-    public int getTechnicianId() {
-        return technicianId;
+    public Technician getTechnician() {
+        return DAO.getTechnician().FindById(this.technicianId);
     }
 
     /**
      * Método criado para alterar o id do técnico da ordem de serviço
      * @param technician O id do técnico da ordem de serviço
      */
-    public void setTechnicianId(Technician technician) {
+    public void setTechnician(Technician technician) {
         this.technicianId = technician.getId();
     }
 

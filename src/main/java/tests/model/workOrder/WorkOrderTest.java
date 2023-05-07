@@ -109,16 +109,16 @@ public class WorkOrderTest {
     public void gettersAndSetters(){
         workOrder.setId(5);
         customer.setId(10);
-        workOrder.setCustomerId(customer);
+        workOrder.setCustomer(customer);
         technician.setId(15);
-        workOrder.setTechnicianId(technician);
+        workOrder.setTechnician(technician);
         workOrder.setStatus("Status Teste");
         workOrder.setDescription("Descrição");
         workOrder.setPaidOut(true);
 
         Assertions.assertEquals(5, workOrder.getId());
-        Assertions.assertEquals(10, workOrder.getCustomerId());
-        Assertions.assertEquals(15, workOrder.getTechnicianId());
+        Assertions.assertEquals(10, workOrder.getCustomer());
+        Assertions.assertEquals(15, workOrder.getTechnician());
         Assertions.assertEquals("Status Teste", workOrder.getStatus());
         Assertions.assertEquals("Descrição", workOrder.getDescription());
         Assertions.assertEquals(true, workOrder.isPaidOut());

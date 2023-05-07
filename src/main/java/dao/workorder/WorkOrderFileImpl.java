@@ -75,7 +75,7 @@ public class WorkOrderFileImpl implements WorkOrderDAO{
     public List<WorkOrder> FindByTechnicianId(int id){
         List<WorkOrder> workOrderTechinicianList = new ArrayList<>();
         for(WorkOrder wo: this.workOrderList){
-            if(wo.getTechnicianId() == id){
+            if(wo.getTechnician().getId() == id){
                 workOrderTechinicianList.add(wo);
             }
         }
@@ -89,7 +89,7 @@ public class WorkOrderFileImpl implements WorkOrderDAO{
         List<WorkOrder> workOrderCustomerList = new ArrayList<WorkOrder>();
 
         for(WorkOrder wo: this.workOrderList){
-            if(wo.getCustomerId()== id){
+            if(wo.getCustomer().getId() == id){
                 workOrderCustomerList.add(wo);
             }
         }
@@ -134,7 +134,7 @@ public class WorkOrderFileImpl implements WorkOrderDAO{
     public List<WorkOrder> getOpenedAndAllocatedWorkOrders() {
         List<WorkOrder> workOrderOpenedAndAllocatedList = new ArrayList<WorkOrder>();
         for(WorkOrder wo: this.workOrderList){
-            if(wo.isOngoing() && wo.getTechnicianId() != 0){
+            if(wo.isOngoing() && wo.getTechnician().getId() != 0){
                 workOrderOpenedAndAllocatedList.add(wo);
             }
         }

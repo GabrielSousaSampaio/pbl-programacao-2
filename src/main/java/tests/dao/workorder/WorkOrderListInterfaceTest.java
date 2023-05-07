@@ -126,12 +126,12 @@ class WorkOrderListInterfaceTest {
         workOrderList.add(workOrder3);
 
         //Settando as ordens de serviço com o id do tecnico
-        workOrder1.setTechnicianId(technician1);
-        workOrder2.setTechnicianId(technician1);
-        workOrder3.setTechnicianId(technician1);
+        workOrder1.setTechnician(technician1);
+        workOrder2.setTechnician(technician1);
+        workOrder3.setTechnician(technician1);
 
         //Verificando se as listas são iguais
-        assertEquals(workOrderList, DAO.getWorkOrder().FindByTechnicianId(workOrder1.getTechnicianId()));
+        assertEquals(workOrderList, DAO.getWorkOrder().FindByTechnicianId(workOrder1.getTechnician().getId()));
     }
 
     @Test
@@ -147,12 +147,12 @@ class WorkOrderListInterfaceTest {
         workOrderList.add(workOrder3);
 
         //Settando as ordens de serviço com o id do cliente
-        workOrder1.setCustomerId(customer1);
-        workOrder2.setCustomerId(customer1);
-        workOrder3.setCustomerId(customer1);
+        workOrder1.setCustomer(customer1);
+        workOrder2.setCustomer(customer1);
+        workOrder3.setCustomer(customer1);
 
         //Verificando se as listas são iguais
-        assertEquals(workOrderList, DAO.getWorkOrder().FindByCustomerId(workOrder1.getCustomerId()));
+        assertEquals(workOrderList, DAO.getWorkOrder().FindByCustomerId(workOrder1.getCustomer().getId()));
     }
 
     @Test
@@ -208,8 +208,8 @@ class WorkOrderListInterfaceTest {
         technician2.setId(2);
 
         //Atribuindo técnicos a ordens de serviço
-        workOrder1.setTechnicianId(technician1);
-        workOrder2.setTechnicianId(technician2);
+        workOrder1.setTechnician(technician1);
+        workOrder2.setTechnician(technician2);
 
         //Finalizando ordem de serviço
         workOrder2.finished();
