@@ -1,5 +1,6 @@
 package main.java.tests.model.workOrder;
 
+import main.java.dao.DAO;
 import main.java.model.*;
 import main.java.model.services.Cleaning;
 import main.java.model.services.Installation;
@@ -25,7 +26,7 @@ public class WorkOrderTest {
         installation = new Installation(100, 20, "Windows Vista");
         cleaning = new Cleaning(70, 0,"Limpeza com ventinho");
         technician = new Technician("Flavio", "flavinManutencaoChapaQuente2010@uol.com", "123456");
-        customer = new Customer("João", "joao123@hotmail.com", "Rua 5, Bairro Campo Limpo","(75)92999-3244" );
+        customer = new Customer("João", "joao123@hotmail.com", "Rua 5, Bairro Campo Limpo","(75)92999-3244");
         workOrder = new WorkOrder(customer, "Serviço teste");
     }
 
@@ -107,6 +108,8 @@ public class WorkOrderTest {
     //Método que testa os métodos get e set de WorkOrder.java
     @Test
     public void gettersAndSetters(){
+        DAO.getCustomer().create(customer);
+        DAO.getTechnician().create(technician);
         workOrder.setId(5);
         customer.setId(10);
         workOrder.setCustomer(customer);
@@ -117,10 +120,12 @@ public class WorkOrderTest {
         workOrder.setPaidOut(true);
 
         Assertions.assertEquals(5, workOrder.getId());
-        Assertions.assertEquals(10, workOrder.getCustomer());
-        Assertions.assertEquals(15, workOrder.getTechnician());
+        Assertions.assertEquals(10, workOrder.getCustomer().getId());
+        Assertions.assertEquals(15, workOrder.getTechnician().getId());
         Assertions.assertEquals("Status Teste", workOrder.getStatus());
         Assertions.assertEquals("Descrição", workOrder.getDescription());
         Assertions.assertEquals(true, workOrder.isPaidOut());
+
+        DAO.getCustomer().clearList();
     }
 }
