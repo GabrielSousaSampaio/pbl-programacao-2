@@ -7,7 +7,7 @@ import java.util.List;
 /**
  *
  * Classe criada a partir da implementação da interface "TechnicianDAO" para a manipulação dos técnicos
- * armazenadas no sistema através de listas.
+ * armazenados no sistema através de listas.
  *
  * @author Gabriel Sampaio, Gabriel Baptista
  */

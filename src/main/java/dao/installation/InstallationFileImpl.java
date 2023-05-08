@@ -5,6 +5,13 @@ import main.java.model.services.Installation;
 
 import java.util.List;
 
+/**
+ *
+ * Classe criada a partir da implementação da interface "InstallationDAO" para manipulação dos serviços de
+ * instalação oferecidos e armazenados no sistema através de arquivos.
+ *
+ * @author Gabriel Sampaio, Gabriel Baptista
+ */
 public class InstallationFileImpl implements InstallationDAO{
 
     private List<Installation> installationList;
@@ -13,7 +20,7 @@ public class InstallationFileImpl implements InstallationDAO{
     //Constructor
 
     /**
-     * Método cronstrutor que inicializa o array para armazenar os serviços de instalação e inicia o id com o valor 1
+     * Método cronstrutor que lê ou cria o arquivo e atualiza o id
      *
      */
     public InstallationFileImpl() {
@@ -30,8 +37,8 @@ public class InstallationFileImpl implements InstallationDAO{
     //Methods
 
     /**
-     * Método criado para a adição de um serviço de instalação na lista do sistema
-     * @param installation O serviço de instalação que deseja inserir na lista do sistema
+     * Método criado para a adição de um serviço de instalação no arquivo
+     * @param installation O serviço de instalação que deseja inserir no arquivo
      * @return O serviço de instalaçãoa enviado
      */
     @Override
@@ -45,8 +52,8 @@ public class InstallationFileImpl implements InstallationDAO{
     }
 
     /**
-     * Método criado para adquirir todos os serviços de instalação cadastrados na lista do sistema
-     * @return A lista com todos os serviços de instalação cadastrados
+     * Método criado para adquirir todos os serviços de instalação cadastrados no arquivo
+     * @return A lista com todos os serviços de instalação cadastrados no arquivo
      */
     @Override
     public List<Installation> FindMany() {
@@ -70,7 +77,7 @@ public class InstallationFileImpl implements InstallationDAO{
     }
 
     /**
-     * Método criado para atuallizar os dados de um serviço de instalação previamente cadastrado
+     * Método criado para atuallizar os dados de um serviço de instalação previamente cadastrado no arquivo
      * @param installation O serviço de instalação que deseja atuaizar os dados
      */
     @Override
@@ -87,7 +94,7 @@ public class InstallationFileImpl implements InstallationDAO{
     }
 
     /**
-     * Método criado para deletar um serviço de instalação da lista do sistema
+     * Método criado para deletar um serviço de instalação cadastrado no arquivo
      * @param id O id do serviço de instalação
      */
     @Override
@@ -103,7 +110,7 @@ public class InstallationFileImpl implements InstallationDAO{
         }
     }
     /**
-     * Método criado para limpar completamente a lista de serviços de instalação
+     * Método criado para limpar completamente a lista de serviços de instalação cadastrados no arquivo
      */
     @Override
     public void clearList(){

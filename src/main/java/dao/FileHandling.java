@@ -5,13 +5,30 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ *
+ * Classe criada para auxílio na manipulação de arquivos
+ *
+ * @author Gabriel Sousa Sampaio, Gabriel Baptista
+ */
+
 public class FileHandling {
+
+    /**
+     *
+     * Método criado para escrita da lista de objetos no arquivo
+     * @param objectList Lista de objetos para ser salva no arquivo
+     * @param fileName Nome/caminho do arquivo
+     * @author Gabriel Sousa Sampaio, Gabriel Baptista
+     */
 
     public static <G> void saveInFile(List<G> objectList, String fileName){
 
         try{
 
             FileOutputStream fos = new FileOutputStream(fileName);
+
+            //Limpa o arquivo
             fos.write(new byte[0]);
 
             ObjectOutputStream oos = new ObjectOutputStream(fos);
@@ -26,6 +43,14 @@ public class FileHandling {
         }
 
     }
+
+    /**
+     *
+     * Método criado para a leitura da lista de objetos no arquivo
+     * @param fileName Nome/caminho do arquivo
+     * @return Lista de objetos presente no arquivo
+     * @author Gabriel Sousa Sampaio, Gabriel Baptista
+     */
 
     public static <G> ArrayList<G> readFile(String fileName){
 
@@ -48,8 +73,9 @@ public class FileHandling {
             FileInputStream fis = new FileInputStream(fileName);
             ObjectInputStream ois = new ObjectInputStream(fis);
 
-            objectList = (ArrayList<G>)ois.readObject();
+            objectList = (ArrayList<G>) ois.readObject();
             ois.close();
+
 
             return objectList;
 

@@ -4,6 +4,14 @@ import main.java.dao.FileHandling;
 import main.java.model.Customer;
 import java.util.List;
 
+/**
+ *
+ * Classe criada a partir da implementação da interface "CustomerDAO" para a manipulação dos clientes armazenados
+ * no sistema através de arquivos.
+ *
+ * @author Gabriel Sampaio, Gabriel Baptista
+ */
+
 public class CustomerFileImpl implements CustomerDAO{
     private List<Customer> customerList;
     private int nextId;
@@ -11,7 +19,7 @@ public class CustomerFileImpl implements CustomerDAO{
     //Constructor
 
     /**
-     * Método cronstrutor que inicializa o array para armazenar os clientes e inicia o id com o valor 1
+     * Método cronstrutor que lê ou cria o arquivo e atualiza o id
      *
      */
     public CustomerFileImpl() {
@@ -28,8 +36,8 @@ public class CustomerFileImpl implements CustomerDAO{
     //Methods
 
     /**
-     * Método criado para a adição de um cliente na lista do sistema
-     * @param customer O cliente que deseja inserir na lista do sistema
+     * Método criado para a adição de um cliente no arquivo
+     * @param customer O cliente que deseja inserir no arquivo
      * @return O cliente enviado
      */
     @Override
@@ -44,7 +52,7 @@ public class CustomerFileImpl implements CustomerDAO{
     }
 
     /**
-     * Método criado para adquirir todos os clientes cadastrados na lista do sistema
+     * Método criado para adquirir todos os clientes cadastrados no arquivo
      * @return A lista com todos os clientes cadastrados
      */
     @Override
@@ -68,7 +76,7 @@ public class CustomerFileImpl implements CustomerDAO{
     }
 
     /**
-     * Método criado para atuallizar os dados de um cliente previamente cadastrado
+     * Método criado para atuallizar os dados de um cliente previamente cadastrado no arquivo
      * @param customer O cliente que deseja atuaizar os dados
      */
     @Override
@@ -85,7 +93,7 @@ public class CustomerFileImpl implements CustomerDAO{
     }
 
     /**
-     * Método criado para deletar um cliente da lista do sistema
+     * Método criado para deletar um cliente cadastrado no arquivo
      * @param id O id do cliente
      */
     @Override
@@ -102,7 +110,7 @@ public class CustomerFileImpl implements CustomerDAO{
     }
 
     /**
-     * Método criado para limpar completamente a lista de clientes
+     * Método criado para limpar completamente a lista de clientes cadastrados no arquivo
      */
     @Override
     public void clearList(){

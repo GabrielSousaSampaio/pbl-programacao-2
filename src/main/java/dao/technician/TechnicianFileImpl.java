@@ -5,6 +5,14 @@ import main.java.model.users.Technician;
 
 import java.util.List;
 
+
+/**
+ *
+ * Classe criada a partir da implementação da interface "TechnicianDAO" para a manipulação dos técnicos
+ * armazenados no sistema através de arquivos.
+ *
+ * @author Gabriel Sampaio, Gabriel Baptista
+ */
 public class TechnicianFileImpl implements TechnicianDAO{
     private List<Technician> technicianList;
     private int nextId;
@@ -12,7 +20,7 @@ public class TechnicianFileImpl implements TechnicianDAO{
     //Constructor
 
     /**
-     * Método cronstrutor que inicializa o array para armazenar os técnicos e inicia o id com o valor 1
+     * Método cronstrutor que lê ou cria o arquivo e atualiza o id
      *
      */
     public TechnicianFileImpl() {
@@ -29,8 +37,8 @@ public class TechnicianFileImpl implements TechnicianDAO{
     //Methods
 
     /**
-     * Método criado para a adição de um técnico na lista do sistema
-     * @param technician O técnico que deseja inserir na lista do sistema
+     * Método criado para a adição de um técnico no arquivo
+     * @param technician O técnico que deseja inserir no arquivo
      * @return O técnico enviado
      */
     @Override
@@ -44,7 +52,7 @@ public class TechnicianFileImpl implements TechnicianDAO{
     }
 
     /**
-     * Método criado para adquirir todos os técnicos cadastrados na lista do sistema
+     * Método criado para adquirir todos os técnicos cadastrados no arquivo
      * @return A lista com todos os técnicos cadastrados
      */
     @Override
@@ -68,7 +76,7 @@ public class TechnicianFileImpl implements TechnicianDAO{
     }
 
     /**
-     * Método criado para atuallizar os dados de um técnico previamente cadastrado
+     * Método criado para atuallizar os dados de um técnico previamente cadastrado no arquivo
      * @param technician O técnico que deseja atuaizar os dados
      */
     @Override
@@ -85,7 +93,7 @@ public class TechnicianFileImpl implements TechnicianDAO{
     }
 
     /**
-     * Método criado para deletar um técnico da lista do sistema
+     * Método criado para deletar um técnico cadastrados no arquivo
      * @param id O id do técnico
      */
     @Override
@@ -102,7 +110,7 @@ public class TechnicianFileImpl implements TechnicianDAO{
     }
 
     /**
-     * Método criado para limpar completamente a lista de técnicos
+     * Método criado para limpar completamente a lista de tecnicos cadastrados no arquivo
      */
     @Override
     public void clearList(){

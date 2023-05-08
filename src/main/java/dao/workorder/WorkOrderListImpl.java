@@ -38,7 +38,7 @@ public class WorkOrderListImpl implements WorkOrderDAO{
     /**
      * Método criado para a adição de uma ordem de serviço na lista do sistema
      * @param workOrder A ordem de serviço que deseja inserir na lista do sistema
-     * @return A ordem de serviço enviado
+     * @return A ordem de serviço enviada
      */
 
     @Override
@@ -51,8 +51,8 @@ public class WorkOrderListImpl implements WorkOrderDAO{
 
 
     /**
-     * Método criado para adquirir todas as ordens de serviço cadastrados na lista do sistema
-     * @return A lista com todas as ordens de serviços cadastrados
+     * Método criado para adquirir todas as ordens de serviço cadastradas na lista do sistema
+     * @return A lista com todas as ordens de serviços cadastradas
      */
 
     @Override
@@ -63,7 +63,7 @@ public class WorkOrderListImpl implements WorkOrderDAO{
     /**
      * Método criado para econtrar uma ordem de serviço pelo seu id
      * @param id O id da ordem de serviço
-     * @return A ordem de serviço procurada ou nulo (caso ele não esteja cadastrado)
+     * @return A ordem de serviço procurada ou nulo (caso ela não esteja cadastrada)
      */
     @Override
     public WorkOrder FindById(int id) {

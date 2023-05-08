@@ -3,9 +3,15 @@ package main.java.dao.administrator;
 import main.java.dao.FileHandling;
 import main.java.model.users.Administrator;
 
-import java.util.ArrayList;
 import java.util.List;
 
+/**
+ *
+ * Classe criada a partir da implementação da interface "AdministratorDAO" para a manipulação dos administradores
+ * armazenados no sistema através de arquivos.
+ *
+ * @author Gabriel Sousa Sampaio, Gabriel Baptista
+ */
 public class AdministratorFileImpl implements AdministratorDAO{
 
     private List<Administrator> administratorList;
@@ -13,7 +19,7 @@ public class AdministratorFileImpl implements AdministratorDAO{
 
     //Constructor
     /**
-     * Método cronstrutor que inicializa o array para armazenar os administradores e inicia o id com o valor 1
+     * Método cronstrutor que lê ou cria o arquivo e atualiza o id
      *
      */
     public AdministratorFileImpl() {
@@ -30,8 +36,8 @@ public class AdministratorFileImpl implements AdministratorDAO{
     //Methods
 
     /**
-     * Método criado para a adição de um administrador na lista do sistema
-     * @param administrator O administrador que deseja inserir na lista do sistema
+     * Método criado para a adição de um administrador no arquivo
+     * @param administrator O administrador que deseja inserir no arquivo
      * @return O administrador enviado
      */
     @Override
@@ -45,8 +51,8 @@ public class AdministratorFileImpl implements AdministratorDAO{
     }
 
     /**
-     * Método criado para adquirir todos os administradores cadastrados na lista do sistema
-     * @return A lista com todos os administradores cadastrados
+     * Método criado para adquirir todos os administradores cadastrados no arquivo
+     * @return A lista com todos os administradores cadastrados no arquivo
      */
     @Override
     public List<Administrator> FindMany() {
@@ -71,7 +77,7 @@ public class AdministratorFileImpl implements AdministratorDAO{
     }
 
     /**
-     * Método criado para atuallizar os dados de um administrador previamente cadastrado
+     * Método criado para atuallizar os dados de um administrador previamente cadastrado no arquivo
      * @param administrator O administrador que deseja atuaizar os dados
      */
     @Override
@@ -90,8 +96,8 @@ public class AdministratorFileImpl implements AdministratorDAO{
     }
 
     /**
-     * Método criado para deletar um administrador da lista do sistema
-     * @param id O id do administrador
+     * Método criado para deletar um administrador cadastrado no arquivo
+     * @param id O id do administrador cadastrado no arquivo
      */
     @Override
     public void delete(int id) {
@@ -109,7 +115,7 @@ public class AdministratorFileImpl implements AdministratorDAO{
     }
 
     /**
-     * Método criado para limpar completamente a lista de administradores
+     * Método criado para limpar completamente a lista de administradores cadastrados no arquivo
      */
     @Override
     public void clearList() {

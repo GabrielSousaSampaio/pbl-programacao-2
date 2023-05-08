@@ -10,6 +10,14 @@ import main.java.model.services.Service;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ *
+ * Classe criada a partir da implementação da interface "WorkOrderDAO" para a manipulação das ordens de serviço
+ * armazenadas no sistema através de arquivos.
+ *
+ * @author Gabriel Sousa Sampaio, Gabriel Baptista
+ */
+
 public class WorkOrderFileImpl implements WorkOrderDAO{
 
     private List<WorkOrder> workOrderList;
@@ -18,7 +26,7 @@ public class WorkOrderFileImpl implements WorkOrderDAO{
     //Constructor
 
     /**
-     * Método cronstrutor que inicializa o array para armazenar as ordens de serviço e inicia o id com o valor 1
+     * Método cronstrutor que lê ou cria o arquivo e atualiza o id
      *
      */
 
@@ -33,6 +41,11 @@ public class WorkOrderFileImpl implements WorkOrderDAO{
         }
     }
 
+    /**
+     * Método criado para a adição de uma ordem de serviço no arquivo
+     * @param workOrder A ordem de serviço que deseja inserir no arquivo
+     * @return A ordem de serviço enviada
+     */
     @Override
     public WorkOrder create(WorkOrder workOrder) {
 
@@ -47,8 +60,8 @@ public class WorkOrderFileImpl implements WorkOrderDAO{
     }
 
     /**
-     * Método criado para adquirir todas as ordens de serviço cadastrados na lista do sistema
-     * @return A lista com todas as ordens de serviços cadastrados
+     * Método criado para adquirir todas as ordens de serviço cadastradas no arquivo
+     * @return A lista com todas as ordens de serviços cadastradas
      */
 
     @Override
@@ -59,7 +72,7 @@ public class WorkOrderFileImpl implements WorkOrderDAO{
     /**
      * Método criado para econtrar uma ordem de serviço pelo seu id
      * @param id O id da ordem de serviço
-     * @return A ordem de serviço procurada ou nulo (caso ele não esteja cadastrado)
+     * @return A ordem de serviço procurada ou nulo (caso ela não esteja cadastrada)
      */
     @Override
     public WorkOrder FindById(int id) {
@@ -207,7 +220,7 @@ public class WorkOrderFileImpl implements WorkOrderDAO{
     }
 
     /**
-     * Método criado para atuallizar os dados de uma ordem de serviço previamente cadastrada
+     * Método criado para atuallizar os dados de uma ordem de serviço previamente cadastrada no arquivo
      * @param workOrder A ordem de serviço que deseja atuaizar os dados
      */
     @Override
@@ -224,7 +237,7 @@ public class WorkOrderFileImpl implements WorkOrderDAO{
     }
 
     /**
-     * Método criado para deletar uma ordem de serviço da lista do sistema
+     * Método criado para deletar uma ordem de serviço cadastrada no arquivo
      * @param id O id da ordem de serviço
      */
     @Override
@@ -241,7 +254,7 @@ public class WorkOrderFileImpl implements WorkOrderDAO{
     }
 
     /**
-     * Método criado para limpar completamente a lista de ordens de serviço
+     * Método criado para limpar completamente a lista das ordens de serviço cadastradas no arquivo
      */
     @Override
     public void clearList(){

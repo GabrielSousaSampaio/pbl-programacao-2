@@ -8,7 +8,7 @@ import java.util.List;
 /**
  *
  * Classe criada a partir da implementação da interface "AdministratorDAO" para a manipulação dos administradores
- * armazenadas no sistema através de listas.
+ * armazenados no sistema através de listas.
  *
  * @author Gabriel Sousa Sampaio, Gabriel Baptista
  */

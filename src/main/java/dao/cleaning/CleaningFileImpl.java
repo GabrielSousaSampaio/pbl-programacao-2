@@ -3,9 +3,15 @@ package main.java.dao.cleaning;
 import main.java.dao.FileHandling;
 import main.java.model.services.Cleaning;
 
-import java.util.ArrayList;
 import java.util.List;
 
+/**
+ *
+ * Classe criada a partir da implementação da interface "CleaningDAO" para manipulação dos serviços de
+ * limpeza oferecidos e armazenados no sistema através de arquivos.
+ *
+ * @author Gabriel Sampaio, Gabriel Baptista
+ */
 public class CleaningFileImpl implements CleaningDAO{
 
     private List<Cleaning> cleaningList;
@@ -14,7 +20,7 @@ public class CleaningFileImpl implements CleaningDAO{
 
     //Constructor
     /**
-     * Método cronstrutor que inicializa o array para armazenar os serviços de limpeza e inicia o id com o valor 1
+     * Método cronstrutor que lê ou cria o arquivo e atualiza o id
      *
      */
     public CleaningFileImpl() {
@@ -31,8 +37,8 @@ public class CleaningFileImpl implements CleaningDAO{
     //Methods
 
     /**
-     * Método criado para a adição de um serviço de limpeza na lista do sistema
-     * @param cleaning O componente que deseja inserir na lista do sistema
+     * Método criado para a adição de um serviço de limpeza no arquivo
+     * @param cleaning O componente que deseja inserir no arquivo
      * @return O serviço de limpeza enviado
      */
     @Override
@@ -46,8 +52,8 @@ public class CleaningFileImpl implements CleaningDAO{
     }
 
     /**
-     * Método criado para adquirir todos os serviços de limpeza cadastrados na lista do sistema
-     * @return A lista com todos os serviços de limpeza cadastrados
+     * Método criado para adquirir todos os serviços de limpeza cadastrados no arquivo
+     * @return A lista com todos os serviços de limpeza cadastrados no arquivo
      */
     @Override
     public List<Cleaning> FindMany() {
@@ -70,7 +76,7 @@ public class CleaningFileImpl implements CleaningDAO{
     }
 
     /**
-     * Método criado para atuallizar os dados de um serviço de limpeza previamente cadastrado
+     * Método criado para atuallizar os dados de um serviço de limpeza previamente cadastrado no arquivo
      * @param cleaning O serviço de limpeza que deseja atuaizar os dados
      */
     @Override
@@ -87,7 +93,7 @@ public class CleaningFileImpl implements CleaningDAO{
     }
 
     /**
-     * Método criado para deletar um serviço de limpeza da lista do sistema
+     * Método criado para deletar um serviço de limpeza cadastrado no arquivo
      * @param id O id do serviço de limpeza
      */
     @Override
@@ -104,7 +110,7 @@ public class CleaningFileImpl implements CleaningDAO{
     }
 
     /**
-     * Método criado para limpar completamente a lista de serviços de limpeza
+     * Método criado para limpar completamente a lista de serviços de limpeza cadastrados no arquivo
      */
     @Override
     public void clearList(){

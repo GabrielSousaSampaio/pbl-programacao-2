@@ -3,17 +3,24 @@ package main.java.dao.recepcionist;
 import main.java.dao.FileHandling;
 import main.java.model.users.Recepcionist;
 
-import java.util.ArrayList;
 import java.util.List;
 
+/**
+ *
+ * Classe criada a partir da implementação da interface "RecepcionistDAO" para a manipulação dos recepcionistas
+ * armazenados no sistema através de arquivos.
+ *
+ * @author Gabriel Sampaio, Gabriel Baptista
+ */
 public class RecepcionistFileImpl implements RecepcionistDAO{
     private List<Recepcionist> recepcionistList;
     private int nextId;
 
     //Constructor
 
+
     /**
-     * Método cronstrutor que inicializa o array para armazenar os recepcionistas e inicia o id com o valor 1
+     * Método cronstrutor que lê ou cria o arquivo e atualiza o id
      *
      */
     public RecepcionistFileImpl() {
@@ -32,8 +39,8 @@ public class RecepcionistFileImpl implements RecepcionistDAO{
     //Methods
 
     /**
-     * Método criado para a adição de um recepcionista na lista do sistema
-     * @param recepcionist O recepcionista que deseja inserir na lista do sistema
+     * Método criado para a adição de um recepcionista no arquivo
+     * @param recepcionist O recepcionista que deseja inserir no arquivo
      * @return O recepcionista enviado
      */
     @Override
@@ -48,7 +55,7 @@ public class RecepcionistFileImpl implements RecepcionistDAO{
     }
 
     /**
-     * Método criado para adquirir todos os recepcionistas cadastrados na lista do sistema
+     * Método criado para adquirir todos os recepcionistas cadastrados no arquivo
      * @return A lista com todos os recepcionistas cadastrados
      */
     @Override
@@ -73,7 +80,7 @@ public class RecepcionistFileImpl implements RecepcionistDAO{
     }
 
     /**
-     * Método criado para atuallizar os dados de um recepcionista previamente cadastrado
+     * Método criado para atuallizar os dados de um recepcionista previamente cadastrado no arquivo
      * @param recepcionist O recepcionista que deseja atuaizar os dados
      */
     @Override
@@ -92,7 +99,7 @@ public class RecepcionistFileImpl implements RecepcionistDAO{
     }
 
     /**
-     * Método criado para deletar um recepcionista da lista do sistema
+     * Método criado para deletar um recepcionista cadastrado no arquivo
      * @param id O id do recepcionista
      */
     @Override
@@ -111,7 +118,7 @@ public class RecepcionistFileImpl implements RecepcionistDAO{
     }
 
     /**
-     * Método criado para limpar completamente a lista de recepcionistas
+     * Método criado para limpar completamente a lista de recepcionistas cadastrados no arquivo
      */
     @Override
     public void clearList() {

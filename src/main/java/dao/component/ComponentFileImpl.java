@@ -5,9 +5,15 @@ import main.java.model.components.Component;
 import main.java.model.components.ComputerComponent;
 import main.java.model.components.OtherComponent;
 
-import java.util.ArrayList;
 import java.util.List;
 
+/**
+ *
+ * Classe criada a partir da implementação da interface "ComponentDAO" para manipulação dos componentes armazenados no
+ * sistema, representando então, o estoque dos mesmos, através de arquivos.
+ *
+ * @author Gabriel Sampaio, Gabriel Baptista
+ */
 public class ComponentFileImpl implements ComponentDAO{
 
     private List<Component> componentList;
@@ -16,7 +22,7 @@ public class ComponentFileImpl implements ComponentDAO{
     //Constructor
 
     /**
-     * Método cronstrutor que inicializa o array para armazenar os componentes e inicia o id com o valor 1
+     * Método cronstrutor que lê ou cria o arquivo e atualiza o id
      *
      */
     public ComponentFileImpl() {
@@ -33,8 +39,8 @@ public class ComponentFileImpl implements ComponentDAO{
     //Methods
 
     /**
-     * Método criado para a adição de um componente na lista do sistema
-     * @param component O componente que deseja inserir na lista do sistema
+     * Método criado para a adição de um componente no arquivo
+     * @param component O componente que deseja inserir no arquivo
      * @return O componente enviado
      */
     @Override
@@ -48,8 +54,8 @@ public class ComponentFileImpl implements ComponentDAO{
     }
 
     /**
-     * Método criado para adquirir todos os componentes cadastrados na lista do sistema
-     * @return A lista com todos os componentes cadastrados
+     * Método criado para adquirir todos os componentes cadastrados no arquivo
+     * @return A lista com todos os componentes cadastrados no arquivo
      */
     @Override
     public List<Component> FindMany() {
@@ -73,7 +79,7 @@ public class ComponentFileImpl implements ComponentDAO{
     }
 
     /**
-     * Método criado para atuallizar os dados de um componente previamente cadastrado
+     * Método criado para atuallizar os dados de um componente previamente cadastrados no arquivo
      * @param component O componente que deseja atuaizar os dados
      */
     @Override
@@ -91,7 +97,7 @@ public class ComponentFileImpl implements ComponentDAO{
     }
 
     /**
-     * Método criado para deletar um componente da lista do sistema
+     * Método criado para deletar um componente cadastrados no arquivo
      * @param id O id do componente
      */
     @Override
@@ -108,7 +114,7 @@ public class ComponentFileImpl implements ComponentDAO{
     }
 
     /**
-     * Método criado para limpar completamente a lista de componentes
+     * Método criado para limpar completamente a lista de componentes cadastrados no arquivo
      */
     @Override
     public void clearList(){
