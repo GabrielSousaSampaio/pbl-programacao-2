@@ -13,7 +13,7 @@ public class Main extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("login-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 640, 480);
         stage.setResizable(false);
-        stage.setTitle("Technical Manegment!");
+        stage.setTitle("Zezin assistência técnica LTDA");
         stage.setScene(scene);
         stage.show();
     }
