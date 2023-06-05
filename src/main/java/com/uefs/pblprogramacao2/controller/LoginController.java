@@ -66,7 +66,7 @@ public class LoginController implements Initializable {
                 user = DAO.getRecepcionist().FindById(parseInt(idTextField.getText()));
                 if ((user.getPassword()).equals(passwordField.getText())) {
                     clearAll();
-                    System.out.println("PASSA PARA TELA DE RECEPCIONISTA");
+                    Main.changeView("recepcionistMenuScene");
                 } else {
                     throw new Exception();
                 }

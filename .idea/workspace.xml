@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ee9ec85a-7e9d-4021-83cb-f3564ab35126" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/uefs/pblprogramacao2/controller/RecepcionistMenuController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/uefs/pblprogramacao2/recepcionist-menu-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/uefs/pblprogramacao2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uefs/pblprogramacao2/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/uefs/pblprogramacao2/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uefs/pblprogramacao2/controller/LoginController.java" afterDir="false" />

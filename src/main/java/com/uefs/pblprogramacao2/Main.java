@@ -1,7 +1,6 @@
 package com.uefs.pblprogramacao2;
 
 import javafx.application.Application;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -14,6 +13,7 @@ public class Main extends Application {
     private static Stage stage;
     private static Scene loginScene;
     private static Scene adminMenuScene;
+    private static Scene recepcionistMenuScene;
 
     @Override
     public void start(Stage primaryStage) throws IOException {
@@ -25,6 +25,9 @@ public class Main extends Application {
 
         Parent fxmlAdminMenu = FXMLLoader.load(getClass().getResource("admin-menu-view.fxml"));
         adminMenuScene = new Scene(fxmlAdminMenu, 640, 480);
+
+        Parent fxmlrecepcionistMenu = FXMLLoader.load(getClass().getResource("recepcionist-menu-view.fxml"));
+        recepcionistMenuScene = new Scene(fxmlrecepcionistMenu, 640, 480);
 
         stage.setScene(loginScene);
         stage.show();
@@ -38,6 +41,8 @@ public class Main extends Application {
             case "adminMenuScene":
                 stage.setScene(adminMenuScene);
                 break;
+            case "recepcionistMenuScene":
+                stage.setScene(recepcionistMenuScene);
         }
     }
 
