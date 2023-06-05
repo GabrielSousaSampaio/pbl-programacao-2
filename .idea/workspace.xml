@@ -5,13 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ee9ec85a-7e9d-4021-83cb-f3564ab35126" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/uefs/pblprogramacao2/controller/AdminMenuController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/uefs/pblprogramacao2/admin-menu-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/uefs/pblprogramacao2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uefs/pblprogramacao2/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/uefs/pblprogramacao2/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uefs/pblprogramacao2/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/uefs/pblprogramacao2/login-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/uefs/pblprogramacao2/login-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,49 +70,94 @@
       <recent name="com.uefs.pblprogramacao2.model" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.uefs.pblprogramacao2.Main" />
+  <component name="RunManager">
+    <configuration name="CustomerDAOTest.create" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="pbl-programacao-2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.uefs.pblprogramacao2.*" />
+          <option name="PATTERN" value="com.uefs.pblprogramacao2.dao.customer.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AdministratorDAOTest.create" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="pbl-programacao-2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.uefs.pblprogramacao2.dao.administrator.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.uefs.pblprogramacao2.dao.administrator" />
-      <option name="MAIN_CLASS_NAME" value="com.uefs.pblprogramacao2.dao.administrator.AdministratorDAOTest" />
+      <option name="PACKAGE_NAME" value="com.uefs.pblprogramacao2.dao.customer" />
+      <option name="MAIN_CLASS_NAME" value="com.uefs.pblprogramacao2.dao.customer.CustomerDAOTest" />
       <option name="METHOD_NAME" value="create" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="All in pbl-programacao-2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="InstallationDAOTest.create" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="pbl-programacao-2" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.uefs.pblprogramacao2.dao.installation.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.uefs.pblprogramacao2.dao.installation" />
+      <option name="MAIN_CLASS_NAME" value="com.uefs.pblprogramacao2.dao.installation.InstallationDAOTest" />
+      <option name="METHOD_NAME" value="create" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RecepcionistDAOTest.create" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="pbl-programacao-2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.uefs.pblprogramacao2.dao.recepcionist.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.uefs.pblprogramacao2.dao.recepcionist" />
+      <option name="MAIN_CLASS_NAME" value="com.uefs.pblprogramacao2.dao.recepcionist.RecepcionistDAOTest" />
+      <option name="METHOD_NAME" value="create" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TechnicianDAOTest.create" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="pbl-programacao-2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.uefs.pblprogramacao2.dao.technician.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.uefs.pblprogramacao2.dao.technician" />
+      <option name="MAIN_CLASS_NAME" value="com.uefs.pblprogramacao2.dao.technician.TechnicianDAOTest" />
+      <option name="METHOD_NAME" value="create" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WorkOrderDAOTest.create" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="pbl-programacao-2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.uefs.pblprogramacao2.dao.workorder.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.uefs.pblprogramacao2.dao.workorder" />
+      <option name="MAIN_CLASS_NAME" value="com.uefs.pblprogramacao2.dao.workorder.WorkOrderDAOTest" />
+      <option name="METHOD_NAME" value="create" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.AdministratorDAOTest.create" />
-        <item itemvalue="JUnit.All in pbl-programacao-2" />
+        <item itemvalue="JUnit.WorkOrderDAOTest.create" />
+        <item itemvalue="JUnit.TechnicianDAOTest.create" />
+        <item itemvalue="JUnit.RecepcionistDAOTest.create" />
+        <item itemvalue="JUnit.InstallationDAOTest.create" />
+        <item itemvalue="JUnit.CustomerDAOTest.create" />
       </list>
     </recent_temporary>
   </component>
