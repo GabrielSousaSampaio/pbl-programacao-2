@@ -1,0 +1,50 @@
+.profile-layout{
+    -fx-background-color: #5E80EB;
+    -fx-background-radius: 0 0 50 50;
+
+}
+
+.profile-layout2{
+    -fx-background-color: #835EEB;
+    -fx-background-radius: 0 0 50 50;
+}
+.banner-layout{
+    -fx-background-color: #5E80EB;
+    -fx-background-radius: 50 50 50 50;
+
+}
+
+.banner-layout2{
+    -fx-background-color: #835EEB;
+    -fx-background-radius: 50 50 50 50;
+
+}
+
+.button{
+
+    -fx-background-color: #5E80EB;
+    -fx-background-radius: 50;
+}
+.button2{
+
+    -fx-background-color: #835EEB;
+    -fx-background-radius: 50;
+}
+
+.white-background{
+
+     -fx-background-color: #fff;
+
+}
+
+
+.trasparent{
+
+    -fx-background-color: rgba(0,0,0,0);
+
+}
+
+.root{
+-fx-background-image:url('space.jpg');
+-fx-background-size:cover;
+}

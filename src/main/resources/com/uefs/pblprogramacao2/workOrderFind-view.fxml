@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+
+<AnchorPane prefHeight="468.0" prefWidth="631.0" stylesheets="@values/style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.uefs.pblprogramacao2.WorkOrderFind">
+   <children>
+      <Pane layoutX="112.0" layoutY="10.0" opacity="0.67" prefHeight="129.0" prefWidth="394.0" style="-fx-background-color: #181920; -fx-background-radius: 0.5cm;">
+         <children>
+            <TextField layoutX="18.0" layoutY="70.0" opacity="0.94" prefHeight="46.0" prefWidth="338.0" promptText="Digite aqui" style="-fx-background-color: #03213c;" />
+            <Label layoutX="18.0" layoutY="24.0" text="Buscar ordem de serviço" textFill="WHITE" />
+         </children>
+      </Pane>
+      <Pane layoutX="32.0" layoutY="159.0" opacity="0.67" prefHeight="200.0" prefWidth="183.0" style="-fx-background-color: #181920; -fx-background-radius: 0.5cm;" />
+      <Pane layoutX="232.0" layoutY="159.0" opacity="0.67" prefHeight="296.0" prefWidth="379.0" style="-fx-background-color: #181920; -fx-background-radius: 0.5cm;" />
+   </children>
+</AnchorPane>

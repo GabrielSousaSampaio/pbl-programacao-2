@@ -5,11 +5,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ee9ec85a-7e9d-4021-83cb-f3564ab35126" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/uefs/pblprogramacao2/controller/RecepcionistMenuController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/uefs/pblprogramacao2/recepcionist-menu-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/uefs/pblprogramacao2/controller/costumerRegisterController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/uefs/pblprogramacao2/administrator2-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/uefs/pblprogramacao2/administratorFind-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/uefs/pblprogramacao2/administratorRegister-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/uefs/pblprogramacao2/cleaningRegister.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/uefs/pblprogramacao2/componentRegister-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/uefs/pblprogramacao2/costumerFind-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/uefs/pblprogramacao2/costumerRegister-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/uefs/pblprogramacao2/installationRegister-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/uefs/pblprogramacao2/login2-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/uefs/pblprogramacao2/otherComponentRegister-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/uefs/pblprogramacao2/recepcionist2-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/uefs/pblprogramacao2/recepcionistFind_view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/uefs/pblprogramacao2/recepcionistRegister-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/uefs/pblprogramacao2/technician-tela.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/uefs/pblprogramacao2/technicianFind-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/uefs/pblprogramacao2/technicianRegister-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/uefs/pblprogramacao2/values/space.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/uefs/pblprogramacao2/values/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/uefs/pblprogramacao2/workOrderCancel-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/uefs/pblprogramacao2/workOrderFind-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/uefs/pblprogramacao2/workOrderFinish-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/uefs/pblprogramacao2/workOrderOpen-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/uefs/pblprogramacao2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uefs/pblprogramacao2/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/uefs/pblprogramacao2/controller/AdminMenuController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/uefs/pblprogramacao2/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uefs/pblprogramacao2/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/uefs/pblprogramacao2/controller/RecepcionistMenuController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/uefs/pblprogramacao2/admin-menu-view.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/uefs/pblprogramacao2/login-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/uefs/pblprogramacao2/login-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/uefs/pblprogramacao2/recepcionist-menu-view.fxml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +48,7 @@
       <list>
         <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="module-info" />
       </list>
     </option>
   </component>
@@ -37,32 +65,38 @@
         <option name="useMavenConfig" value="true" />
       </MavenGeneralSettings>
     </option>
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="workspaceImportEnabled" value="true" />
-      </MavenImportingSettings>
-    </option>
   </component>
   <component name="ProjectId" id="2PzZo9nLbPKi9di7JIGQtcmFVYL" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "last_opened_file_path": "E:/Users/gabri/Desktop/Universidade/Ecomp/2023.1 Quarto semestre/Algoritmos e Programação II/GerenciadorDeNotas-main",
-    "settings.editor.selected.configurable": "preferences.JavaFX"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Program Files/Java/javafx-sdk-20.0.1/lib/javafx.web.jar&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pathVariables&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\USER\OneDrive\Documentos\GitHub\pbl-programacao-2\src" />
+    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\USER\OneDrive\Documentos\GitHub\pbl-programacao-2\src\main\java\com\uefs\pblprogramacao2" />
+      <recent name="C:\Users\USER\OneDrive\Documentos\GitHub\pbl-programacao-2\src\main\resources\com\uefs\pblprogramacao2" />
+      <recent name="C:\Users\USER\OneDrive\Documentos\GitHub\pbl-programacao-2\src" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.uefs.pblprogramacao2.controller" />
@@ -72,7 +106,21 @@
       <recent name="com.uefs.pblprogramacao2.model" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.uefs.pblprogramacao2.Main" />
+      <module name="pbl-programacao-2" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Program Files\Java\javafx-sdk-20.0.1\lib&quot; --add-modules javafx.controls,javafx.fxml" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.uefs.pblprogramacao2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CustomerDAOTest.create" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="pbl-programacao-2" />
       <extension name="coverage">
@@ -83,22 +131,6 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.uefs.pblprogramacao2.dao.customer" />
       <option name="MAIN_CLASS_NAME" value="com.uefs.pblprogramacao2.dao.customer.CustomerDAOTest" />
-      <option name="METHOD_NAME" value="create" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="InstallationDAOTest.create" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="pbl-programacao-2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.uefs.pblprogramacao2.dao.installation.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.uefs.pblprogramacao2.dao.installation" />
-      <option name="MAIN_CLASS_NAME" value="com.uefs.pblprogramacao2.dao.installation.InstallationDAOTest" />
       <option name="METHOD_NAME" value="create" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -153,13 +185,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.CustomerDAOTest.create" />
+      <item itemvalue="JUnit.RecepcionistDAOTest.create" />
+      <item itemvalue="JUnit.TechnicianDAOTest.create" />
+      <item itemvalue="JUnit.WorkOrderDAOTest.create" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.CustomerDAOTest.create" />
         <item itemvalue="JUnit.WorkOrderDAOTest.create" />
         <item itemvalue="JUnit.TechnicianDAOTest.create" />
         <item itemvalue="JUnit.RecepcionistDAOTest.create" />
-        <item itemvalue="JUnit.InstallationDAOTest.create" />
-        <item itemvalue="JUnit.CustomerDAOTest.create" />
       </list>
     </recent_temporary>
   </component>
