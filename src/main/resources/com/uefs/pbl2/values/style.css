@@ -1,0 +1,139 @@
+.profile-layout{
+    -fx-background-color: #5E80EB;
+    -fx-background-radius: 0 0 50 50;
+
+}
+
+.profile-layout2{
+    -fx-background-color: #835EEB;
+    -fx-background-radius: 0 0 50 50;
+}
+.banner-layout{
+    -fx-background-color: #5E80EB;
+    -fx-background-radius: 50 50 50 50;
+
+}
+
+.banner-layout2{
+    -fx-background-color: #835EEB;
+    -fx-background-radius: 50 50 50 50;
+
+}
+
+
+.white-background{
+
+     -fx-background-color: #fff;
+
+}
+
+
+.trasparent{
+
+    -fx-background-color: rgba(0,0,0,0);
+
+}
+
+.root{
+-fx-background-image:url('space.jpg');
+-fx-background-size:cover;
+}
+
+.combo-box{
+
+    -fx-background-color: #03213c;
+    -fx-border-color: #fff;
+    -fx-background-radius: 50;
+    -fx-border-radius:  50;
+    -fx-text-fill: #fff;
+    -fx-mark-color:#03213c;
+}
+
+
+.button_confirmar{
+
+    -fx-background-color: #181920;
+
+}
+
+.button_confirmar:hover{
+
+    -fx-background-color: #6d6e77;
+}
+
+.button_escuro{
+
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-border-color: #fff;
+    -fx-text-fill: #fff;
+
+}
+.button_escuro:hover{
+
+    -fx-background-color: #6d6e77;
+    -fx-border-color: #fff;
+    -fx-text-fill: #fff;
+
+}
+
+.button_azulescuro{
+
+    -fx-background-color: #03213c;
+    -fx-border-color: #fff;
+    -fx-text-fill: #fff;
+
+}
+.button_azulescuro:hover{
+
+    -fx-background-color: #6d6e77;
+    -fx-border-color: #fff;
+    -fx-text-fill: #fff;
+
+}
+
+
+
+
+.button_cancelar{
+
+    -fx-background-color: #1F3352;
+    -fx-background-radius: 50;
+    -fx-border-color: #ff0000;
+    -fx-border-radius: 50;
+    -fx-text-fill: #ff0000;
+}
+.button_cancelar:hover{
+
+    -fx-background-color: #ff0000;
+    -fx-background-radius: 50;
+    -fx-border-color: #ff0000;
+    -fx-border-radius: 50;
+    -fx-text-fill: #fff;
+}
+
+.button_criar{
+
+    -fx-background-color: #1F3352;
+    -fx-background-radius: 50;
+    -fx-border-color: #00ff00;
+    -fx-border-radius: 50;
+    -fx-text-fill: #00ff00;
+}
+.button_criar:hover{
+
+    -fx-background-color: #00ff00;
+    -fx-background-radius: 50;
+    -fx-border-color: #00ff00;
+    -fx-border-radius: 50;
+    -fx-text-fill: #fff;
+}
+.text-field {
+    -fx-accent: gray;
+    -fx-background-color: #ffffff, #1F3352;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-background-radius: 0;
+    -fx-text-fill: #ffffff;
+}
+.text-field:focused {
+    -fx-background-color: #28A5A5, #1F3352;
+}

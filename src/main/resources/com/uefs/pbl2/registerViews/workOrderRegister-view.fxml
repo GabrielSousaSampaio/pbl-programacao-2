@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="468.0" prefWidth="631.0" stylesheets="@../values/style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.uefs.pbl2.controller.WorkOrderFind">
+   <children>
+      <Pane layoutX="28.0" layoutY="21.0" opacity="0.67" prefHeight="179.0" prefWidth="160.0" style="-fx-background-color: #181920; -fx-background-radius: 0.5cm;" />
+      <Pane layoutX="223.0" layoutY="21.0" opacity="0.67" prefHeight="394.0" prefWidth="369.0" style="-fx-background-color: #181920; -fx-background-radius: 0.5cm;">
+         <children>
+            <Label alignment="CENTER" layoutY="6.0" prefHeight="17.0" prefWidth="369.0" text="Nova Ordem de serviço" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Line endX="215.0" layoutX="136.0" layoutY="53.0" startX="-118.0" stroke="WHITE" />
+            <Line endX="215.0" layoutX="132.0" layoutY="335.0" startX="-118.0" stroke="WHITE" />
+            <TextField fx:id="idBox" layoutX="103.0" layoutY="67.0" prefHeight="27.0" prefWidth="45.0" style="-fx-background-color: trasnparent; -fx-border-color: ffff; -fx-text-inner-color: ffff;">
+               <effect>
+                  <Glow level="0.55" />
+               </effect>
+            </TextField>
+            <TextField fx:id="descriptionBox" alignment="TOP_LEFT" layoutX="14.0" layoutY="98.0" prefHeight="223.0" prefWidth="334.0" promptText="DESCRIÇÃO" style="-fx-background-color: trasnparent; -fx-border-color: ffff; -fx-text-inner-color: ffff;">
+               <effect>
+                  <Glow level="0.55" />
+               </effect>
+            </TextField>
+            <Button fx:id="saveBtn" layoutX="59.0" layoutY="347.0" mnemonicParsing="false" onAction="#saveBtnAction" style="-fx-background-color: transparent; -fx-border-color: #03f80f; -fx-background-radius: 0.5cm;" text="SALVAR" textFill="#03f80f">
+               <effect>
+                  <Glow level="1.0" />
+               </effect>
+            </Button>
+            <Button fx:id="cancelBtt" layoutX="236.0" layoutY="347.0" mnemonicParsing="false" onAction="#cancelBttAction" style="-fx-background-color: transparent; -fx-border-color: #f70505; -fx-background-radius: 0.5cm;" text="CANCELAR" textFill="#f70505">
+               <effect>
+                  <Glow level="1.0" />
+               </effect>
+            </Button>
+            <Label alignment="CENTER" layoutX="14.0" layoutY="70.0" text="ID do cliente:" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="28.0" layoutY="234.0" opacity="0.67" prefHeight="179.0" prefWidth="167.0" style="-fx-background-color: #181920; -fx-background-radius: 0.5cm;">
+         <children>
+            <Circle fill="#03213c" layoutX="85.0" layoutY="90.0" opacity="0.36" radius="59.0" stroke="WHITE" strokeType="INSIDE" />
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="9.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../values/rocket.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

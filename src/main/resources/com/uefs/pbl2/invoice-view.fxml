@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="561.0" prefWidth="704.0" stylesheets="@values/style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.uefs.pbl2.WorkOrderFind">
+   <children>
+      <Pane layoutX="18.0" layoutY="21.0" opacity="0.67" prefHeight="231.0" prefWidth="188.0" style="-fx-background-color: #181920; -fx-background-radius: 0.5cm;">
+         <children>
+            <Label alignment="TOP_LEFT" layoutX="16.0" layoutY="154.0" text="ID da ordem de serviço:" textFill="WHITE">
+               <font>
+                  <Font name="Corbel Bold" size="15.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" layoutX="4.0" layoutY="175.0" prefHeight="42.0" prefWidth="181.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label fx:id="idBOX" alignment="TOP_LEFT" textFill="WHITE">
+                           <font>
+                              <Font name="Corbel Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children></Pane>
+      <Pane layoutX="223.0" layoutY="21.0" opacity="0.67" prefHeight="492.0" prefWidth="447.0" style="-fx-background-color: #181920; -fx-background-radius: 0.5cm;">
+         <children>
+            <Label layoutX="310.0" layoutY="458.0" text="Total:" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label alignment="CENTER" layoutX="39.0" prefHeight="17.0" prefWidth="369.0" text="Fatura" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Line endX="291.0" layoutX="136.0" layoutY="53.0" startX="-118.0" stroke="WHITE" />
+            <TableView fx:id="table" layoutX="19.0" layoutY="68.0" prefHeight="314.0" prefWidth="410.0">
+              <columns>
+                  <TableColumn fx:id="nameColumn" prefWidth="207.0" text="NOME SERVIÇO" />
+                <TableColumn fx:id="priceColumn" prefWidth="202.0" text="PREÇO" />
+              </columns>
+            </TableView>
+            <HBox alignment="CENTER" layoutX="350.0" layoutY="460.0" prefHeight="17.0" prefWidth="89.0">
+               <children>
+                  <Label fx:id="totalBOX" contentDisplay="CENTER" textFill="WHITE" />
+               </children>
+            </HBox>
+            <Line endX="291.0" layoutX="137.0" layoutY="403.0" startX="-118.0" stroke="WHITE" />
+            <Button fx:id="payBTT" layoutX="19.0" layoutY="449.0" mnemonicParsing="false" onAction="#payBTTAction" style="-fx-background-color: transparent; -fx-border-color: #03f80f; -fx-background-radius: 0.5cm;" text="PAGAR" textFill="#03f80f">
+               <effect>
+                  <Glow level="1.0" />
+               </effect>
+            </Button>
+            <Button fx:id="cancelBTT" layoutX="87.0" layoutY="449.0" mnemonicParsing="false" onAction="#cancelBTTAction" style="-fx-background-color: transparent; -fx-border-color: #f70505; -fx-background-radius: 0.5cm;" text="CANCELAR" textFill="#f70505">
+               <effect>
+                  <Glow level="1.0" />
+               </effect>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="29.0" layoutY="334.0" opacity="0.67" prefHeight="179.0" prefWidth="167.0" style="-fx-background-color: #181920; -fx-background-radius: 0.5cm;">
+         <children>
+            <Circle fill="#03213c" layoutX="85.0" layoutY="90.0" opacity="0.36" radius="59.0" stroke="WHITE" strokeType="INSIDE" />
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="9.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@values/rocket.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

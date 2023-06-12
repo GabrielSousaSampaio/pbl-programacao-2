@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="596.0" prefWidth="718.0" stylesheets="@values/style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.uefs.pbl2.WorkOrderFind">
+   <children>
+      <Pane layoutX="28.0" layoutY="21.0" opacity="0.67" prefHeight="201.0" prefWidth="167.0" style="-fx-background-color: #181920; -fx-background-radius: 0.5cm;" />
+      <Pane layoutX="223.0" layoutY="21.0" opacity="0.67" prefHeight="549.0" prefWidth="462.0" style="-fx-background-color: #181920; -fx-background-radius: 0.5cm;">
+         <children>
+            <Label alignment="CENTER" layoutY="6.0" prefHeight="30.0" prefWidth="462.0" text="Relatório" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="-1.0" layoutY="60.0" prefHeight="30.0" style="-fx-background-color: #6d6e77;" text="Quantidade de serviços realizados:" textFill="WHITE">
+               <font>
+                  <Font name="Corbel Bold" size="15.0" />
+               </font>
+               <padding>
+                  <Insets left="8.0" right="8.0" />
+               </padding>
+            </Label>
+            <Label layoutX="-1.0" layoutY="153.0" prefHeight="30.0" style="-fx-background-color: #6d6e77;" text="Satisfação dos clientes:" textFill="WHITE">
+               <font>
+                  <Font name="Corbel Bold" size="15.0" />
+               </font>
+               <padding>
+                  <Insets left="8.0" right="8.0" />
+               </padding>
+            </Label>
+            <Label layoutY="461.0" prefHeight="30.0" style="-fx-background-color: #6d6e77;" text="Custos de peças:" textFill="WHITE">
+               <font>
+                  <Font name="Corbel Bold" size="15.0" />
+               </font>
+               <padding>
+                  <Insets left="8.0" right="8.0" />
+               </padding>
+            </Label>
+            <Label layoutX="277.0" layoutY="60.0" prefHeight="30.0" style="-fx-background-color: #6d6e77;" text="Tempo médio de espera:" textFill="WHITE">
+               <font>
+                  <Font name="Corbel Bold" size="15.0" />
+               </font>
+               <padding>
+                  <Insets left="8.0" right="8.0" />
+               </padding>
+            </Label>
+            <Label layoutX="277.0" layoutY="460.0" prefHeight="30.0" style="-fx-background-color: #6d6e77;" text="Valor total arrecadado:" textFill="WHITE">
+               <font>
+                  <Font name="Corbel Bold" size="15.0" />
+               </font>
+               <padding>
+                  <Insets left="8.0" right="8.0" />
+               </padding>
+            </Label>
+            <Line endX="246.0" layoutX="216.0" layoutY="146.0" startX="-216.0" stroke="WHITE" />
+            <Line endX="246.0" layoutX="216.0" layoutY="259.0" startX="-216.0" stroke="WHITE" />
+            <Line endX="246.0" layoutX="216.0" layoutY="452.0" startX="-216.0" stroke="WHITE" />
+            <Line endX="246.0" layoutX="216.0" layoutY="43.0" startX="-216.0" stroke="WHITE" />
+            <Line endX="246.0" layoutX="216.0" layoutY="52.0" startX="-216.0" stroke="WHITE" />
+            <TableView fx:id="table" layoutX="9.0" layoutY="296.0" prefHeight="138.0" prefWidth="445.0">
+              <columns>
+                <TableColumn fx:id="idColumn" prefWidth="77.0" text="ID" />
+                <TableColumn fx:id="priceColumn" prefWidth="123.0" text="PREÇO" />
+                  <TableColumn fx:id="costColumn" prefWidth="118.0" text="CUSTO" />
+                  <TableColumn fx:id="quantityColumn" prefWidth="126.0" text="QUANTIDADE" />
+              </columns>
+            </TableView>
+            <Label layoutX="167.0" layoutY="263.0" prefHeight="23.0" prefWidth="129.0" style="-fx-background-color: #6d6e77;" text="Peças utilizadas:" textFill="WHITE">
+               <font>
+                  <Font name="Corbel Bold" size="15.0" />
+               </font>
+               <padding>
+                  <Insets left="8.0" right="8.0" />
+               </padding>
+            </Label>
+            <Label fx:id="quantityServiceBOX" layoutX="61.0" layoutY="100.0" textFill="WHITE">
+               <font>
+                  <Font name="Corbel Bold" size="15.0" />
+               </font>
+               <padding>
+                  <Insets left="8.0" right="8.0" />
+               </padding>
+            </Label>
+            <Label fx:id="timeAverageBOX" layoutX="352.0" layoutY="100.0" textFill="WHITE">
+               <font>
+                  <Font name="Corbel Bold" size="15.0" />
+               </font>
+               <padding>
+                  <Insets left="8.0" right="8.0" />
+               </padding>
+            </Label>
+            <Label fx:id="satisfactionAverageBOX" layoutX="61.0" layoutY="200.0" textFill="WHITE">
+               <font>
+                  <Font name="Corbel Bold" size="15.0" />
+               </font>
+               <padding>
+                  <Insets left="8.0" right="8.0" />
+               </padding>
+            </Label>
+            <Label fx:id="componentPriceBOX" layoutX="61.0" layoutY="506.0" textFill="WHITE">
+               <font>
+                  <Font name="Corbel Bold" size="15.0" />
+               </font>
+               <padding>
+                  <Insets left="8.0" right="8.0" />
+               </padding>
+            </Label>
+            <Label fx:id="totalValorBOX" layoutX="352.0" layoutY="506.0" textFill="WHITE">
+               <font>
+                  <Font name="Corbel Bold" size="15.0" />
+               </font>
+               <padding>
+                  <Insets left="8.0" right="8.0" />
+               </padding>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="28.0" layoutY="391.0" opacity="0.67" prefHeight="179.0" prefWidth="167.0" style="-fx-background-color: #181920; -fx-background-radius: 0.5cm;">
+         <children>
+            <Circle fill="#03213c" layoutX="85.0" layoutY="90.0" opacity="0.36" radius="59.0" stroke="WHITE" strokeType="INSIDE" />
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="9.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@values/rocket.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
