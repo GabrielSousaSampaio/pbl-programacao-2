@@ -47,6 +47,9 @@ public class WorkOrderFinishedFindController {
     private Button newWorkOrderBTT;
 
     @FXML
+    private Button invoiceBTT;
+
+    @FXML
     private TableColumn<WorkOrder, String> payedColumn;
 
     @FXML
@@ -87,6 +90,11 @@ public class WorkOrderFinishedFindController {
 
     @FXML
     void newWorkOrderBTTAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void invoiceBTTAction(ActionEvent event) {
 
     }
 
