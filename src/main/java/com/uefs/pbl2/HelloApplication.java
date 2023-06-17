@@ -11,12 +11,6 @@ import java.io.IOException;
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        System.out.println(DAO.getTechnician().FindById(2).getName());
-        System.out.println(DAO.getTechnician().FindById(2).getEmail());
-        System.out.println(DAO.getTechnician().FindById(2).getPassword());
-        System.out.println(DAO.getTechnician().FindById(2).getWorkingOn());
-        System.out.println(DAO.getWorkOrder().FindById(1).getTechnician());
-
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("login2-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setResizable(false);

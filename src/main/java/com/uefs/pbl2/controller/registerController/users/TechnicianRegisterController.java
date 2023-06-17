@@ -114,6 +114,7 @@ public class TechnicianRegisterController {
 
             try {
                 observableTechnicianList.setAll(DAO.getTechnician().FindById(Integer.parseInt(searchBox.getText())));
+                labelError.setText("");
 
             }catch (NumberFormatException e){
 

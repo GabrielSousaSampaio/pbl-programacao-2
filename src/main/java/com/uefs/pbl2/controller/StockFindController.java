@@ -89,17 +89,41 @@ public class StockFindController {
     @FXML
     void searchCCBttAction(ActionEvent event) {
 
+        if(!(searchCCBox.getText().isEmpty())){
+
+            try {
+                computerComponentObservableList.setAll(DAO.getComponent().FindById(Integer.parseInt(searchCCBox.getText())));
+                CCmsgLabel.setText("");
+            }catch (NumberFormatException e){
+                CCmsgLabel.setStyle("-fx-text-fill:#f70505");
+                CCmsgLabel.setText("Digite um número inteiro!");
+            }
+        }else{
+            computerComponentObservableList.setAll(DAO.getComponent().FindMany());
+        }
+
     }
 
     @FXML
     void searchIOCBttAction(ActionEvent event) {
 
+        if(!(searchOCBox.getText().isEmpty())){
+
+            try {
+                otherComponentObservableList.setAll(DAO.getComponent().FindById(Integer.parseInt(searchOCBox.getText())));
+                OCmsgLabel.setText("");
+            }catch (NumberFormatException e){
+                OCmsgLabel.setStyle("-fx-text-fill:#f70505");
+                OCmsgLabel.setText("Digite um número inteiro!");
+            }
+        }else{
+            otherComponentObservableList.setAll(DAO.getComponent().FindMany());
+        }
+
     }
 
     @FXML
     public void initialize() {
-
-
 
         otherComponentObservableList = FXCollections.observableArrayList(DAO.getComponent().FindMany());
         computerComponentObservableList = FXCollections.observableArrayList(DAO.getComponent().FindMany());

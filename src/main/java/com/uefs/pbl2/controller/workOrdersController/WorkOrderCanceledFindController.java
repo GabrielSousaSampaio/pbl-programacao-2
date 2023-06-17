@@ -1,15 +1,21 @@
 package com.uefs.pbl2.controller.workOrdersController;
 
+import com.uefs.pbl2.HelloApplication;
+import com.uefs.pbl2.controller.registerController.WorkOrderRegisterController;
 import com.uefs.pbl2.dao.DAO;
 import com.uefs.pbl2.model.WorkOrder;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.time.LocalDateTime;
 
 public class WorkOrderCanceledFindController {
@@ -73,7 +79,26 @@ public class WorkOrderCanceledFindController {
 
     @FXML
     void newWorkOrderBTTAction(ActionEvent event) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("registerViews/" +
+                    "workOrderRegister-view.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
 
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            stage.setTitle("Registro de ordem de serviço");
+            stage.setResizable(false);
+            stage.centerOnScreen();
+            stage.initModality(Modality.APPLICATION_MODAL);
+
+            WorkOrderRegisterController workOrderRegisterController = fxmlLoader.getController();
+            workOrderRegisterController.setDialogStage(stage);
+
+            stage.showAndWait();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
@@ -83,7 +108,7 @@ public class WorkOrderCanceledFindController {
 
             try {
                 observableWorkOrderList.setAll(DAO.getWorkOrder().FindById(Integer.parseInt(searchBOX.getText())));
-
+                labelError.setText("");
             }catch (NumberFormatException e){
 
                 labelError.setText("Digite um número inteiro!");
@@ -91,11 +116,6 @@ public class WorkOrderCanceledFindController {
         }else{
             observableWorkOrderList.setAll(DAO.getWorkOrder().getCanceledWorkOrders());
         }
-
-    }
-
-    @FXML
-    void searchBTTEAction(ActionEvent event) {
 
     }
 

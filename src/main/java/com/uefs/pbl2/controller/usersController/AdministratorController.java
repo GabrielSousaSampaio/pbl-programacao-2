@@ -146,7 +146,7 @@ public class AdministratorController {
             stage.centerOnScreen();
 
         } catch (IOException e) {
-            this.msgLabel.setStyle("-fx-text-fill:#03f80f");
+            this.msgLabel.setStyle("-fx-text-fill:#f70505");
             this.msgLabel.setText("Erro ao tentar abrir outra tela");
 
         }

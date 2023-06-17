@@ -92,8 +92,6 @@ public class LoginController {
             else if(s.equals("Técnico")){
 
                 for(Technician t: DAO.getTechnician().FindMany()){
-
-                    System.out.println(t.getWorkingOn());
                     try {
                         if (t.getId() == Integer.parseInt(idBOX.getText()) &&
                                 t.getPassword().equals(passwordBOX.getText())) {

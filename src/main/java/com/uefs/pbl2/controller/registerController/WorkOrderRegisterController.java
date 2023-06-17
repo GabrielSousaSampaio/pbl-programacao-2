@@ -45,21 +45,25 @@ public class WorkOrderRegisterController {
             this.msgLabel.setStyle("-fx-text-fill:#f70505");
             msgLabel.setText("ERRO, campos preenchidos incorretamente!");
         }else{
+            try {
+                Customer customer = DAO.getCustomer().FindById(Integer.parseInt(idBox.getText()));
+                if (customer != null) {
+                    WorkOrder workOrder = new WorkOrder(customer, descriptionBox.getText());
+                    DAO.getWorkOrder().create(workOrder);
+                    this.msgLabel.setStyle("-fx-text-fill:#03f80f");
+                    msgLabel.setText("Ordem de serviço registrado com sucesso!");
+                } else {
+                    this.msgLabel.setStyle("-fx-text-fill:#f70505");
+                    msgLabel.setText("Cliente inexistente!");
+                }
 
-            Customer customer = DAO.getCustomer().FindById(Integer.parseInt(idBox.getText()));
-            System.out.println(customer);
-            if(customer != null) {
-                WorkOrder workOrder = new WorkOrder(customer, descriptionBox.getText());
-                DAO.getWorkOrder().create(workOrder);
-                this.msgLabel.setStyle("-fx-text-fill:#03f80f");
-                msgLabel.setText("Ordem de serviço registrado com sucesso!");
-            }else{
+                descriptionBox.clear();
+                idBox.clear();
+            }catch (Exception e){
                 this.msgLabel.setStyle("-fx-text-fill:#f70505");
-                msgLabel.setText("Cliente inexistente!");
-            }
+                msgLabel.setText("ERRO, campos preenchidos incorretamente!");
 
-            descriptionBox.clear();
-            idBox.clear();
+            }
         }
 
     }

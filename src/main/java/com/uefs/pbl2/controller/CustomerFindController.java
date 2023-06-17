@@ -57,9 +57,9 @@ public class CustomerFindController {
 
             try {
                 observableCustomerList.setAll(DAO.getCustomer().FindById(Integer.parseInt(searchBox.getText())));
-
+                msgLabel.setText("");
             }catch (NumberFormatException e){
-                this.msgLabel.setStyle("-fx-text-fill:#f70505");
+                msgLabel.setStyle("-fx-text-fill:#f70505");
                 msgLabel.setText("Digite um número inteiro!");
 
             }

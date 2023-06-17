@@ -1,6 +1,7 @@
 package com.uefs.pbl2.controller.workOrdersController;
 
 import com.uefs.pbl2.HelloApplication;
+import com.uefs.pbl2.controller.registerController.WorkOrderRegisterController;
 import com.uefs.pbl2.dao.DAO;
 import com.uefs.pbl2.model.WorkOrder;
 import javafx.collections.FXCollections;
@@ -91,11 +92,57 @@ public class WorkOrderFinishedFindController {
     @FXML
     void newWorkOrderBTTAction(ActionEvent event) {
 
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("registerViews/" +
+                    "workOrderRegister-view.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            stage.setTitle("Registro de ordem de serviço");
+            stage.setResizable(false);
+            stage.centerOnScreen();
+            stage.initModality(Modality.APPLICATION_MODAL);
+
+            WorkOrderRegisterController workOrderRegisterController = fxmlLoader.getController();
+            workOrderRegisterController.setDialogStage(stage);
+
+            stage.showAndWait();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 
     @FXML
     void invoiceBTTAction(ActionEvent event) {
 
+        WorkOrder workOrder = table.getSelectionModel().getSelectedItem();
+        if (workOrder == null) {
+            deleteLabel.setText("Selecione uma ordem de serviço");
+        } else {
+            try {
+                FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("invoice-view.fxml"));
+                Scene scene = new Scene(fxmlLoader.load());
+
+                Stage stage = new Stage();
+                stage.setScene(scene);
+                stage.setTitle("Fatura");
+                stage.setResizable(false);
+                stage.centerOnScreen();
+                stage.initModality(Modality.APPLICATION_MODAL);
+
+                WorkOrderRegisterController workOrderRegisterController = fxmlLoader.getController();
+                workOrderRegisterController.setDialogStage(stage);
+
+                stage.showAndWait();
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+        }
     }
 
     @FXML
@@ -105,7 +152,7 @@ public class WorkOrderFinishedFindController {
 
             try {
                 observableWorkOrderList.setAll(DAO.getWorkOrder().FindById(Integer.parseInt(searchBOX.getText())));
-
+                labelError.setText("");
             }catch (NumberFormatException e){
 
                 labelError.setText("Digite um número inteiro!");
@@ -117,18 +164,13 @@ public class WorkOrderFinishedFindController {
     }
 
     @FXML
-    void searchBTTEAction(ActionEvent event) {
-
-    }
-
-    @FXML
     void updatePaymentBTTAction(ActionEvent event) {
 
         WorkOrder workOrder = table.getSelectionModel().getSelectedItem();
-
         if (workOrder == null) {
             deleteLabel.setText("Selecione uma ordem de serviço");
         } else {
+
             try {
                 FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("workOrderViews/" +
                         "paymentMethod-view.fxml"));
@@ -136,7 +178,7 @@ public class WorkOrderFinishedFindController {
 
                 Stage stage = new Stage();
                 stage.setScene(scene);
-                stage.setTitle("Alterar método de pagamento");
+                stage.setTitle("Atualizar pagamento!");
                 stage.setResizable(false);
                 stage.centerOnScreen();
                 stage.initModality(Modality.APPLICATION_MODAL);
@@ -150,8 +192,8 @@ public class WorkOrderFinishedFindController {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-
         }
+
     }
 
     @FXML
@@ -162,8 +204,8 @@ public class WorkOrderFinishedFindController {
         idColumn.setCellValueFactory(new PropertyValueFactory<WorkOrder,Integer>("id"));
         customerColumn.setCellValueFactory(new PropertyValueFactory<WorkOrder, String>("CustomerName"));
         createAtColumn.setCellValueFactory(new PropertyValueFactory<WorkOrder, LocalDateTime>("CreatedAt"));
-        finshAtColumn.setCellValueFactory(new PropertyValueFactory<WorkOrder, LocalDateTime>("FinshedAt"));
-        payedColumn.setCellValueFactory(new PropertyValueFactory<WorkOrder, String>("CreatedAt"));
+        finshAtColumn.setCellValueFactory(new PropertyValueFactory<WorkOrder, LocalDateTime>("finishedAt"));
+        payedColumn.setCellValueFactory(new PropertyValueFactory<WorkOrder, String>("paymentMethod"));
         descriptionColumn.setCellValueFactory(new PropertyValueFactory<WorkOrder, String>("description"));
 
 

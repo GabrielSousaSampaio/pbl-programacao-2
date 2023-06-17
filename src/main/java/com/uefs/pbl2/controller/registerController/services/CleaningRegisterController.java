@@ -12,8 +12,9 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 
-public class cleaningRegisterController {
+public class CleaningRegisterController {
 
     @FXML
     private TextField costBOX;
@@ -65,6 +66,8 @@ public class cleaningRegisterController {
 
     @FXML
     private Button updateBtt;
+
+    private Stage dialogStage;
 
     private ObservableList<Cleaning> observableCleaningList;
 
@@ -124,8 +127,9 @@ public class cleaningRegisterController {
 
             try {
                 observableCleaningList.setAll(DAO.getCleaning().FindById(Integer.parseInt(searchBox.getText())));
-
+                labelError.setText("");
             }catch (NumberFormatException e){
+
 
                 labelError.setText("Digite um número inteiro!");
             }
@@ -135,11 +139,6 @@ public class cleaningRegisterController {
 
     }
 
-
-    @FXML
-    void searchBttEAction(ActionEvent event) {
-
-    }
 
     @FXML
     void updateBttAction(ActionEvent event) {
@@ -189,6 +188,11 @@ public class cleaningRegisterController {
 
 
         tabel.setItems(observableCleaningList);
+
+    }
+    public void setDialogStage(Stage stage){
+
+        this.dialogStage = stage;
 
     }
 

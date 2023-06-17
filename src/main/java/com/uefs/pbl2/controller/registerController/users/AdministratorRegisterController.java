@@ -115,7 +115,7 @@ public class AdministratorRegisterController {
 
             try {
                 observableAdministratorList.setAll(DAO.getAdministrator().FindById(Integer.parseInt(searchBox.getText())));
-
+                labelError.setText("");
             }catch (NumberFormatException e){
 
                 labelError.setText("Digite um número inteiro!");

@@ -54,10 +54,10 @@ public class ServiceFindController {
     private TextField searchCSBox;
 
     @FXML
-    private Button searchCSBtt;
+    private TextField searchISBox;
 
     @FXML
-    private TextField searchISBox;
+    private Button searchCSBtt;
 
     @FXML
     private Button searchISBtt;
@@ -77,10 +77,37 @@ public class ServiceFindController {
     @FXML
     void searchCSBttAction(ActionEvent event) {
 
+        if(!(searchCSBox.getText().isEmpty())){
+
+            try {
+                cleaningObservableList.setAll(DAO.getCleaning().FindById(Integer.parseInt(searchCSBox.getText())));
+                CSmsgLabel.setText("");
+            }catch (NumberFormatException e){
+                CSmsgLabel.setStyle("-fx-text-fill:#f70505");
+                CSmsgLabel.setText("Digite um número inteiro!");
+            }
+        }else{
+            cleaningObservableList.setAll(DAO.getCleaning().FindMany());
+        }
+
     }
 
     @FXML
     void searchISBttAction(ActionEvent event) {
+
+        if(!(searchISBox.getText().isEmpty())){
+
+            try {
+                installationObservableList.setAll(DAO.getInstallation().FindById(Integer.parseInt(searchISBox.getText())));
+                ISmsgLabel.setText("");
+            }catch (NumberFormatException e){
+                ISmsgLabel.setStyle("-fx-text-fill:#f70505");
+                ISmsgLabel.setText("Digite um número inteiro!");
+            }
+        }else{
+            installationObservableList.setAll(DAO.getInstallation().FindMany());
+        }
+
 
     }
     @FXML

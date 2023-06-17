@@ -13,8 +13,9 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 
-public class componentRegisterController {
+public class ComponentRegisterController {
 
     @FXML
     private TextField costBOX;
@@ -79,6 +80,8 @@ public class componentRegisterController {
     @FXML
     private Button updateBtt;
 
+    private Stage dialogStage;
+
     private ObservableList<Component> observableComputerComponentList;
 
     @FXML
@@ -134,7 +137,7 @@ public class componentRegisterController {
             try {
                 observableComputerComponentList.setAll(DAO.getComponent().FindById(Integer.parseInt(searchBox.getText()
                 )));
-
+                labelError.setText("");
             }catch (NumberFormatException e){
 
                 labelError.setText("Digite um número inteiro!");
@@ -142,11 +145,6 @@ public class componentRegisterController {
         }else{
             observableComputerComponentList.setAll(DAO.getComponent().FindMany());
         }
-
-    }
-
-    @FXML
-    void searchBttEAction(ActionEvent event) {
 
     }
 
@@ -202,6 +200,14 @@ public class componentRegisterController {
         tabel.setItems(observableComputerComponentList);
 
     }
+
+    public void setDialogStage(Stage stage){
+
+        this.dialogStage = stage;
+
+    }
+
+
 }
 
 

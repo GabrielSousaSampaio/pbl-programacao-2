@@ -6,34 +6,41 @@
   <component name="ChangeListManager">
     <list default="true" id="7e86b605-398c-42e5-8912-1d45b4b4abd6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/filesSaves/technician.dat" beforeDir="false" afterPath="$PROJECT_DIR$/src/filesSaves/technician.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/filesSaves/workOrders.dat" beforeDir="false" afterPath="$PROJECT_DIR$/src/filesSaves/workOrders.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/CustomerFindController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/CustomerFindController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/registerController/services/installationRegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/registerController/services/installationRegisterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/ServiceFindController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/ServiceFindController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/ServiceManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/ServiceManagerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/StockFindController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/StockFindController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/StockManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/StockManagerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/TechnicianFindController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/TechnicianFindController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/WorkOrderFindController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/WorkOrderFindController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/registerController/WorkOrderRegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/registerController/WorkOrderRegisterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/registerController/components/componentRegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/registerController/components/ComponentRegisterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/registerController/components/othercomponentRegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/registerController/components/OthercomponentRegisterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/registerController/services/cleaningRegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/registerController/services/CleaningRegisterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/registerController/services/installationRegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/registerController/services/InstallationRegisterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/registerController/users/AdministratorRegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/registerController/users/AdministratorRegisterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/registerController/users/CustomerRegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/registerController/users/CustomerRegisterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/registerController/users/RecepcionistRegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/registerController/users/RecepcionistRegisterController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/registerController/users/TechnicianRegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/registerController/users/TechnicianRegisterController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/usersController/AdministratorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/usersController/AdministratorController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/usersController/RecepcionistController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/usersController/RecepcionistController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/usersController/TechnicianController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/usersController/TechnicianController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/workOrdersController/PaymentMethodController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/workOrdersController/PaymentMethodController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/workOrdersController/WorkOrderCanceledFindController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/workOrdersController/WorkOrderCanceledFindController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/workOrdersController/WorkOrderFinishedFindController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/workOrdersController/WorkOrderFinishedFindController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/workOrdersController/WorkOrderOpenFindController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/workOrdersController/WorkOrderOpenFindController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/actualWorkOrder-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/actualWorkOrder-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/findSpecificViews/technicianFind-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/findSpecificViews/technicianFind-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/findSpecificViews/workOrderFind-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/findSpecificViews/workOrderFind-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/registerViews/administratorRegister-view2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/registerViews/administratorRegister-view2.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/registerViews/cleaningRegister-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/registerViews/cleaningRegister-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/registerViews/componentRegister-view2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/registerViews/componentRegister-view2.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/registerViews/customerRegister-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/registerViews/customerRegister-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/registerViews/installationRegister-view2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/registerViews/installationRegister-view2.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/registerViews/otherComponentRegister-view2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/registerViews/otherComponentRegister-view2.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/registerViews/recepcionistRegister-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/registerViews/recepcionistRegister-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/registerViews/technicianRegister-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/registerViews/technicianRegister-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/registerViews/workOrderRegister-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/registerViews/workOrderRegister-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/report-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/report-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/usersViews/administrator2-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/usersViews/administrator2-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/usersViews/recepcionist2-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/usersViews/recepcionist2-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/usersViews/technician-tela.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/usersViews/technician-tela.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/workOrderViews/workOrderCancel-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/workOrderViews/workOrderCancel-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/workOrderViews/workOrderFinish-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/workOrderViews/workOrderFinish-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/workOrderViews/workOrderOpen-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/workOrderViews/workOrderOpen-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/serviceManager-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/serviceManager-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/stockManager-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/stockManager-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/workOrderViews/paymentMethod-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/workOrderViews/paymentMethod-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +96,7 @@
       <recent name="C:\Users\USER\pbl2\src\main\resources\com\uefs\pbl2\registerView" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.HelloApplication">
     <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.uefs.pbl2.HelloApplication" />
       <module name="pbl2" />
@@ -103,9 +110,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TechnicianDAOTest.findMany" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="pbl2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.uefs.pbl2.dao.technician.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.uefs.pbl2.dao.technician" />
+      <option name="MAIN_CLASS_NAME" value="com.uefs.pbl2.dao.technician.TechnicianDAOTest" />
+      <option name="METHOD_NAME" value="findMany" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.HelloApplication" />
+        <item itemvalue="JUnit.TechnicianDAOTest.findMany" />
       </list>
     </recent_temporary>
   </component>

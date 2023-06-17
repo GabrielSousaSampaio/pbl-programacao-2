@@ -12,8 +12,9 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 
-public class installationRegisterController {
+public class InstallationRegisterController {
 
     @FXML
     private TextField costBOX;
@@ -65,6 +66,8 @@ public class installationRegisterController {
 
     @FXML
     private Button updateBtt;
+
+    private Stage dialogStage;
 
     private ObservableList<Installation> observableInstallationList;
 
@@ -120,7 +123,7 @@ public class installationRegisterController {
 
             try {
                 observableInstallationList.setAll(DAO.getInstallation().FindById(Integer.parseInt(searchBox.getText())));
-
+                labelError.setText("");
             }catch (NumberFormatException e){
 
                 labelError.setText("Digite um número inteiro!");
@@ -131,10 +134,6 @@ public class installationRegisterController {
 
     }
 
-    @FXML
-    void searchBttEAction(ActionEvent event) {
-
-    }
 
     @FXML
     void updateBttAction(ActionEvent event) {
@@ -178,12 +177,17 @@ public class installationRegisterController {
         observableInstallationList = FXCollections.observableArrayList(DAO.getInstallation().FindMany());
 
         idColumn.setCellValueFactory(new PropertyValueFactory<Installation,Integer>("id"));
-        nameColumn.setCellValueFactory(new PropertyValueFactory<Installation,String>("name"));
+        nameColumn.setCellValueFactory(new PropertyValueFactory<Installation,String>("installationName"));
         priceColumn.setCellValueFactory(new PropertyValueFactory<Installation,Double>("price"));
         costColumn.setCellValueFactory(new PropertyValueFactory<Installation,Double>("cost"));
 
 
         tabel.setItems(observableInstallationList);
+
+    }
+    public void setDialogStage(Stage stage){
+
+        this.dialogStage = stage;
 
     }
 

@@ -48,7 +48,7 @@
             </VBox>
          </children>
       </Pane>
-      <TextField fx:id="searchOCBox" layoutX="698.0" layoutY="33.0" prefHeight="27.0" prefWidth="328.0" promptText="Pesquisar (id)" style="-fx-background-color: trasnparent; -fx-border-color: ffff; -fx-text-inner-color: ffff;">
+      <TextField fx:id="searchISBox" layoutX="698.0" layoutY="33.0" prefHeight="27.0" prefWidth="328.0" promptText="Pesquisar (id)" style="-fx-background-color: trasnparent; -fx-border-color: ffff; -fx-text-inner-color: ffff;">
          <effect>
             <Glow level="0.55" />
          </effect>
@@ -60,12 +60,12 @@
       </Button>
       <Pane layoutX="-7.0" layoutY="-24.0" opacity="0.68" prefHeight="651.0" prefWidth="237.0" style="-fx-background-color: #181920;">
          <children>
-            <Button fx:id="searchCustomerBTT" layoutX="14.0" layoutY="326.0" mnemonicParsing="false" onAction="#searchCustomerBTTAction" opacity="0.74" prefHeight="35.0" prefWidth="220.0" style="-fx-background-radius: 0.2 cm; -fx-border-radius: 0.2cm;" styleClass="button_escuro" stylesheets="@values/style.css" text="Adicionar serviço de limpeza" textAlignment="CENTER" textFill="WHITE">
+            <Button fx:id="CSregisterBTT" layoutX="14.0" layoutY="326.0" mnemonicParsing="false" onAction="#CSregisterBTTAction" opacity="0.74" prefHeight="35.0" prefWidth="220.0" style="-fx-background-radius: 0.2 cm; -fx-border-radius: 0.2cm;" styleClass="button_escuro" stylesheets="@values/style.css" text="Registrar serviço de limpeza" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="Corbel Bold" size="12.0" />
                </font>
             </Button>
-            <Button fx:id="searchTechnicianBTT" layoutX="12.0" layoutY="372.0" mnemonicParsing="false" onAction="#searchTechnicianBTTAction" opacity="0.74" prefHeight="35.0" prefWidth="220.0" style="-fx-background-radius: 0.2 cm; -fx-border-radius: 0.2cm;" styleClass="button_escuro" stylesheets="@values/style.css" text="Adicionar serviço de instalação" textFill="WHITE">
+            <Button fx:id="ISregisterBTT" layoutX="12.0" layoutY="372.0" mnemonicParsing="false" onAction="#ISregisterBTTAction" opacity="0.74" prefHeight="35.0" prefWidth="220.0" style="-fx-background-radius: 0.2 cm; -fx-border-radius: 0.2cm;" styleClass="button_escuro" stylesheets="@values/style.css" text="Registrar serviço de instalação" textFill="WHITE">
                <font>
                   <Font name="Corbel Bold" size="12.0" />
                </font>

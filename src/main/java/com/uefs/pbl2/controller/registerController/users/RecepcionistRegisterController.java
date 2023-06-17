@@ -114,7 +114,7 @@ public class RecepcionistRegisterController {
 
             try {
                 observableRecepcionistList.setAll(DAO.getRecepcionist().FindById(Integer.parseInt(searchBox.getText())));
-
+                labelError.setText("");
             }catch (NumberFormatException e){
 
                 labelError.setText("Digite um número inteiro!");
@@ -125,10 +125,6 @@ public class RecepcionistRegisterController {
 
     }
 
-    @FXML
-    void searchBttEAction(ActionEvent event) {
-
-    }
 
     @FXML
     void updateBttAction(ActionEvent event) {

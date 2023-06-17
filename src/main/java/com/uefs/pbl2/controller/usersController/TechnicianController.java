@@ -3,14 +3,12 @@ package com.uefs.pbl2.controller.usersController;
 import com.uefs.pbl2.HelloApplication;
 import com.uefs.pbl2.controller.ActualWorkOrderController;
 import com.uefs.pbl2.controller.ServiceManagerController;
-import com.uefs.pbl2.controller.StockFindController;
 import com.uefs.pbl2.controller.StockManagerController;
 import com.uefs.pbl2.controller.workOrdersController.WorkOrderCanceledFindController;
 import com.uefs.pbl2.controller.workOrdersController.WorkOrderFinishedFindController;
 import com.uefs.pbl2.controller.workOrdersController.WorkOrderOpenFindController;
 import com.uefs.pbl2.dao.DAO;
 import com.uefs.pbl2.model.WorkOrder;
-import com.uefs.pbl2.model.components.Component;
 import com.uefs.pbl2.model.users.Technician;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -205,22 +203,22 @@ public class TechnicianController{
         if(DAO.getTechnician().FindById(technician.getId()).getWorkingOn() != null){
             this.msgLabel.setStyle("-fx-text-fill:#f70505");
             this.msgLabel.setText("Você já possui um serviço");
+
         }else{
 
             if(observableWorkOrderTList.isEmpty()){
                 this.msgLabel.setStyle("-fx-text-fill:#f70505");
                 this.msgLabel.setText("Tabela sem serviços!");
             }else{
-                WorkOrder workOrder = observableWorkOrderTList.get(0);
+
                 DAO.getWorkOrder().FindById(observableWorkOrderTList.get(0).getId()).setTechnician(this.technician);
-                DAO.getTechnician().FindById(this.technician.getId()).setWorkingOn(workOrder);
-                System.out.println(DAO.getTechnician().FindById(this.technician.getId()).getWorkingOn());
+                DAO.getTechnician().FindById(this.technician.getId()).setWorkingOn(DAO.getWorkOrder().FindById(observableWorkOrderTList.get(0).getId()));
+
                 msgLabel.setStyle("-fx-text-fill:#03f80f");
                 msgLabel.setText("Serviço adcionado!");
 
             }
         }
-
     }
 
 
@@ -236,7 +234,7 @@ public class TechnicianController{
             stage.centerOnScreen();
 
         } catch (IOException e) {
-            this.msgLabel.setStyle("-fx-text-fill:#03f80f");
+            this.msgLabel.setStyle("-fx-text-fill:#f70505");
             this.msgLabel.setText("Erro ao tentar abrir outra tela");
 
         }
@@ -304,7 +302,6 @@ public class TechnicianController{
                     }
             }
         }
-
 
         observableWorkOrderTList = FXCollections.observableArrayList(workOrders);
 

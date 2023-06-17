@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="494.0" prefWidth="857.0" styleClass="root" stylesheets="@../values/style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.uefs.pbl2.controller.registerController.services.installationRegisterController">
+<AnchorPane prefHeight="494.0" prefWidth="857.0" styleClass="root" stylesheets="@../values/style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.uefs.pbl2.controller.registerController.services.InstallationRegisterController">
    <children>
       <Pane layoutX="14.0" layoutY="38.0" opacity="0.67" prefHeight="439.0" prefWidth="332.0" style="-fx-background-color: #181920; -fx-background-radius: 0.5cm;">
          <children>

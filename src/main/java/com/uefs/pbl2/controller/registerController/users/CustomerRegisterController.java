@@ -120,7 +120,7 @@ public class CustomerRegisterController {
 
             try {
                 observableCustomerList.setAll(DAO.getCustomer().FindById(Integer.parseInt(searchBox.getText())));
-
+                labelError.setText("");
             }catch (NumberFormatException e){
 
                 labelError.setText("Digite um número inteiro!");
@@ -128,11 +128,6 @@ public class CustomerRegisterController {
         }else{
             observableCustomerList.setAll(DAO.getCustomer().FindMany());
         }
-
-    }
-
-    @FXML
-    void searchBttEAction(ActionEvent event) {
 
     }
 

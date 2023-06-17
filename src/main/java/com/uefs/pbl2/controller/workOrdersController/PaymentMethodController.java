@@ -36,6 +36,7 @@ public class PaymentMethodController {
 
     @FXML
     void cancelBTTAction(ActionEvent event) {
+        dialogStage.close();
 
     }
 
@@ -44,6 +45,7 @@ public class PaymentMethodController {
 
         if(comboBOX.getSelectionModel().getSelectedItem().toString().isEmpty()){
 
+            errorLabel.setStyle("-fx-text-fill:#f70505");
             errorLabel.setText("Selecione alguma opção para confirmar");
 
         }
@@ -69,8 +71,10 @@ public class PaymentMethodController {
                 this.workOrder.setPaymentMethod(null);
 
             }
-
+            errorLabel.setStyle("-fx-text-fill:#03f80f");
+            errorLabel.setText("Atualizado com sucesso");
         }
+
 
 
     }
@@ -85,6 +89,7 @@ public class PaymentMethodController {
     }
 
     public void setWorkOrder(WorkOrder workOrder){
+
         this.workOrder= workOrder;
     }
 

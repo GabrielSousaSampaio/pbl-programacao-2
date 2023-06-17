@@ -55,7 +55,7 @@ public class TechnicianFindController {
 
             try {
                 observableTechnicianList.setAll(DAO.getTechnician().FindById(Integer.parseInt(searchBox.getText())));
-
+                msgLabel.setText("");
             }catch (NumberFormatException e){
 
                 this.msgLabel.setStyle("-fx-text-fill:#f70505");

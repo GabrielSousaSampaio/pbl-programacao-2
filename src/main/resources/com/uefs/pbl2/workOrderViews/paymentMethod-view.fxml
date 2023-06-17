@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@../values/style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.uefs.pbl2.PaymentMethodController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@../values/style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.uefs.pbl2.controller.workOrdersController.PaymentMethodController">
    <children>
       <Pane layoutX="129.0" layoutY="98.0" opacity="0.78" prefHeight="190.0" prefWidth="342.0" style="-fx-background-color: #181920;">
          <children>

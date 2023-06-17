@@ -1,6 +1,9 @@
 package com.uefs.pbl2.controller;
 
 import com.uefs.pbl2.HelloApplication;
+import com.uefs.pbl2.controller.registerController.components.OthercomponentRegisterController;
+import com.uefs.pbl2.controller.registerController.services.CleaningRegisterController;
+import com.uefs.pbl2.controller.registerController.services.InstallationRegisterController;
 import com.uefs.pbl2.dao.DAO;
 import com.uefs.pbl2.model.services.Cleaning;
 import com.uefs.pbl2.model.services.Installation;
@@ -18,6 +21,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -77,7 +81,7 @@ public class ServiceManagerController {
     private Button searchISBtt;
 
     @FXML
-    private TextField searchOCBox;
+    private TextField searchISBox;
 
     @FXML
     private Button searchTechnicianBTT;
@@ -97,26 +101,96 @@ public class ServiceManagerController {
     @FXML
     void homeBTTAction(ActionEvent event) {
 
+        dialogStage.close();
+
 
     }
 
     @FXML
     void searchCSBttAction(ActionEvent event) {
+        if(!(searchCSBox.getText().isEmpty())){
+
+            try {
+                cleaningObservableList.setAll(DAO.getCleaning().FindById(Integer.parseInt(searchCSBox.getText())));
+
+            }catch (NumberFormatException e){
+                this.CSmsgLabel.setStyle("-fx-text-fill:#f70505");
+                CSmsgLabel.setText("Digite um número inteiro!");
+            }
+        }else{
+            cleaningObservableList.setAll(DAO.getCleaning().FindMany());
+        }
 
     }
 
     @FXML
-    void searchCustomerBTTAction(ActionEvent event) {
+    void ISregisterBTTAction(ActionEvent event) {
+
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource(
+                    "registerViews/installationRegister-view2.fxml"));
+
+            Scene scene = new Scene(fxmlLoader.load());
+
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            stage.setTitle("Registrar serviço de instalação");
+            stage.setResizable(false);
+            stage.centerOnScreen();
+            stage.initModality(Modality.APPLICATION_MODAL);
+
+            InstallationRegisterController installationRegisterController = fxmlLoader.getController();
+            installationRegisterController.setDialogStage(stage);
+
+            stage.showAndWait();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
     }
 
     @FXML
     void searchISBttAction(ActionEvent event) {
 
+        if(!(searchISBox.getText().isEmpty())){
+
+            try {
+                installationObservableList.setAll(DAO.getInstallation().FindById(Integer.parseInt(searchISBox.getText())));
+
+            }catch (NumberFormatException e){
+                this.ISmsgLabel.setStyle("-fx-text-fill:#f70505");
+                ISmsgLabel.setText("Digite um número inteiro!");
+            }
+        }else{
+            installationObservableList.setAll(DAO.getInstallation().FindMany());
+        }
+
     }
 
     @FXML
-    void searchTechnicianBTTAction(ActionEvent event) {
+    void CSregisterBTTAction(ActionEvent event) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource(
+                    "registerViews/cleaningRegister-view.fxml"));
+
+            Scene scene = new Scene(fxmlLoader.load());
+
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            stage.setTitle("Registrar serviço de limpeza");
+            stage.setResizable(false);
+            stage.centerOnScreen();
+            stage.initModality(Modality.APPLICATION_MODAL);
+
+            CleaningRegisterController cleaningRegisterController = fxmlLoader.getController();
+            cleaningRegisterController.setDialogStage(stage);
+
+            stage.showAndWait();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
     }
 
