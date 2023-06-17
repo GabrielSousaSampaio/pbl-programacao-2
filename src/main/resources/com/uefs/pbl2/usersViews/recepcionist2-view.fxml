@@ -15,7 +15,7 @@
 <AnchorPane prefHeight="600.0" prefWidth="1100.0" stylesheets="@../values/style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.uefs.pbl2.controller.usersController.RecepcionistController">
    <children>
       <Pane layoutX="874.0" layoutY="176.0" opacity="0.73" prefHeight="416.0" prefWidth="250.0" style="-fx-background-color: #181920;" />
-      <Pane layoutX="257.0" opacity="0.67" prefHeight="90.0" prefWidth="595.0" style="-fx-background-color: #181920;">
+      <Pane layoutX="235.0" opacity="0.67" prefHeight="109.0" prefWidth="595.0" style="-fx-background-color: #181920;">
          <children>
             <Line endX="297.0" layoutX="297.0" layoutY="45.0" startX="-231.0" stroke="WHITE" />
             <Label layoutX="8.0" layoutY="14.0" text="Recepcionist dashboard" textFill="WHITE">
@@ -23,9 +23,13 @@
                   <Font name="Bernard MT Condensed" size="20.0" />
                </font>
             </Label>
+            <VBox alignment="CENTER" layoutY="55.0" prefHeight="52.0" prefWidth="595.0">
+               <children>
+                  <Label fx:id="msgLabel" textFill="WHITE" />
+               </children>
+            </VBox>
          </children></Pane>
       <Pane disable="true" layoutX="241.0" layoutY="-10.0" opacity="0.74" prefHeight="641.0" prefWidth="909.0" style="-fx-background-color: #03213c;" visible="false" />
-      <Pane layoutX="548.0" layoutY="396.0" opacity="0.73" prefHeight="207.0" prefWidth="250.0" style="-fx-background-color: #181920;" />
       <Pane layoutY="-20.0" opacity="0.68" prefHeight="651.0" prefWidth="205.0" style="-fx-background-color: #181920;">
          <children>
             <Button fx:id="searchCustomerBTT" layoutX="14.0" layoutY="326.0" mnemonicParsing="false" onAction="#searchCustomerBTTAction" opacity="0.74" prefHeight="35.0" prefWidth="181.0" style="-fx-background-radius: 0.2 cm; -fx-border-radius: 0.2cm;" styleClass="button_escuro" stylesheets="@../values/style.css" text="Buscar cliente" textFill="WHITE">
@@ -52,9 +56,9 @@
             <Image url="@../values/rocket.png" />
          </image>
       </ImageView>
-      <Pane layoutX="874.0" layoutY="-4.0" opacity="0.73" prefHeight="150.0" prefWidth="295.0" style="-fx-background-color: #181920;">
+      <Pane layoutX="884.0" layoutY="-1.0" opacity="0.73" prefHeight="150.0" prefWidth="295.0" style="-fx-background-color: #181920;">
          <children>
-            <Label layoutX="170.0" layoutY="21.0" text="Recepcionista" textFill="WHITE">
+            <Label layoutX="171.0" layoutY="14.0" text="Recepcionista" textFill="WHITE">
                <font>
                   <Font name="Corbel Bold" size="12.0" />
                </font>
@@ -79,7 +83,7 @@
             </HBox>
          </children>
       </Pane>
-      <ImageView fitHeight="96.0" fitWidth="90.0" layoutX="1035.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="96.0" fitWidth="90.0" layoutX="1045.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../values/user.jpg" />
          </image>
@@ -99,7 +103,7 @@
             <Font name="Corbel Bold" size="15.0" />
          </font>
       </Button>
-      <Label disable="true" layoutX="357.0" layoutY="412.0" text="Estoque" textFill="WHITE">
+      <Label disable="true" layoutX="328.0" layoutY="412.0" text="Estoque de peças" textFill="WHITE">
          <font>
             <Font name="Corbel Bold" size="15.0" />
          </font>
@@ -114,11 +118,6 @@
             <Font name="Corbel Bold" size="15.0" />
          </font>
       </Label>
-      <Label disable="true" layoutX="575.0" layoutY="403.0" text="Gráfico satisfação dos clientes" textFill="WHITE">
-         <font>
-            <Font name="Corbel Bold" size="15.0" />
-         </font>
-      </Label>
       <Button fx:id="logoutBTT" layoutX="78.0" layoutY="576.0" mnemonicParsing="false" onAction="#logoutBTTAction" prefHeight="35.0" prefWidth="42.0" style="-fx-border-radius: 0.2cm;" styleClass="button_escuro">
          <graphic>
             <ImageView fitHeight="42.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
@@ -128,5 +127,15 @@
             </ImageView>
          </graphic>
       </Button>
+      <Button fx:id="servicesBTT" layoutX="554.0" layoutY="396.0" mnemonicParsing="false" onAction="#servicesBTTAction" opacity="0.73" prefHeight="207.0" prefWidth="250.0" styleClass="button_confirmar" stylesheets="@../values/style.css" textFill="WHITE">
+         <font>
+            <Font name="Corbel Bold" size="15.0" />
+         </font>
+      </Button>
+      <Label disable="true" layoutX="652.0" layoutY="412.0" text="Serviços" textFill="WHITE">
+         <font>
+            <Font name="Corbel Bold" size="15.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

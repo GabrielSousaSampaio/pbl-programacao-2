@@ -11,19 +11,8 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="494.0" prefWidth="857.0" styleClass="root" stylesheets="@../values/style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.uefs.pbl2.controller.TechnicianFindController">
+<AnchorPane prefHeight="494.0" prefWidth="857.0" styleClass="root" stylesheets="@../values/style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.uefs.pbl2.controller.CustomerFindController">
    <children>
-      <TableView fx:id="tabel" layoutX="33.0" layoutY="84.0" opacity="0.88" prefHeight="393.0" prefWidth="807.0">
-        <columns>
-          <TableColumn fx:id="idColumn" prefWidth="51.0" text="ID" />
-          <TableColumn fx:id="nameColumn" prefWidth="97.0" text="NOME" />
-            <TableColumn fx:id="emailColumn" prefWidth="110.0" text="E-MAIL" />
-            <TableColumn fx:id="workOnColumn" prefWidth="126.0" text="TRABALHANDO EM:" />
-        </columns>
-         <columnResizePolicy>
-            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
-         </columnResizePolicy>
-      </TableView>
       <TextField fx:id="searchBox" layoutX="41.0" layoutY="14.0" prefHeight="27.0" prefWidth="328.0" promptText="Pesquisar (id)" style="-fx-background-color: trasnparent; -fx-border-color: ffff; -fx-text-inner-color: ffff;">
          <effect>
             <Glow level="0.55" />
@@ -44,5 +33,17 @@
             </VBox>
          </children>
       </Pane>
+      <TableView fx:id="table" layoutX="33.0" layoutY="84.0" opacity="0.88" prefHeight="393.0" prefWidth="807.0">
+         <columns>
+            <TableColumn fx:id="idColumn" prefWidth="51.0" text="ID" />
+            <TableColumn fx:id="nameColumn" prefWidth="97.0" text="NOME" />
+            <TableColumn fx:id="emailColumn" prefWidth="77.0" text="E-MAIL" />
+            <TableColumn fx:id="addressColumn" prefWidth="91.0" text="Endereço" />
+            <TableColumn fx:id="phoneColumn" prefWidth="71.0" text="Telefone" />
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
    </children>
 </AnchorPane>

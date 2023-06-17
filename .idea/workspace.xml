@@ -5,8 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e86b605-398c-42e5-8912-1d45b4b4abd6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/filesSaves/customer.dat" beforeDir="false" afterPath="$PROJECT_DIR$/src/filesSaves/customer.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/workOrdersController/WorkOrderFinishedFindController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/workOrdersController/WorkOrderFinishedFindController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/filesSaves/workOrders.dat" beforeDir="false" afterPath="$PROJECT_DIR$/src/filesSaves/workOrders.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/registerController/services/installationRegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/registerController/services/installationRegisterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/registerController/users/TechnicianRegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/registerController/users/TechnicianRegisterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/usersController/AdministratorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/usersController/AdministratorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/usersController/RecepcionistController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/usersController/RecepcionistController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/usersController/TechnicianController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/usersController/TechnicianController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/actualWorkOrder-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/actualWorkOrder-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/findSpecificViews/technicianFind-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/findSpecificViews/technicianFind-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/findSpecificViews/workOrderFind-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/findSpecificViews/workOrderFind-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/registerViews/administratorRegister-view2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/registerViews/administratorRegister-view2.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/registerViews/cleaningRegister-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/registerViews/cleaningRegister-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/registerViews/componentRegister-view2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/registerViews/componentRegister-view2.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/registerViews/customerRegister-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/registerViews/customerRegister-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/registerViews/installationRegister-view2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/registerViews/installationRegister-view2.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/registerViews/otherComponentRegister-view2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/registerViews/otherComponentRegister-view2.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/registerViews/recepcionistRegister-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/registerViews/recepcionistRegister-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/registerViews/technicianRegister-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/registerViews/technicianRegister-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/registerViews/workOrderRegister-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/registerViews/workOrderRegister-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/report-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/report-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/usersViews/administrator2-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/usersViews/administrator2-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/usersViews/recepcionist2-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/usersViews/recepcionist2-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/usersViews/technician-tela.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/usersViews/technician-tela.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/workOrderViews/workOrderCancel-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/workOrderViews/workOrderCancel-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/workOrderViews/workOrderFinish-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/workOrderViews/workOrderFinish-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/workOrderViews/workOrderOpen-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/workOrderViews/workOrderOpen-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,10 +82,10 @@
       <recent name="C:\Users\USER\pbl2\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\USER\pbl2\src\main\resources\com\uefs\pbl2\findSpecificViews" />
       <recent name="C:\Users\USER\pbl2\src\main\resources\com\uefs\pbl2\values" />
       <recent name="C:\Users\USER\pbl2\src\main\resources\com\uefs\pbl2\workOrderViews" />
       <recent name="C:\Users\USER\pbl2\src\main\resources\com\uefs\pbl2\usersViews" />
-      <recent name="C:\Users\USER\pbl2\src\main\resources\com\uefs\pbl2\findSpecificViews" />
       <recent name="C:\Users\USER\pbl2\src\main\resources\com\uefs\pbl2\registerView" />
     </key>
   </component>

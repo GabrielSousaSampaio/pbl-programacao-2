@@ -40,11 +40,6 @@
                   <Font name="Corbel Bold" size="12.0" />
                </font>
             </Button>
-            <Button fx:id="searchBTTE" layoutX="8.0" layoutY="220.0" mnemonicParsing="false" onAction="#searchBTTEAction" opacity="0.74" prefHeight="58.0" prefWidth="151.0" style="-fx-background-color: trasparent; -fx-background-radius: 0.5 cm; -fx-border-color: #ffffff; -fx-border-radius: 0.2cm;" text="Busca específica" textFill="WHITE">
-               <font>
-                  <Font name="Corbel Bold" size="12.0" />
-               </font>
-            </Button>
             <TableView fx:id="table" layoutX="281.0" layoutY="9.0" opacity="0.89" prefHeight="422.0" prefWidth="550.0">
                <columns>
                   <TableColumn fx:id="idColumn" prefWidth="51.0" text="ID" />

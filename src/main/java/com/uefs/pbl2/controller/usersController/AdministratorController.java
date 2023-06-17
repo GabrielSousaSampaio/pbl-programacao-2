@@ -1,6 +1,9 @@
 package com.uefs.pbl2.controller.usersController;
 
 import com.uefs.pbl2.HelloApplication;
+import com.uefs.pbl2.controller.ReportController;
+import com.uefs.pbl2.controller.ServiceManagerController;
+import com.uefs.pbl2.controller.StockManagerController;
 import com.uefs.pbl2.controller.registerController.users.AdministratorRegisterController;
 import com.uefs.pbl2.controller.registerController.users.CustomerRegisterController;
 import com.uefs.pbl2.controller.registerController.users.RecepcionistRegisterController;
@@ -21,6 +24,8 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+import static com.uefs.pbl2.controller.StageController.getStage;
+
 public class AdministratorController {
 
     private Administrator administrator;
@@ -35,7 +40,10 @@ public class AdministratorController {
     private Label emailLabel;
 
     @FXML
-    private Button invoiceBTT;
+    private Button nextServiceBTT;
+
+    @FXML
+    private Button serviceManagerBTT;
 
     @FXML
     private ImageView l;
@@ -54,6 +62,9 @@ public class AdministratorController {
 
     @FXML
     private Button searchCanceledWorkOrderBTT;
+
+    @FXML
+    private Label msgLabel;
 
     @FXML
     private Button searchEWorkOrderBTT;
@@ -124,12 +135,21 @@ public class AdministratorController {
     }
 
     @FXML
-    void invoiceBTTAction(ActionEvent event) {
-
-    }
-
-    @FXML
     void logoutBTTAction(ActionEvent event) {
+
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("login2-view.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+            Stage stage = getStage(event);
+
+            stage.setScene(scene);
+            stage.centerOnScreen();
+
+        } catch (IOException e) {
+            this.msgLabel.setStyle("-fx-text-fill:#03f80f");
+            this.msgLabel.setText("Erro ao tentar abrir outra tela");
+
+        }
 
     }
 
@@ -162,6 +182,26 @@ public class AdministratorController {
     @FXML
     void reportBTTAction(ActionEvent event) {
 
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("report-view.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            stage.setTitle("Relatório");
+            stage.setResizable(false);
+            stage.centerOnScreen();
+            stage.initModality(Modality.APPLICATION_MODAL);
+
+            ReportController reportController = fxmlLoader.getController();
+            reportController.setDialogStage(stage);
+
+            stage.showAndWait();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 
     @FXML
@@ -187,11 +227,6 @@ public class AdministratorController {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-    }
-
-    @FXML
-    void searchEWorkOrderBTTAction(ActionEvent event) {
 
     }
 
@@ -249,6 +284,50 @@ public class AdministratorController {
     @FXML
     void stockManagerBTTAction(ActionEvent event) {
 
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("stockManager-view.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            stage.setTitle("Estoque de peças");
+            stage.setResizable(false);
+            stage.centerOnScreen();
+            stage.initModality(Modality.APPLICATION_MODAL);
+
+            StockManagerController stockManagerController = fxmlLoader.getController();
+            stockManagerController.setDialogStage(stage);
+
+            stage.showAndWait();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    @FXML
+    void serviceManagerBTTAction(ActionEvent event){
+
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("serviceManager-view.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            stage.setTitle("Serviços");
+            stage.setResizable(false);
+            stage.centerOnScreen();
+            stage.initModality(Modality.APPLICATION_MODAL);
+
+            ServiceManagerController serviceManagerController = fxmlLoader.getController();
+            serviceManagerController.setDialogStage(stage);
+
+            stage.showAndWait();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML

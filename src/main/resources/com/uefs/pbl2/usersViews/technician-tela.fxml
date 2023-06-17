@@ -17,9 +17,9 @@
 <AnchorPane prefHeight="600.0" prefWidth="1100.0" stylesheets="@../values/style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.uefs.pbl2.controller.usersController.TechnicianController">
    <children>
       <Pane layoutX="239.0" layoutY="197.0" opacity="0.73" prefHeight="422.0" prefWidth="601.0" style="-fx-background-color: #181920;" visible="false" />
-      <Pane layoutX="861.0" opacity="0.73" prefHeight="150.0" prefWidth="295.0" style="-fx-background-color: #181920;">
+      <Pane layoutX="884.0" layoutY="-1.0" opacity="0.73" prefHeight="150.0" prefWidth="295.0" style="-fx-background-color: #181920;">
          <children>
-            <Label layoutX="178.0" layoutY="21.0" text="Técnico" textFill="WHITE">
+            <Label layoutX="182.0" layoutY="14.0" text="Técnico" textFill="WHITE">
                <font>
                   <Font name="Corbel Bold" size="12.0" />
                </font></Label>
@@ -70,9 +70,14 @@
                   <Font name="Corbel Bold" size="12.0" />
                </font>
             </Button>
+            <Button fx:id="serviceManagerBTT" layoutX="21.0" layoutY="256.0" mnemonicParsing="false" onAction="#serviceManagerBTTAction" opacity="0.74" prefHeight="35.0" prefWidth="166.0" style="-fx-background-radius: 0.2 cm; -fx-border-radius: 0.2cm;" styleClass="button_azulescuro" text="Gerenciar serviços" textFill="WHITE">
+               <font>
+                  <Font name="Corbel Bold" size="12.0" />
+               </font>
+            </Button>
          </children></Pane>
       <Pane disable="true" layoutX="241.0" layoutY="-10.0" opacity="0.74" prefHeight="641.0" prefWidth="909.0" style="-fx-background-color: #03213c;" visible="false" />
-      <ImageView fitHeight="96.0" fitWidth="90.0" layoutX="1022.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="96.0" fitWidth="90.0" layoutX="1045.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../values/user.jpg" />
          </image>
@@ -91,7 +96,7 @@
                </image>
             </ImageView>
          </graphic></Button>
-      <Pane layoutX="235.0" opacity="0.67" prefHeight="90.0" prefWidth="595.0" style="-fx-background-color: #181920;">
+      <Pane layoutX="235.0" opacity="0.67" prefHeight="109.0" prefWidth="595.0" style="-fx-background-color: #181920;">
          <children>
             <Line endX="297.0" layoutX="297.0" layoutY="45.0" startX="-231.0" stroke="WHITE" />
             <Label layoutX="8.0" layoutY="14.0" text="Technician dashboard" textFill="WHITE">
@@ -99,6 +104,11 @@
                   <Font name="Bernard MT Condensed" size="20.0" />
                </font>
             </Label>
+            <VBox alignment="CENTER" layoutY="55.0" prefHeight="52.0" prefWidth="595.0">
+               <children>
+                  <Label fx:id="msgLabel" textFill="WHITE" />
+               </children>
+            </VBox>
          </children>
       </Pane>
       <Pane layoutX="399.0" layoutY="132.0" opacity="0.73" prefHeight="59.0" prefWidth="282.0" style="-fx-background-color: #181920;">

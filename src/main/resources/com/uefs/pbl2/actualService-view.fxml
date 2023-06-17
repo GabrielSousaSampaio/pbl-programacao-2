@@ -15,7 +15,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="1150.0" stylesheets="@values/style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.uefs.pbl2.controller.ActualWorkOrderController">
+<AnchorPane prefHeight="600.0" prefWidth="1150.0" stylesheets="@values/style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.uefs.pbl2.controller.workOrdersController.ActualServiceController">
    <children>
       <Pane layoutX="494.0" layoutY="14.0" prefHeight="37.0" prefWidth="222.0" style="-fx-background-color: #181920; -fx-background-radius: 0.5cm;" stylesheets="@values/style.css">
          <children>
@@ -62,51 +62,73 @@
             <Insets bottom="20.0" top="40.0" />
          </opaqueInsets>
       </HBox>
-      <Pane layoutX="8.0" layoutY="6.0" opacity="0.65" prefHeight="585.0" prefWidth="383.0" style="-fx-background-color: #181920; -fx-background-radius: 0.5cm;">
+      <Pane layoutX="6.0" layoutY="6.0" opacity="0.65" prefHeight="585.0" prefWidth="385.0" style="-fx-background-color: #181920; -fx-background-radius: 0.5cm;">
          <children>
-            <Label layoutX="14.0" layoutY="109.0" text="DESCRIÇÃO:" textFill="WHITE">
-               <font>
-                  <Font name="Corbel Bold" size="16.0" />
-               </font>
-            </Label>
             <Line endX="167.0" layoutX="216.0" layoutY="55.0" startX="-216.0" stroke="WHITE" />
-            <Label layoutX="95.0" layoutY="14.0" text="ORDEM DE SERVIÇO AUTAL" textFill="WHITE">
+            <Label layoutX="131.0" layoutY="14.0" text="SERVIÇO AUTAL" textFill="WHITE">
                <font>
                   <Font name="Corbel Bold" size="16.0" />
                </font>
             </Label>
-            <Label fx:id="descriptionBOX" layoutX="6.0" layoutY="138.0" prefHeight="183.0" prefWidth="368.0" style="-fx-border-color: ffff;" textFill="WHITE" />
-            <Button fx:id="includeServiceBTT" layoutX="16.0" layoutY="354.0" mnemonicParsing="false" onAction="#includeServiceBTTAction" style="-fx-background-color: transparent; -fx-border-color: ffff; -fx-background-radius: 0.5cm;" text="INCLUIR SERVIÇO" textFill="WHITE">
+            <Button fx:id="includeServiceBTT" layoutX="14.0" layoutY="353.0" mnemonicParsing="false" onAction="#includeServiceBTTAction" prefHeight="50.0" prefWidth="122.0" style="-fx-background-color: transparent; -fx-border-color: #f70505; -fx-background-radius: 0.5cm;" text="REMOVER SERVIÇO" textFill="#f70505">
                <effect>
                   <Glow level="1.0" />
                </effect>
             </Button>
-            <Button fx:id="includeComponentBTT" layoutX="229.0" layoutY="354.0" mnemonicParsing="false" onAction="#includeComponentBTTAction" style="-fx-background-color: transparent; -fx-border-color: ffff; -fx-background-radius: 0.5cm;" text="INCLUIR COMPONENTE" textFill="WHITE">
+            <Button fx:id="includeComponentBTT" layoutX="217.0" layoutY="353.0" mnemonicParsing="false" onAction="#includeComponentBTTAction" prefHeight="50.0" prefWidth="154.0" style="-fx-background-color: transparent; -fx-border-color: #f70505; -fx-background-radius: 0.5cm;" text="REMOVER COMPONENTE" textFill="#f70505">
                <effect>
                   <Glow level="1.0" />
                </effect>
             </Button>
-            <Button fx:id="viewServiceBTT" layoutX="126.0" layoutY="449.0" mnemonicParsing="false" onAction="#viewServiceBTTAction" prefHeight="60.0" prefWidth="140.0" style="-fx-background-color: transparent; -fx-border-color: #f705d5; -fx-background-radius: 0.5cm;" text="VIZUALIZAR SERVIÇO" textFill="#f705d5">
-               <effect>
-                  <Glow level="1.0" />
-               </effect>
-            </Button>
-            <VBox alignment="CENTER" layoutX="-2.0" layoutY="396.0" prefHeight="43.0" prefWidth="384.0">
+            <VBox alignment="CENTER" layoutX="1.0" layoutY="299.0" prefHeight="43.0" prefWidth="384.0">
                <children>
                   <Label fx:id="msgLabel" textFill="WHITE" />
                </children>
             </VBox>
-            <VBox fx:id="msgLabel1" alignment="CENTER_LEFT" layoutX="14.0" layoutY="56.0" prefHeight="43.0" prefWidth="368.0">
+            <VBox fx:id="msgLabel1" alignment="CENTER_LEFT" layoutX="-1.0" layoutY="56.0" prefHeight="43.0" prefWidth="383.0">
                <children>
-                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                  <HBox alignment="CENTER_LEFT" prefHeight="43.0" prefWidth="378.0">
                      <children>
-                        <Label prefHeight="18.0" prefWidth="64.0" text="CLIENTE:" textFill="WHITE">
+                        <Label prefHeight="18.0" prefWidth="191.0" text="ID DA ORDEM DE SERVIÇO:" textFill="WHITE">
                            <font>
                               <Font name="Corbel Bold" size="15.0" />
                            </font>
                            <opaqueInsets>
                               <Insets />
                            </opaqueInsets>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="workOrderIDBOX" prefHeight="18.0" prefWidth="64.0" textFill="WHITE">
+                           <font>
+                              <Font name="Corbel Bold" size="15.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+               <opaqueInsets>
+                  <Insets left="20.0" />
+               </opaqueInsets>
+            </VBox>
+            <VBox fx:id="msgLabel11" alignment="CENTER_LEFT" layoutX="-1.0" layoutY="99.0" prefHeight="43.0" prefWidth="384.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="18.0" prefWidth="83.0" text="CLIENTE:" textFill="WHITE">
+                           <font>
+                              <Font name="Corbel Bold" size="15.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
                         </Label>
                         <Label fx:id="clienteBOX" prefHeight="18.0" prefWidth="64.0" textFill="WHITE">
                            <font>
@@ -120,20 +142,11 @@
                   </HBox>
                </children>
                <opaqueInsets>
-                  <Insets />
+                  <Insets left="20.0" />
                </opaqueInsets>
             </VBox>
-            <Button fx:id="finshServiceBTT" layoutX="9.0" layoutY="544.0" mnemonicParsing="false" onAction="#finishServiceBTTAction" style="-fx-background-color: transparent; -fx-border-color: #03f80f; -fx-background-radius: 0.5cm;" text="FINALIZAR SERVIÇO" textFill="#03f80f">
-               <effect>
-                  <Glow level="1.0" />
-               </effect>
-            </Button>
-            <Button fx:id="cancelServiceBTT" layoutX="247.0" layoutY="544.0" mnemonicParsing="false" onAction="#cancelServiceBTTAction" style="-fx-background-color: transparent; -fx-border-color: #f70505; -fx-background-radius: 0.5cm;" text="CANCELAR SERVIÇO" textFill="#f70505">
-               <effect>
-                  <Glow level="1.0" />
-               </effect>
-            </Button>
-            <Button fx:id="homeBTT" layoutX="165.0" layoutY="536.0" mnemonicParsing="false" onAction="#homeBTTAction" prefHeight="35.0" prefWidth="42.0" style="-fx-border-radius: 0.2cm;" styleClass="button_escuro">
+            <Line endX="167.0" layoutX="217.0" layoutY="441.0" startX="-216.0" stroke="WHITE" />
+            <Button fx:id="homeBTT" layoutX="168.0" layoutY="528.0" mnemonicParsing="false" onAction="#homeBTTAction" prefHeight="35.0" prefWidth="42.0" style="-fx-border-radius: 0.2cm;" styleClass="button_escuro">
                <graphic>
                   <ImageView fitHeight="42.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
                      <image>

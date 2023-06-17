@@ -72,7 +72,7 @@ public class LoginController {
 
                             AdministratorController administratorController = fxmlLoader.getController();
                             administratorController.setDialogStage(stage);
-                            administratorController.setAdministrator(a);
+                            administratorController.setAdministrator(DAO.getAdministrator().FindById(a.getId()));
 
                         }else{
                             errorLabel.setText("Id ou senha incorreto(s)!");
@@ -92,6 +92,8 @@ public class LoginController {
             else if(s.equals("Técnico")){
 
                 for(Technician t: DAO.getTechnician().FindMany()){
+
+                    System.out.println(t.getWorkingOn());
                     try {
                         if (t.getId() == Integer.parseInt(idBOX.getText()) &&
                                 t.getPassword().equals(passwordBOX.getText())) {
@@ -108,7 +110,7 @@ public class LoginController {
 
                             TechnicianController technicianController = fxmlLoader.getController();
                             technicianController.setDialogStage(stage);
-                            technicianController.setTechnician(t);
+                            technicianController.setTechnician(DAO.getTechnician().FindById(t.getId()));
 
 
                         }else{
@@ -145,7 +147,7 @@ public class LoginController {
 
                             RecepcionistController recepcionistController = fxmlLoader.getController();
                             recepcionistController.setDialogStage(stage);
-                            recepcionistController.setRecepcionist(r);
+                            recepcionistController.setRecepcionist(DAO.getRecepcionist().FindById(r.getId()));
 
                         }
                         else{

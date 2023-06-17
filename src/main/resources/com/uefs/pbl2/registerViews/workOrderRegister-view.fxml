@@ -8,14 +8,15 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="468.0" prefWidth="631.0" stylesheets="@../values/style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.uefs.pbl2.controller.WorkOrderFind">
+<AnchorPane prefHeight="468.0" prefWidth="631.0" stylesheets="@../values/style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.uefs.pbl2.controller.registerController.WorkOrderRegisterController">
    <children>
       <Pane layoutX="28.0" layoutY="21.0" opacity="0.67" prefHeight="179.0" prefWidth="160.0" style="-fx-background-color: #181920; -fx-background-radius: 0.5cm;" />
-      <Pane layoutX="223.0" layoutY="21.0" opacity="0.67" prefHeight="394.0" prefWidth="369.0" style="-fx-background-color: #181920; -fx-background-radius: 0.5cm;">
+      <Pane layoutX="223.0" layoutY="21.0" opacity="0.67" prefHeight="431.0" prefWidth="369.0" style="-fx-background-color: #181920; -fx-background-radius: 0.5cm;">
          <children>
             <Label alignment="CENTER" layoutY="6.0" prefHeight="17.0" prefWidth="369.0" text="Nova Ordem de serviço" textFill="WHITE">
                <font>
@@ -34,12 +35,12 @@
                   <Glow level="0.55" />
                </effect>
             </TextField>
-            <Button fx:id="saveBtn" layoutX="59.0" layoutY="347.0" mnemonicParsing="false" onAction="#saveBtnAction" style="-fx-background-color: transparent; -fx-border-color: #03f80f; -fx-background-radius: 0.5cm;" text="SALVAR" textFill="#03f80f">
+            <Button fx:id="saveBtn" layoutX="24.0" layoutY="390.0" mnemonicParsing="false" onAction="#saveBtnAction" style="-fx-background-color: transparent; -fx-border-color: #03f80f; -fx-background-radius: 0.5cm;" text="SALVAR" textFill="#03f80f">
                <effect>
                   <Glow level="1.0" />
                </effect>
             </Button>
-            <Button fx:id="cancelBtt" layoutX="236.0" layoutY="347.0" mnemonicParsing="false" onAction="#cancelBttAction" style="-fx-background-color: transparent; -fx-border-color: #f70505; -fx-background-radius: 0.5cm;" text="CANCELAR" textFill="#f70505">
+            <Button fx:id="cancelBtt" layoutX="255.0" layoutY="390.0" mnemonicParsing="false" onAction="#cancelBttAction" style="-fx-background-color: transparent; -fx-border-color: #f70505; -fx-background-radius: 0.5cm;" text="CANCELAR" textFill="#f70505">
                <effect>
                   <Glow level="1.0" />
                </effect>
@@ -49,9 +50,14 @@
                   <Font size="14.0" />
                </font>
             </Label>
+            <VBox alignment="CENTER" layoutX="26.0" layoutY="342.0" prefHeight="41.0" prefWidth="310.0">
+               <children>
+                  <Label fx:id="msgLabel" textFill="WHITE" />
+               </children>
+            </VBox>
          </children>
       </Pane>
-      <Pane layoutX="28.0" layoutY="234.0" opacity="0.67" prefHeight="179.0" prefWidth="167.0" style="-fx-background-color: #181920; -fx-background-radius: 0.5cm;">
+      <Pane layoutX="25.0" layoutY="273.0" opacity="0.67" prefHeight="179.0" prefWidth="167.0" style="-fx-background-color: #181920; -fx-background-radius: 0.5cm;">
          <children>
             <Circle fill="#03213c" layoutX="85.0" layoutY="90.0" opacity="0.36" radius="59.0" stroke="WHITE" strokeType="INSIDE" />
             <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="9.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">

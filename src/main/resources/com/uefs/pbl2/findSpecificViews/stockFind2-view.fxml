@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="494.0" prefWidth="857.0" styleClass="root" stylesheets="@../values/style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.uefs.pbl2.controller.StockFindController">
+   <children>
+      <Label fx:id="labelError1" layoutX="569.0" layoutY="19.0" textFill="#e40000" />
+      <Pane layoutX="18.0" layoutY="22.0" prefHeight="87.0" prefWidth="392.0" style="-fx-background-color: #181920; -fx-background-radius: 0.5cm;" stylesheets="@../values/style.css">
+         <children>
+            <VBox alignment="CENTER" layoutX="95.0" layoutY="46.0" prefHeight="24.0" prefWidth="272.0">
+               <children>
+                  <Label fx:id="CCmsgLabel" textFill="WHITE" />
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+      <TextField fx:id="searchCCBox" layoutX="32.0" layoutY="33.0" prefHeight="27.0" prefWidth="328.0" promptText="Pesquisar (id)" style="-fx-background-color: trasnparent; -fx-border-color: ffff; -fx-text-inner-color: ffff;">
+         <effect>
+            <Glow level="0.55" />
+         </effect>
+      </TextField>
+      <Button fx:id="searchCCBtt" layoutX="32.0" layoutY="72.0" mnemonicParsing="false" onAction="#searchCCBttAction" opacity="0.74" prefHeight="17.0" prefWidth="70.0" style="-fx-background-color: trasparent; -fx-background-radius: 0.5 cm; -fx-border-color: #ffffff; -fx-border-radius: 0.2cm;" text="Buscar" textFill="WHITE">
+         <font>
+            <Font name="Corbel Bold" size="12.0" />
+         </font>
+      </Button>
+      <Pane layoutX="437.0" layoutY="22.0" prefHeight="87.0" prefWidth="392.0" style="-fx-background-color: #181920; -fx-background-radius: 0.5cm;" stylesheets="@../values/style.css">
+         <children>
+            <VBox alignment="CENTER" layoutX="95.0" layoutY="46.0" prefHeight="24.0" prefWidth="272.0">
+               <children>
+                  <Label fx:id="OCmsgLabel" textFill="WHITE" />
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+      <TextField fx:id="searchOCBox" layoutX="451.0" layoutY="33.0" prefHeight="27.0" prefWidth="328.0" promptText="Pesquisar (id)" style="-fx-background-color: trasnparent; -fx-border-color: ffff; -fx-text-inner-color: ffff;">
+         <effect>
+            <Glow level="0.55" />
+         </effect>
+      </TextField>
+      <Button fx:id="searchOCBtt" layoutX="451.0" layoutY="72.0" mnemonicParsing="false" onAction="#searchIOCBttAction" opacity="0.74" prefHeight="17.0" prefWidth="70.0" style="-fx-background-color: trasparent; -fx-background-radius: 0.5 cm; -fx-border-color: #ffffff; -fx-border-radius: 0.2cm;" text="Buscar" textFill="WHITE">
+         <font>
+            <Font name="Corbel Bold" size="12.0" />
+         </font>
+      </Button>
+      <HBox alignment="CENTER" layoutX="13.0" layoutY="128.0" prefHeight="345.0" prefWidth="402.0" style="-fx-background-color: #181920; -fx-background-radius: 0.5CM;">
+         <children>
+            <VBox alignment="BOTTOM_CENTER" prefHeight="260.0" prefWidth="409.0">
+               <children>
+                  <Label text="COMPONENTES DE COMPUTADOR" textFill="WHITE">
+                     <font>
+                        <Font name="Corbel Bold" size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TableView fx:id="tableComputerComponent" opacity="0.89" prefHeight="337.0" prefWidth="402.0">
+                     <columns>
+                        <TableColumn fx:id="idCCColumn" prefWidth="34.0" text="ID" />
+                        <TableColumn fx:id="nameCCColumn" prefWidth="70.0" text="NOME" />
+                        <TableColumn fx:id="manefacturedCCColumn" prefWidth="77.0" text="FABRICANTE" />
+                        <TableColumn fx:id="priceCCColumn" prefWidth="61.0" text="PREÇO" />
+                        <TableColumn fx:id="costCCColumn" prefWidth="56.0" text="CUSTO" />
+                        <TableColumn fx:id="quantityCCColumn" prefWidth="88.0" text="QUANTIDADE" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                     <opaqueInsets>
+                        <Insets top="40.0" />
+                     </opaqueInsets>
+                  </TableView>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </VBox>
+         </children>
+         <opaqueInsets>
+            <Insets bottom="20.0" top="40.0" />
+         </opaqueInsets>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="429.0" layoutY="128.0" prefHeight="345.0" prefWidth="408.0" style="-fx-background-color: #181920; -fx-background-radius: 0.5CM;">
+         <children>
+            <VBox alignment="BOTTOM_CENTER" prefHeight="260.0" prefWidth="409.0">
+               <children>
+                  <Label text="OUTROS COMPONENTES" textFill="WHITE">
+                     <font>
+                        <Font name="Corbel Bold" size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TableView fx:id="tableOtherComponents" opacity="0.89" prefHeight="341.0" prefWidth="409.0">
+                     <columns>
+                        <TableColumn fx:id="idOCColumn" prefWidth="34.0" text="ID" />
+                        <TableColumn fx:id="descriptionOCColumn" prefWidth="136.0" text="DESCRIÇÃO" />
+                        <TableColumn fx:id="priceOCColumn" prefWidth="59.0" text="PREÇO" />
+                        <TableColumn fx:id="costOCColumn" prefWidth="56.0" text="CUSTO" />
+                        <TableColumn fx:id="quantityOCColumn" prefWidth="88.0" text="QUANTIDADE" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                     <opaqueInsets>
+                        <Insets top="40.0" />
+                     </opaqueInsets>
+                  </TableView>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </VBox>
+         </children>
+         <opaqueInsets>
+            <Insets bottom="20.0" top="40.0" />
+         </opaqueInsets>
+      </HBox>
+   </children>
+</AnchorPane>

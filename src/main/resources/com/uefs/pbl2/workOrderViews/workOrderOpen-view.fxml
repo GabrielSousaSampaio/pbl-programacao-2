@@ -35,17 +35,12 @@
                   <Glow level="1.0" />
                </effect>
             </Button>
-            <TextField fx:id="searchBOX" layoutX="8.0" layoutY="64.0" promptText="Pesquisar" style="-fx-background-color: trasnparent; -fx-border-color: ffff; -fx-text-inner-color: ffff;">
+            <TextField fx:id="searchBOX" layoutX="8.0" layoutY="64.0" promptText="Pesquisar(id)" style="-fx-background-color: trasnparent; -fx-border-color: ffff; -fx-text-inner-color: ffff;">
                <effect>
                   <Glow level="0.55" />
                </effect>
             </TextField>
             <Button fx:id="searchBTT" layoutX="8.0" layoutY="110.0" mnemonicParsing="false" onAction="#searchBTTAction" opacity="0.74" prefHeight="17.0" prefWidth="70.0" style="-fx-background-color: trasparent; -fx-background-radius: 0.5 cm; -fx-border-color: #ffffff; -fx-border-radius: 0.2cm;" text="Buscar" textFill="WHITE">
-               <font>
-                  <Font name="Corbel Bold" size="12.0" />
-               </font>
-            </Button>
-            <Button fx:id="searchBTTE" layoutX="8.0" layoutY="206.0" mnemonicParsing="false" onAction="#searchBTTEAction" opacity="0.74" prefHeight="58.0" prefWidth="151.0" style="-fx-background-color: trasparent; -fx-background-radius: 0.5 cm; -fx-border-color: #ffffff; -fx-border-radius: 0.2cm;" text="Busca específica" textFill="WHITE">
                <font>
                   <Font name="Corbel Bold" size="12.0" />
                </font>

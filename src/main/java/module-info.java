@@ -11,6 +11,7 @@ module com.uefs.pbl2 {
     opens com.uefs.pbl2.controller.usersController to javafx.base, javafx.fxml, javafx.graphics;
     opens com.uefs.pbl2.model.users to javafx.base, javafx.fxml, javafx.graphics;
     opens com.uefs.pbl2.controller.workOrdersController to javafx.base, javafx.fxml, javafx.graphics ;
+    opens com.uefs.pbl2.controller.registerController to javafx.base, javafx.fxml, javafx.graphics ;
     exports com.uefs.pbl2;
 
 }

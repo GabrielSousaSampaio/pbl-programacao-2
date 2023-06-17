@@ -139,8 +139,8 @@ public class installationRegisterController {
     @FXML
     void updateBttAction(ActionEvent event) {
 
-        Installation instalacaoSevico = tabel.getSelectionModel().getSelectedItem();
-        if(instalacaoSevico == null){
+        Installation instalacaoServico = tabel.getSelectionModel().getSelectedItem();
+        if(instalacaoServico == null){
             labelError.setText("Selecione um serviço de instalação");
         }else{
 
@@ -149,13 +149,13 @@ public class installationRegisterController {
                 labelError.setText("ERRO, campos preenchidos incorretamente!");
             }else{
                 try {
-                    instalacaoSevico.setInstallationName(nameBox.getText());
-                    instalacaoSevico.setPrice(Double.parseDouble(priceBox.getText()));
-                    instalacaoSevico.setCost(Double.parseDouble(costBOX.getText()));
+                    instalacaoServico.setInstallationName(nameBox.getText());
+                    instalacaoServico.setPrice(Double.parseDouble(priceBox.getText()));
+                    instalacaoServico.setCost(Double.parseDouble(costBOX.getText()));
 
-                    DAO.getInstallation().update(instalacaoSevico);
+                    DAO.getInstallation().update(instalacaoServico);
 
-                    observableInstallationList.set(tabel.getSelectionModel().getSelectedIndex(), instalacaoSevico);
+                    observableInstallationList.set(tabel.getSelectionModel().getSelectedIndex(), instalacaoServico);
 
                     labelAceppt.setText("Serviço de instalação atualizado com sucesso!");
 

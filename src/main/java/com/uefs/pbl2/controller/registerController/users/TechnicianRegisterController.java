@@ -29,6 +29,9 @@ public class TechnicianRegisterController {
     private TableColumn<Technician, Integer> idColumn;
 
     @FXML
+    private TableColumn<Technician, String> workOnColumn;
+
+    @FXML
     private Label labelAceppt;
 
     @FXML
@@ -54,9 +57,6 @@ public class TechnicianRegisterController {
 
     @FXML
     private Button searchBtt;
-
-    @FXML
-    private Button searchEBtt;
 
     @FXML
     private TableView<Technician> tabel;
@@ -126,11 +126,6 @@ public class TechnicianRegisterController {
     }
 
     @FXML
-    void searchBttEAction(ActionEvent event) {
-
-    }
-
-    @FXML
     void updateBttAction(ActionEvent event) {
 
         Technician tecnico = tabel.getSelectionModel().getSelectedItem();
@@ -169,6 +164,7 @@ public class TechnicianRegisterController {
         idColumn.setCellValueFactory(new PropertyValueFactory<Technician,Integer>("id"));
         nameColumn.setCellValueFactory(new PropertyValueFactory<Technician,String>("name"));
         emailColumn.setCellValueFactory(new PropertyValueFactory<Technician,String>("email"));
+        workOnColumn.setCellValueFactory(new PropertyValueFactory<Technician,String>("getWorkingOn.getid"));
 
 
         tabel.setItems(observableTechnicianList);

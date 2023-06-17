@@ -35,12 +35,17 @@
                </font>
             </Button>
             <Line endX="-51.5" layoutX="249.0" layoutY="175.0" startX="-238.0" stroke="WHITE" />
-            <Button fx:id="reportBTT" layoutX="20.0" layoutY="259.0" mnemonicParsing="false" onAction="#reportBTTAction" opacity="0.74" prefHeight="35.0" prefWidth="166.0" style="-fx-background-radius: 0.2 cm; -fx-border-radius: 0.2cm;" styleClass="button_azulescuro" text="Gerar relatório" textFill="WHITE">
+            <Button fx:id="reportBTT" layoutX="20.0" layoutY="293.0" mnemonicParsing="false" onAction="#reportBTTAction" opacity="0.74" prefHeight="35.0" prefWidth="166.0" style="-fx-background-radius: 0.2 cm; -fx-border-radius: 0.2cm;" styleClass="button_azulescuro" text="Gerar relatório" textFill="WHITE">
                <font>
                   <Font name="Corbel Bold" size="12.0" />
                </font>
             </Button>
             <Button fx:id="searchOpenWorkOrderBTT" layoutX="17.0" layoutY="420.0" mnemonicParsing="false" onAction="#searchOpenWorkOrderBTTAction" opacity="0.74" prefHeight="35.0" prefWidth="181.0" style="-fx-border-radius: 0.2cm; -fx-background-radius: 0.2cm;" styleClass="button_escuro" stylesheets="@../values/style.css" text="Ordens de serviços abertas" textFill="WHITE">
+               <font>
+                  <Font name="Corbel Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="serviceManagerBTT" layoutX="21.0" layoutY="251.0" mnemonicParsing="false" onAction="#serviceManagerBTTAction" opacity="0.74" prefHeight="35.0" prefWidth="166.0" style="-fx-background-radius: 0.2 cm; -fx-border-radius: 0.2cm;" styleClass="button_azulescuro" text="Gerenciar serviços" textFill="WHITE">
                <font>
                   <Font name="Corbel Bold" size="12.0" />
                </font>
@@ -53,7 +58,7 @@
             <Image url="@../values/rocket.png" />
          </image>
       </ImageView>
-      <Pane layoutX="241.0" layoutY="-1.0" opacity="0.67" prefHeight="90.0" prefWidth="595.0" style="-fx-background-color: #181920;">
+      <Pane layoutX="235.0" opacity="0.67" prefHeight="109.0" prefWidth="595.0" style="-fx-background-color: #181920;">
          <children>
             <Line endX="297.0" layoutX="297.0" layoutY="45.0" startX="-231.0" stroke="WHITE" />
             <Label layoutX="8.0" layoutY="14.0" text="Adiminstrator dashboard" textFill="WHITE">
@@ -61,6 +66,11 @@
                   <Font name="Bernard MT Condensed" size="20.0" />
                </font>
             </Label>
+            <VBox alignment="CENTER" layoutY="55.0" prefHeight="52.0" prefWidth="595.0">
+               <children>
+                  <Label fx:id="msgLabel" textFill="WHITE" />
+               </children>
+            </VBox>
          </children>
       </Pane>
       <Button fx:id="customerBTT" layoutX="555.0" layoutY="398.0" mnemonicParsing="false" onAction="#customerBTTAction" opacity="0.73" prefHeight="207.0" prefWidth="250.0" styleClass="button_confirmar" stylesheets="@../values/style.css" textFill="WHITE">
@@ -105,7 +115,7 @@
       </Label>
       <Pane layoutX="884.0" layoutY="-1.0" opacity="0.73" prefHeight="150.0" prefWidth="295.0" style="-fx-background-color: #181920;">
          <children>
-            <Label layoutX="168.0" layoutY="22.0" text="Administrador" textFill="WHITE">
+            <Label layoutX="169.0" layoutY="14.0" text="Administrador" textFill="WHITE">
                <font>
                   <Font name="Corbel Bold" size="12.0" />
                </font>
