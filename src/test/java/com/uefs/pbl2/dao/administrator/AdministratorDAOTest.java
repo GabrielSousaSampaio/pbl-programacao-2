@@ -24,7 +24,7 @@ class AdministratorDAOTest {
     void setUp() {
 
         //Criando dois administradores para os testes
-        administrator1 = new Administrator("João","joao@emal.com","22222");
+        administrator1 = new Administrator("admin","joao@emal.com","admin");
         administrator2 = new Administrator("Maria","maria@emal.com","33333");
 
         //Salvando administradores com DAO
