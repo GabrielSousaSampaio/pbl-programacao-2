@@ -15,7 +15,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="561.0" prefWidth="704.0" stylesheets="@values/style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.uefs.pbl2.WorkOrderFind">
+<AnchorPane prefHeight="561.0" prefWidth="704.0" stylesheets="@values/style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.uefs.pbl2.InvoiceController">
    <children>
       <Pane layoutX="18.0" layoutY="21.0" opacity="0.67" prefHeight="231.0" prefWidth="188.0" style="-fx-background-color: #181920; -fx-background-radius: 0.5cm;">
          <children>
@@ -50,10 +50,10 @@
                </font>
             </Label>
             <Line endX="291.0" layoutX="136.0" layoutY="53.0" startX="-118.0" stroke="WHITE" />
-            <TableView fx:id="table" layoutX="19.0" layoutY="68.0" prefHeight="314.0" prefWidth="410.0">
+            <TableView fx:id="table" layoutX="19.0" layoutY="68.0" prefHeight="118.0" prefWidth="410.0">
               <columns>
-                  <TableColumn fx:id="nameColumn" prefWidth="207.0" text="NOME SERVIÇO" />
-                <TableColumn fx:id="priceColumn" prefWidth="202.0" text="PREÇO" />
+                  <TableColumn fx:id="nameColumn" prefWidth="195.0" text="ID DO SERVIÇO" />
+                <TableColumn fx:id="priceColumn" prefWidth="214.0" text="PREÇO" />
               </columns>
             </TableView>
             <HBox alignment="CENTER" layoutX="350.0" layoutY="460.0" prefHeight="17.0" prefWidth="89.0">
@@ -72,6 +72,17 @@
                   <Glow level="1.0" />
                </effect>
             </Button>
+            <VBox alignment="CENTER" layoutX="31.0" layoutY="412.0" prefHeight="30.0" prefWidth="384.0">
+               <children>
+                  <Label fx:id="msgLabel" textFill="WHITE" />
+               </children>
+            </VBox>
+            <TableView fx:id="table2" layoutX="19.0" layoutY="207.0" prefHeight="179.0" prefWidth="410.0">
+               <columns>
+                  <TableColumn fx:id="IDColumn" prefWidth="195.0" text="ID DOS COMPONENTS" />
+                  <TableColumn fx:id="priceColumn1" prefWidth="214.0" text="PREÇO" />
+               </columns>
+            </TableView>
          </children>
       </Pane>
       <Pane layoutX="29.0" layoutY="334.0" opacity="0.67" prefHeight="179.0" prefWidth="167.0" style="-fx-background-color: #181920; -fx-background-radius: 0.5cm;">

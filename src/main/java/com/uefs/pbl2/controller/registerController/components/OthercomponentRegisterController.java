@@ -2,6 +2,7 @@ package com.uefs.pbl2.controller.registerController.components;
 
 import com.uefs.pbl2.dao.DAO;
 import com.uefs.pbl2.model.components.Component;
+import com.uefs.pbl2.model.components.ComputerComponent;
 import com.uefs.pbl2.model.components.OtherComponent;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -15,7 +16,12 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class OthercomponentRegisterController {
+
+    List<OtherComponent> otherComponentList = new ArrayList<OtherComponent>();
 
     @FXML
     private TextField costBOX;
@@ -69,14 +75,14 @@ public class OthercomponentRegisterController {
     private Button searchEBtt;
 
     @FXML
-    private TableView<Component> tabel;
+    private TableView<OtherComponent> tabel;
 
     @FXML
     private Button updateBtt;
 
     private Stage dialogStage;
 
-    private ObservableList<Component> observableOtherComponentList;
+    private ObservableList<OtherComponent> observableOtherComponentList;
 
     @FXML
     void deleteBttAction(ActionEvent event) {
@@ -127,14 +133,22 @@ public class OthercomponentRegisterController {
         if(!(searchBox.getText().isEmpty())){
 
             try {
-                observableOtherComponentList.setAll(DAO.getComponent().FindById(Integer.parseInt(searchBox.getText())));
-                labelError.setText("");
-            }catch (NumberFormatException e){
+                List<OtherComponent > oClist = new ArrayList<OtherComponent >();
+                for(OtherComponent otherComponent: otherComponentList){
+                    if(otherComponent.getId() == Integer.parseInt(searchBox.getText())){
+                        oClist.add(otherComponent);
+                    }
+                }
 
+
+                observableOtherComponentList.setAll(oClist);
+
+            }catch (NumberFormatException e){
+                labelError.setStyle("-fx-text-fill:#f70505");
                 labelError.setText("Digite um número inteiro!");
             }
         }else{
-            observableOtherComponentList.setAll(DAO.getComponent().FindMany());
+            observableOtherComponentList.setAll(otherComponentList);
         }
 
 
@@ -183,7 +197,14 @@ public class OthercomponentRegisterController {
     @FXML
     void initialize() {
 
-        observableOtherComponentList = FXCollections.observableArrayList(DAO.getComponent().FindMany());
+        for(Component c: DAO.getComponent().FindMany()){
+
+            if(c instanceof OtherComponent){
+                otherComponentList.add((OtherComponent) c);
+            }
+        }
+
+        observableOtherComponentList = FXCollections.observableArrayList(otherComponentList);
 
         idColumn.setCellValueFactory(new PropertyValueFactory<OtherComponent,Integer>("id"));
         descriptionColumn.setCellValueFactory(new PropertyValueFactory<OtherComponent, String>("description"));

@@ -182,7 +182,7 @@ public class CleaningRegisterController {
         observableCleaningList = FXCollections.observableArrayList(DAO.getCleaning().FindMany());
 
         idColumn.setCellValueFactory(new PropertyValueFactory<Cleaning,Integer>("id"));
-        nameColumn.setCellValueFactory(new PropertyValueFactory<Cleaning,String>("name"));
+        nameColumn.setCellValueFactory(new PropertyValueFactory<Cleaning,String>("cleaningName"));
         priceColumn.setCellValueFactory(new PropertyValueFactory<Cleaning,Double>("price"));
         costColumn.setCellValueFactory(new PropertyValueFactory<Cleaning,Double>("cost"));
 

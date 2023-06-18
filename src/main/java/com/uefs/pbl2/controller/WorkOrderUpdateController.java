@@ -58,7 +58,8 @@ public class WorkOrderUpdateController {
             msgLabel.setText("ERRO, campos preenchidos incorretamente!");
         }else{
 
-            WorkOrder workOrder = new WorkOrder(this.workOrder.getCustomer(), descriptionBox.getText());
+            //WorkOrder workOrder = new WorkOrder(this.workOrder.getCustomer(), descriptionBox.getText());
+            workOrder.setDescription(descriptionBox.getText());
             DAO.getWorkOrder().update(workOrder);
             this.msgLabel.setStyle("-fx-text-fill:#03f80f");
             msgLabel.setText("Ordem de serviço registrado com sucesso!");
@@ -69,11 +70,13 @@ public class WorkOrderUpdateController {
         }
 
 
+
     }
 
     @FXML
     void cancelWorkOrderBTTAction(ActionEvent event){
         this.workOrder.cancel();
+        DAO.getWorkOrder().update(workOrder);
         dialogStage.close();
 
     }
@@ -81,6 +84,7 @@ public class WorkOrderUpdateController {
     @FXML
     void finishedBTTAction(ActionEvent event){
         this.workOrder.finished();
+        DAO.getWorkOrder().update(workOrder);
         dialogStage.close();
 
 

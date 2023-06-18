@@ -1,6 +1,10 @@
 package com.uefs.pbl2.model;
 
 import com.uefs.pbl2.dao.DAO;
+import com.uefs.pbl2.model.components.Component;
+import com.uefs.pbl2.model.components.ComputerComponent;
+import com.uefs.pbl2.model.components.OtherComponent;
+import com.uefs.pbl2.model.services.Building;
 import com.uefs.pbl2.model.services.Service;
 import com.uefs.pbl2.model.users.Technician;
 
@@ -44,6 +48,7 @@ public class WorkOrder implements Serializable {
         this.serviceList = new ArrayList<Service>();
         this.description = description;
         this.setCreatedAt(); // Inicia o contador da criação da ordem
+        this.setBuilding();
     }
 
     //Getters and Setters
@@ -107,6 +112,21 @@ public class WorkOrder implements Serializable {
      */
     public String getStatus() {
         return status;
+    }
+
+    public void setBuilding(){
+
+        Building building = new Building();
+        this.serviceList.add(building);
+
+    }
+    public Building getBuilding(){
+
+        for(Service s: this.serviceList) {
+            if (s instanceof Building)
+                return (Building) s;
+        }
+        return null;
     }
 
     /**

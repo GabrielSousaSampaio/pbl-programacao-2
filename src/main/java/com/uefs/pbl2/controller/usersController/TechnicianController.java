@@ -211,8 +211,12 @@ public class TechnicianController{
                 this.msgLabel.setText("Tabela sem serviços!");
             }else{
 
-                DAO.getWorkOrder().FindById(observableWorkOrderTList.get(0).getId()).setTechnician(this.technician);
-                DAO.getTechnician().FindById(this.technician.getId()).setWorkingOn(DAO.getWorkOrder().FindById(observableWorkOrderTList.get(0).getId()));
+                WorkOrder workOrder = observableWorkOrderTList.get(0);
+                workOrder.setTechnician(technician);
+                technician.setWorkingOn(workOrder);
+
+                DAO.getTechnician().update(technician);
+                DAO.getWorkOrder().update(workOrder);
 
                 msgLabel.setStyle("-fx-text-fill:#03f80f");
                 msgLabel.setText("Serviço adcionado!");
@@ -295,11 +299,11 @@ public class TechnicianController{
     public void initialize() {
 
         ArrayList<WorkOrder> workOrders = new ArrayList<WorkOrder>();
-        for(Technician t: DAO.getTechnician().FindMany()){
-            for(WorkOrder w:DAO.getWorkOrder().getOpenedWorkOrders()) {
-                    if (t.getWorkingOn() != w){
-                        workOrders.add(w);
-                    }
+        for(WorkOrder w:DAO.getWorkOrder().getOpenedWorkOrders()){
+            System.out.println(w.getTechnician());
+            if(w.getTechnician() == null) {
+
+                workOrders.add(w);
             }
         }
 
@@ -317,6 +321,7 @@ public class TechnicianController{
 
     public void setTechnician(Technician technicianobj){
         technician = technicianobj;
+        technician.setWorkingOn(DAO.getTechnician().FindById(technician.getId()).getWorkingOn());
         try {
             this.nameLabel.setText(technician.getName());
             this.emailLabel.setText(technician.getEmail());

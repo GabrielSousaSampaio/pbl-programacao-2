@@ -15,7 +15,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="1150.0" stylesheets="@values/style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.uefs.pbl2.controller.workOrdersController.ActualServiceController">
+<AnchorPane prefHeight="600.0" prefWidth="1150.0" stylesheets="@values/style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.uefs.pbl2.controller.ActualServiceController">
    <children>
       <Pane layoutX="494.0" layoutY="14.0" prefHeight="37.0" prefWidth="222.0" style="-fx-background-color: #181920; -fx-background-radius: 0.5cm;" stylesheets="@values/style.css">
          <children>
@@ -70,12 +70,12 @@
                   <Font name="Corbel Bold" size="16.0" />
                </font>
             </Label>
-            <Button fx:id="includeServiceBTT" layoutX="14.0" layoutY="353.0" mnemonicParsing="false" onAction="#includeServiceBTTAction" prefHeight="50.0" prefWidth="122.0" style="-fx-background-color: transparent; -fx-border-color: #f70505; -fx-background-radius: 0.5cm;" text="REMOVER SERVIÇO" textFill="#f70505">
+            <Button fx:id="removeServiceBTT" layoutX="14.0" layoutY="353.0" mnemonicParsing="false" onAction="#removeServiceBTTAction" prefHeight="50.0" prefWidth="122.0" style="-fx-background-color: transparent; -fx-border-color: #f70505; -fx-background-radius: 0.5cm;" text="REMOVER SERVIÇO" textFill="#f70505">
                <effect>
                   <Glow level="1.0" />
                </effect>
             </Button>
-            <Button fx:id="includeComponentBTT" layoutX="217.0" layoutY="353.0" mnemonicParsing="false" onAction="#includeComponentBTTAction" prefHeight="50.0" prefWidth="154.0" style="-fx-background-color: transparent; -fx-border-color: #f70505; -fx-background-radius: 0.5cm;" text="REMOVER COMPONENTE" textFill="#f70505">
+            <Button fx:id="removeComponentBTT" layoutX="205.0" layoutY="353.0" mnemonicParsing="false" onAction="#removeComponentBTTAction" prefHeight="50.0" prefWidth="166.0" style="-fx-background-color: transparent; -fx-border-color: #f70505; -fx-background-radius: 0.5cm;" text="REMOVER COMPONENTE" textFill="#f70505">
                <effect>
                   <Glow level="1.0" />
                </effect>

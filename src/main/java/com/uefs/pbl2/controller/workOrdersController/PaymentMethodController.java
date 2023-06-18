@@ -71,6 +71,7 @@ public class PaymentMethodController {
                 this.workOrder.setPaymentMethod(null);
 
             }
+            DAO.getWorkOrder().update(workOrder);
             errorLabel.setStyle("-fx-text-fill:#03f80f");
             errorLabel.setText("Atualizado com sucesso");
         }

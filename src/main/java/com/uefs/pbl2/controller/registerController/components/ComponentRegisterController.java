@@ -15,7 +15,12 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ComponentRegisterController {
+
+    List<ComputerComponent> computerComponentsList = new ArrayList<ComputerComponent>();
 
     @FXML
     private TextField costBOX;
@@ -187,11 +192,18 @@ public class ComponentRegisterController {
     @FXML
     void initialize() {
 
-        observableComputerComponentList = FXCollections.observableArrayList(DAO.getComponent().FindMany());
+        for(Component c: DAO.getComponent().FindMany()){
+
+            if(c instanceof ComputerComponent){
+                computerComponentsList.add((ComputerComponent) c);
+            }
+        }
+
+        observableComputerComponentList = FXCollections.observableArrayList(computerComponentsList);
 
         idColumn.setCellValueFactory(new PropertyValueFactory<ComputerComponent,Integer>("id"));
         nameColumn.setCellValueFactory(new PropertyValueFactory<ComputerComponent,String>("name"));
-        manefacturedColumn.setCellValueFactory(new PropertyValueFactory<ComputerComponent,String>("manefactured"));
+        manefacturedColumn.setCellValueFactory(new PropertyValueFactory<ComputerComponent,String>("manufacturer"));
         priceColumn.setCellValueFactory(new PropertyValueFactory<ComputerComponent,Double>("price"));
         costColumn.setCellValueFactory(new PropertyValueFactory<ComputerComponent,Double>("cost"));
         quantityColumn.setCellValueFactory(new PropertyValueFactory<ComputerComponent,Integer>("quantity"));

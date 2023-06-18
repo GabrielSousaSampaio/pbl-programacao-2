@@ -63,7 +63,6 @@ public class ReportController {
         quantityColumn.setCellValueFactory(new PropertyValueFactory<Component, Integer>("quantity"));
 
         int quantity = 0;
-
         double price = 0;
         double cost = 0;
 

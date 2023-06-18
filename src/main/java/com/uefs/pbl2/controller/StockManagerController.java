@@ -6,6 +6,7 @@ import com.uefs.pbl2.controller.registerController.components.OthercomponentRegi
 import com.uefs.pbl2.dao.DAO;
 import com.uefs.pbl2.model.components.Component;
 import com.uefs.pbl2.model.components.ComputerComponent;
+import com.uefs.pbl2.model.components.ComputerComponent;
 import com.uefs.pbl2.model.components.OtherComponent;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -23,8 +24,13 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class StockManagerController {
+
+    List<ComputerComponent> computerComponentsList = new ArrayList<ComputerComponent>();
+    List<OtherComponent> otherComponentList = new ArrayList<OtherComponent>();
 
     @FXML
     private Label CCmsgLabel;
@@ -90,14 +96,14 @@ public class StockManagerController {
     private Button createOCBTT;
 
     @FXML
-    private TableView<Component> tableComputerComponent;
+    private TableView<ComputerComponent> tableComputerComponent;
 
     @FXML
-    private TableView<Component> tableOtherComponents;
+    private TableView<OtherComponent> tableOtherComponents;
 
-    private ObservableList<Component> computerComponentObservableList;
+    private ObservableList<ComputerComponent> computerComponentObservableList;
 
-    private ObservableList<Component> otherComponentObservableList;
+    private ObservableList<OtherComponent> otherComponentObservableList;
 
     private Stage dialogStage;
 
@@ -114,14 +120,23 @@ public class StockManagerController {
         if(!(searchCCBox.getText().isEmpty())){
 
             try {
-                computerComponentObservableList.setAll(DAO.getComponent().FindById(Integer.parseInt(searchCCBox.getText())));
+
+                List<ComputerComponent> cClist = new ArrayList<ComputerComponent>();
+
+                for(ComputerComponent computerComponent: computerComponentsList){
+                    if(Integer.parseInt(searchOCBox.getText()) == computerComponent.getId()) {
+                        cClist.add((ComputerComponent) computerComponent);
+                    }
+                }
+
+                computerComponentObservableList.setAll(cClist);
 
             }catch (NumberFormatException e){
                 CCmsgLabel.setStyle("-fx-text-fill:#f70505");
                 CCmsgLabel.setText("Digite um número inteiro!");
             }
         }else{
-            computerComponentObservableList.setAll(DAO.getComponent().FindMany());
+            computerComponentObservableList.setAll(computerComponentsList);
         }
 
 
@@ -160,14 +175,21 @@ public class StockManagerController {
         if(!(searchOCBox.getText().isEmpty())){
 
             try {
-                otherComponentObservableList.setAll(DAO.getComponent().FindById(Integer.parseInt(searchOCBox.getText())));
+                List<OtherComponent > oClist = new ArrayList<OtherComponent >();
+                for(OtherComponent otherComponent: otherComponentList){
+                    if(otherComponent.getId() == Integer.parseInt(searchOCBox.getText())){
+                        oClist.add(otherComponent);
+                    }
+                }
+
+                otherComponentObservableList.setAll(oClist);
 
             }catch (NumberFormatException e){
                 CCmsgLabel.setStyle("-fx-text-fill:#f70505");
                 CCmsgLabel.setText("Digite um número inteiro!");
             }
         }else{
-            otherComponentObservableList.setAll(DAO.getComponent().FindMany());
+            otherComponentObservableList.setAll(otherComponentList);
         }
 
     }
@@ -202,12 +224,21 @@ public class StockManagerController {
     @FXML
     public void initialize() {
 
-        otherComponentObservableList = FXCollections.observableArrayList(DAO.getComponent().FindMany());
-        computerComponentObservableList = FXCollections.observableArrayList(DAO.getComponent().FindMany());
+        for(Component c: DAO.getComponent().FindMany()){
+
+            if(c instanceof ComputerComponent){
+                computerComponentsList.add((ComputerComponent) c);
+            }else if(c instanceof OtherComponent){
+                otherComponentList.add((OtherComponent) c);
+            }
+        }
+
+        otherComponentObservableList = FXCollections.observableArrayList(otherComponentList);
+        computerComponentObservableList = FXCollections.observableArrayList(computerComponentsList);
 
         idCCColumn.setCellValueFactory(new PropertyValueFactory<ComputerComponent,Integer>("id"));
         nameCCColumn.setCellValueFactory(new PropertyValueFactory<ComputerComponent,String>("name"));
-        manefacturedCCColumn.setCellValueFactory(new PropertyValueFactory<ComputerComponent,String>("manefactured"));
+        manefacturedCCColumn.setCellValueFactory(new PropertyValueFactory<ComputerComponent,String>("manufacturer"));
         priceCCColumn.setCellValueFactory(new PropertyValueFactory<ComputerComponent,Double>("price"));
         costCCColumn.setCellValueFactory(new PropertyValueFactory<ComputerComponent,Double>("cost"));
         quantityCCColumn.setCellValueFactory(new PropertyValueFactory<ComputerComponent,Integer>("quantity"));

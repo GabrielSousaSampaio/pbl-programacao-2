@@ -5,7 +5,6 @@ import com.uefs.pbl2.controller.WorkOrderUpdateController;
 import com.uefs.pbl2.controller.registerController.WorkOrderRegisterController;
 
 import com.uefs.pbl2.dao.DAO;
-import com.uefs.pbl2.model.Customer;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
