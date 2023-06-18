@@ -55,12 +55,6 @@ public class ReportController {
     @FXML
     void initialize() {
 
-        componentObservableList = FXCollections.observableArrayList(DAO.getWorkOrder().getFinishedWorkOrdersUsedComponents());
-
-        idColumn.setCellValueFactory(new PropertyValueFactory<Component,Integer>("id"));
-        priceColumn.setCellValueFactory(new PropertyValueFactory<Component, Double>("price"));
-        costColumn.setCellValueFactory(new PropertyValueFactory<Component, Double>("cost"));
-        quantityColumn.setCellValueFactory(new PropertyValueFactory<Component, Integer>("quantity"));
 
         int quantity = 0;
         double price = 0;
@@ -74,14 +68,12 @@ public class ReportController {
            cost += component.getCost();
 
         }
-
-
+        
         quantityServiceBOX.setText(Integer.toString(quantity));
         timeAverageBOX.setText(Double.toString(DAO.getWorkOrder().getFinishedWorkOrdersAverageTime()));
-        satisfactionAverageBOX.setText(Double.toString(DAO.getWorkOrder().getFinishedWorkOrdersAverageRating()*100)+"%");
         componentPriceBOX.setText("R$ " + Double.toString(cost));
         totalValorBOX.setText("R$ " + Double.toString(price - cost));
-        table.setItems(componentObservableList);
+
 
     }
 

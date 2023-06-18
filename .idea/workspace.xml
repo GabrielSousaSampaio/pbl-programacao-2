@@ -4,30 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e86b605-398c-42e5-8912-1d45b4b4abd6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/filesSaves/administrator.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/filesSaves/customer.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/filesSaves/recepcionist.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/filesSaves/technician.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/filesSaves/workOrders.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/ActualServiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/ActualServiceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/ActualWorkOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/ActualWorkOrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/ReportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/ReportController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/StockFindController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/StockFindController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/StockManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/StockManagerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/WorkOrderUpdateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/WorkOrderUpdateController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/registerController/components/ComponentRegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/registerController/components/ComponentRegisterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/registerController/components/OthercomponentRegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/registerController/components/OthercomponentRegisterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/registerController/services/CleaningRegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/registerController/services/CleaningRegisterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/usersController/TechnicianController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/usersController/TechnicianController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/workOrdersController/PaymentMethodController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/workOrdersController/PaymentMethodController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/workOrdersController/WorkOrderOpenFindController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/controller/workOrdersController/WorkOrderOpenFindController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/model/WorkOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uefs/pbl2/model/WorkOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/actualService-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/actualService-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/invoice-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/uefs/pbl2/invoice-view.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="7e86b605-398c-42e5-8912-1d45b4b4abd6" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
